@@ -1,0 +1,28 @@
+{
+	"nodes":[
+		{"id":"g-ing","type":"group","x":900,"y":0,"width":2340,"height":2960,"color":"#EF9F27","label":"Pipeline de ingesta · las 7 preguntas"},
+		{"id":"ann","type":"file","file":"rag/ANN HNSW.md","subpath":"#ANN · HNSW","x":0,"y":900,"width":600,"height":1000},
+		{"id":"ragb","type":"file","file":"rag/RAG básico.md","subpath":"#RAG básico","x":0,"y":2100,"width":600,"height":520},
+		{"id":"ragag","type":"file","file":"rag/RAG agéntico.md","subpath":"#RAG agéntico","x":0,"y":2820,"width":600,"height":1300},
+		{"id":"vdb","type":"file","file":"rag/Vector DB.md","subpath":"#Vector DB · pipeline de ingesta","x":940,"y":60,"width":2260,"height":1000},
+		{"id":"con","type":"file","file":"rag/ingesta/Connector.md","subpath":"#Connector","x":940,"y":1160,"width":520,"height":760},
+		{"id":"nor","type":"file","file":"rag/ingesta/Normalization.md","subpath":"#Normalization","x":1520,"y":1160,"width":520,"height":760},
+		{"id":"ids","type":"file","file":"rag/ingesta/Document IDs.md","subpath":"#Document IDs","x":2100,"y":1160,"width":520,"height":760},
+		{"id":"dedup","type":"file","file":"rag/ingesta/Deduplication.md","subpath":"#Deduplication","x":2680,"y":1160,"width":520,"height":760},
+		{"id":"inc","type":"file","file":"rag/ingesta/Incremental sync.md","subpath":"#Incremental sync","x":940,"y":2160,"width":520,"height":760},
+		{"id":"cache","type":"file","file":"rag/ingesta/Caching.md","subpath":"#Caching","x":1520,"y":2160,"width":520,"height":760},
+		{"id":"acl","type":"file","file":"rag/ingesta/ACLs.md","subpath":"#ACLs","x":2100,"y":2160,"width":520,"height":760},
+		{"id":"hub","type":"file","file":"rag/RAG.md","subpath":"#RAG","x":0,"y":0,"width":600,"height":760}
+	],
+	"edges":[
+		{"id":"e1","fromNode":"con","fromSide":"right","toNode":"nor","toSide":"left"},
+		{"id":"e2","fromNode":"nor","fromSide":"right","toNode":"ids","toSide":"left"},
+		{"id":"e3","fromNode":"ids","fromSide":"right","toNode":"dedup","toSide":"left"},
+		{"id":"e4","fromNode":"inc","fromSide":"top","toNode":"con","toSide":"bottom","label":"qué reprocesar"},
+		{"id":"e5","fromNode":"cache","fromSide":"top","toNode":"nor","toSide":"bottom","label":"embeddings cacheados"},
+		{"id":"e6","fromNode":"acl","fromSide":"top","toNode":"ids","toSide":"bottom","label":"acl por chunk"},
+		{"id":"e7","fromNode":"ann","fromSide":"bottom","toNode":"ragb","toSide":"top","label":"búsqueda rápida"},
+		{"id":"e8","fromNode":"ragb","fromSide":"bottom","toNode":"ragag","toSide":"top","label":"cuando 1 búsqueda no alcanza"},
+		{"id":"e9","fromNode":"g-ing","fromSide":"left","toNode":"ann","toSide":"right","label":"alimenta la Vector DB"}
+	]
+}

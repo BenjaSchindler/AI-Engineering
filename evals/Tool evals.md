@@ -1,6 +1,7 @@
 ---
 tipo: eval
 dominio: evals
+parent: "[[Evals]]"
 estado: por-ver
 prereqs: ["[[Golden dataset]]"]
 se_evalua_con: []

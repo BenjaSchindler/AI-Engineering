@@ -1,10 +1,11 @@
 ---
 tipo: patrón
 dominio: rag
+parent: "[[RAG]]"
 estado: por-ver
-prereqs: ["[[RAG]]"]
+prereqs: ["[[RAG básico]]"]
 se_evalua_con: ["[[Tool evals]]", "[[Multi-agent evals]]"]
-contrasta_con: ["[[RAG]]"]
+contrasta_con: ["[[RAG básico]]"]
 fuentes: []
 ---
 # RAG agéntico
@@ -27,7 +28,7 @@ flowchart TB
 ```
 
 ## RAG vs RAG agéntico
-| | [[RAG]] | RAG agéntico |
+| | [[RAG básico]] | RAG agéntico |
 |---|---|---|
 | Búsquedas | 1, fija | N, decididas en runtime |
 | Fuentes | Una Vector DB | Varias herramientas |

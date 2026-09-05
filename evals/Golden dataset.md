@@ -1,6 +1,7 @@
 ---
 tipo: eval
 dominio: evals
+parent: "[[Evals]]"
 estado: por-ver
 prereqs: []
 se_evalua_con: []
@@ -41,4 +42,4 @@ flowchart LR
 - Cada fallo reportado por un usuario → un caso nuevo.
 
 ## Se conecta con
-Alimenta [[Evals]], [[Tool evals]] y [[Multi-agent evals]]. Mide el recall de [[ANN HNSW]] y la calidad de [[RAG]].
+Alimenta [[Evals]], [[Tool evals]] y [[Multi-agent evals]]. Mide el recall de [[ANN HNSW]] y la calidad de [[RAG básico]].

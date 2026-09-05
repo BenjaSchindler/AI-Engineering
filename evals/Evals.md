@@ -1,15 +1,28 @@
 ---
-tipo: eval
+tipo: mapa
 dominio: evals
 estado: por-ver
 prereqs: ["[[Golden dataset]]"]
-se_evalua_con: []
-contrasta_con: []
 fuentes: []
 ---
 # Evals
 
 > **En una frase:** sin evals no sabés si el cambio que hiciste mejoró o rompió algo. Es el test suite de un sistema no determinístico.
+
+## Mapa
+```mermaid
+mindmap
+  root((Evals))
+    Golden dataset
+      casos curados
+      versionado en git
+    Tool evals
+      tool correcta
+      args correctos
+    Multi-agent evals
+      trayectoria
+      handoffs
+```
 
 ## Diagrama
 ```mermaid
@@ -45,5 +58,10 @@ flowchart TB
 - LLM-as-judge necesita su propia eval: ¿el juez coincide con humanos?
 - Corré los evals en CI. Un cambio de prompt es un deploy.
 
-## Nodos
-[[Golden dataset]] · [[Tool evals]] · [[Multi-agent evals]]
+## Estado de los nodos
+```dataview
+TABLE WITHOUT ID file.link AS nodo, estado
+FROM "evals" WHERE tipo != "mapa" SORT file.name
+```
+
+[[Evals.canvas|Abrir el canvas de Evals]] · para ver solo este subgrafo: clic derecho en esta nota → *Open local graph*.

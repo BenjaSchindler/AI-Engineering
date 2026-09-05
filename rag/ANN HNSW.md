@@ -1,6 +1,7 @@
 ---
 tipo: concepto
-dominio: retrieval
+dominio: rag
+parent: "[[RAG]]"
 estado: por-ver
 prereqs: ["[[Vector DB]]"]
 se_evalua_con: ["[[Golden dataset]]"]
@@ -47,4 +48,4 @@ Búsqueda: entrás por arriba, en cada capa saltás al vecino más cercano a la 
 - Filtrar por metadata (ej. [[ACLs]]) durante la búsqueda degrada el grafo. Los DBs modernos hacen "filtered HNSW", pero probalo con tus filtros reales.
 
 ## Se conecta con
-[[Vector DB]] · [[RAG]]
+[[Vector DB]] · [[RAG básico]]

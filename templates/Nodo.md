@@ -1,7 +1,8 @@
 ---
 tipo: concepto
-dominio: 
+dominio:
 estado: por-ver
+parent:
 prereqs: []
 se_evalua_con: []
 contrasta_con: []
@@ -9,7 +10,7 @@ fuentes: []
 ---
 # {{title}}
 
-> **En una frase:** 
+> **En una frase:**
 
 ## Diagrama
 ```mermaid
@@ -23,7 +24,7 @@ flowchart LR
 |  |  |
 
 ## Trade-offs
-- 
+-
 
 ## Se conecta con
 [[ ]]

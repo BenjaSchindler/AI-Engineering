@@ -1,0 +1,44 @@
+{
+ "nodes": [
+  {
+   "id": "hub",
+   "type": "file",
+   "file": "multiagente/Multiagente.md",
+   "subpath": "#Multiagente",
+   "x": 0,
+   "y": 0,
+   "width": 560,
+   "height": 760
+  },
+  {
+   "id": "orq",
+   "type": "file",
+   "file": "multiagente/Orquestador workers.md",
+   "subpath": "#Orquestador / workers",
+   "x": 760,
+   "y": 0,
+   "width": 600,
+   "height": 1000
+  },
+  {
+   "id": "rou",
+   "type": "file",
+   "file": "multiagente/Router handoff.md",
+   "subpath": "#Router / handoff",
+   "x": 1560,
+   "y": 0,
+   "width": 600,
+   "height": 700
+  }
+ ],
+ "edges": [
+  {
+   "id": "e1",
+   "fromNode": "orq",
+   "fromSide": "right",
+   "toNode": "rou",
+   "toSide": "left",
+   "label": "contrasta con"
+  }
+ ]
+}

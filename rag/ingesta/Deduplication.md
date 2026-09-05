@@ -1,6 +1,7 @@
 ---
 tipo: pipeline
-dominio: retrieval
+dominio: rag
+parent: "[[Vector DB]]"
 estado: por-ver
 prereqs: ["[[Normalization]]", "[[Document IDs]]"]
 se_evalua_con: ["[[Golden dataset]]"]

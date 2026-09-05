@@ -1,6 +1,7 @@
 ---
 tipo: patrón
 dominio: multiagente
+parent: "[[Multiagente]]"
 estado: por-ver
 prereqs: []
 se_evalua_con: ["[[Multi-agent evals]]"]

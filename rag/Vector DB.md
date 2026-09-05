@@ -1,6 +1,7 @@
 ---
 tipo: pipeline
-dominio: retrieval
+dominio: rag
+parent: "[[RAG]]"
 estado: por-ver
 prereqs: []
 se_evalua_con: ["[[Golden dataset]]"]
@@ -53,4 +54,4 @@ flowchart LR
 - De miles a millones de vectores la búsqueda exacta no escala → [[ANN HNSW]].
 
 ## Se conecta con
-[[ANN HNSW]] · [[RAG]] · [[Golden dataset]]
+[[ANN HNSW]] · [[RAG básico]] · [[Golden dataset]]

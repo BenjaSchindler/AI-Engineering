@@ -1,0 +1,12 @@
+{
+	"nodes":[
+		{"id":"gold","type":"file","file":"evals/Golden dataset.md","subpath":"#Golden dataset","x":760,"y":0,"width":1040,"height":1240},
+		{"id":"hub","type":"file","file":"evals/Evals.md","subpath":"#Evals","x":-700,"y":-100,"width":1400,"height":2220},
+		{"id":"tool","type":"file","file":"evals/Tool evals.md","subpath":"#Tool evals","x":2080,"y":80,"width":2080,"height":1080},
+		{"id":"mae","type":"file","file":"evals/Multi-agent evals.md","subpath":"#Multi-agent evals","x":2380,"y":1420,"width":1480,"height":1400}
+	],
+	"edges":[
+		{"id":"e1","fromNode":"gold","fromSide":"right","toNode":"tool","toSide":"left","label":"casos"},
+		{"id":"e2","fromNode":"tool","fromSide":"bottom","toNode":"mae","toSide":"top","label":"por agente"}
+	]
+}
