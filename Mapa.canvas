@@ -1,0 +1,341 @@
+{
+ "nodes": [
+  {
+   "id": "g-ret",
+   "type": "group",
+   "label": "Retrieval",
+   "x": 0,
+   "y": 0,
+   "width": 1560,
+   "height": 500,
+   "color": "#1D9E75"
+  },
+  {
+   "id": "vdb",
+   "type": "file",
+   "file": "retrieval/Vector DB.md",
+   "x": 40,
+   "y": 60,
+   "width": 300,
+   "height": 180
+  },
+  {
+   "id": "ann",
+   "type": "file",
+   "file": "retrieval/ANN HNSW.md",
+   "x": 40,
+   "y": 280,
+   "width": 300,
+   "height": 180
+  },
+  {
+   "id": "g-ing",
+   "type": "group",
+   "label": "Pipeline de ingesta · las 7 preguntas",
+   "x": 400,
+   "y": 40,
+   "width": 1120,
+   "height": 430,
+   "color": "#EF9F27"
+  },
+  {
+   "id": "con",
+   "type": "file",
+   "file": "retrieval/ingesta/Connector.md",
+   "x": 440,
+   "y": 90,
+   "width": 240,
+   "height": 150
+  },
+  {
+   "id": "nor",
+   "type": "file",
+   "file": "retrieval/ingesta/Normalization.md",
+   "x": 700,
+   "y": 90,
+   "width": 240,
+   "height": 150
+  },
+  {
+   "id": "ids",
+   "type": "file",
+   "file": "retrieval/ingesta/Document IDs.md",
+   "x": 960,
+   "y": 90,
+   "width": 240,
+   "height": 150
+  },
+  {
+   "id": "dedup",
+   "type": "file",
+   "file": "retrieval/ingesta/Deduplication.md",
+   "x": 1220,
+   "y": 90,
+   "width": 240,
+   "height": 150
+  },
+  {
+   "id": "inc",
+   "type": "file",
+   "file": "retrieval/ingesta/Incremental sync.md",
+   "x": 440,
+   "y": 280,
+   "width": 240,
+   "height": 150
+  },
+  {
+   "id": "cache",
+   "type": "file",
+   "file": "retrieval/ingesta/Caching.md",
+   "x": 700,
+   "y": 280,
+   "width": 240,
+   "height": 150
+  },
+  {
+   "id": "acl",
+   "type": "file",
+   "file": "retrieval/ingesta/ACLs.md",
+   "x": 960,
+   "y": 280,
+   "width": 240,
+   "height": 150
+  },
+  {
+   "id": "g-rag",
+   "type": "group",
+   "label": "RAG",
+   "x": 0,
+   "y": 560,
+   "width": 760,
+   "height": 280,
+   "color": "#7F77DD"
+  },
+  {
+   "id": "rag",
+   "type": "file",
+   "file": "rag/RAG.md",
+   "x": 40,
+   "y": 620,
+   "width": 320,
+   "height": 180
+  },
+  {
+   "id": "ragag",
+   "type": "file",
+   "file": "rag/RAG agéntico.md",
+   "x": 400,
+   "y": 620,
+   "width": 320,
+   "height": 180
+  },
+  {
+   "id": "g-multi",
+   "type": "group",
+   "label": "Multiagente",
+   "x": 800,
+   "y": 560,
+   "width": 760,
+   "height": 280,
+   "color": "#D85A30"
+  },
+  {
+   "id": "orq",
+   "type": "file",
+   "file": "multiagente/Orquestador workers.md",
+   "x": 840,
+   "y": 620,
+   "width": 320,
+   "height": 180
+  },
+  {
+   "id": "rou",
+   "type": "file",
+   "file": "multiagente/Router handoff.md",
+   "x": 1200,
+   "y": 620,
+   "width": 320,
+   "height": 180
+  },
+  {
+   "id": "g-ev",
+   "type": "group",
+   "label": "Evals · atraviesa todo",
+   "x": 0,
+   "y": 900,
+   "width": 1560,
+   "height": 280,
+   "color": "#888780"
+  },
+  {
+   "id": "ev",
+   "type": "file",
+   "file": "evals/Evals.md",
+   "x": 40,
+   "y": 960,
+   "width": 340,
+   "height": 180
+  },
+  {
+   "id": "gold",
+   "type": "file",
+   "file": "evals/Golden dataset.md",
+   "x": 420,
+   "y": 960,
+   "width": 340,
+   "height": 180
+  },
+  {
+   "id": "tool",
+   "type": "file",
+   "file": "evals/Tool evals.md",
+   "x": 800,
+   "y": 960,
+   "width": 340,
+   "height": 180
+  },
+  {
+   "id": "mae",
+   "type": "file",
+   "file": "evals/Multi-agent evals.md",
+   "x": 1180,
+   "y": 960,
+   "width": 340,
+   "height": 180
+  }
+ ],
+ "edges": [
+  {
+   "id": "e1",
+   "fromNode": "con",
+   "fromSide": "right",
+   "toNode": "nor",
+   "toSide": "left"
+  },
+  {
+   "id": "e2",
+   "fromNode": "nor",
+   "fromSide": "right",
+   "toNode": "ids",
+   "toSide": "left"
+  },
+  {
+   "id": "e3",
+   "fromNode": "ids",
+   "fromSide": "right",
+   "toNode": "dedup",
+   "toSide": "left"
+  },
+  {
+   "id": "e4",
+   "fromNode": "inc",
+   "fromSide": "top",
+   "toNode": "con",
+   "toSide": "bottom",
+   "label": "qué reprocesar"
+  },
+  {
+   "id": "e5",
+   "fromNode": "cache",
+   "fromSide": "top",
+   "toNode": "nor",
+   "toSide": "bottom",
+   "label": "embeddings cacheados"
+  },
+  {
+   "id": "e6",
+   "fromNode": "acl",
+   "fromSide": "top",
+   "toNode": "ids",
+   "toSide": "bottom",
+   "label": "acl por chunk"
+  },
+  {
+   "id": "e7",
+   "fromNode": "g-ing",
+   "fromSide": "left",
+   "toNode": "vdb",
+   "toSide": "right",
+   "label": "alimenta"
+  },
+  {
+   "id": "e8",
+   "fromNode": "vdb",
+   "fromSide": "bottom",
+   "toNode": "ann",
+   "toSide": "top",
+   "label": "escala con"
+  },
+  {
+   "id": "e9",
+   "fromNode": "vdb",
+   "fromSide": "bottom",
+   "toNode": "rag",
+   "toSide": "top",
+   "label": "alimenta"
+  },
+  {
+   "id": "e10",
+   "fromNode": "rag",
+   "fromSide": "right",
+   "toNode": "ragag",
+   "toSide": "left",
+   "label": "cuando 1 búsqueda no alcanza"
+  },
+  {
+   "id": "e11",
+   "fromNode": "ragag",
+   "fromSide": "right",
+   "toNode": "orq",
+   "toSide": "left",
+   "label": "sub-tareas distintas"
+  },
+  {
+   "id": "e12",
+   "fromNode": "orq",
+   "fromSide": "right",
+   "toNode": "rou",
+   "toSide": "left",
+   "label": "contrasta con"
+  },
+  {
+   "id": "e13",
+   "fromNode": "gold",
+   "fromSide": "left",
+   "toNode": "ev",
+   "toSide": "right",
+   "label": "alimenta"
+  },
+  {
+   "id": "e14",
+   "fromNode": "gold",
+   "fromSide": "right",
+   "toNode": "tool",
+   "toSide": "left"
+  },
+  {
+   "id": "e15",
+   "fromNode": "tool",
+   "fromSide": "right",
+   "toNode": "mae",
+   "toSide": "left",
+   "label": "nivel de sistema"
+  },
+  {
+   "id": "e16",
+   "fromNode": "g-ev",
+   "fromSide": "top",
+   "toNode": "g-rag",
+   "toSide": "bottom",
+   "label": "evalúa"
+  },
+  {
+   "id": "e17",
+   "fromNode": "g-ev",
+   "fromSide": "top",
+   "toNode": "g-multi",
+   "toSide": "bottom",
+   "label": "evalúa"
+  }
+ ]
+}
