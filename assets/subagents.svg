@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="668" viewBox="0 0 900 668" role="img" aria-labelledby="title desc">
+<title id="title">Subagents · qué cruza y qué no</title>
+<desc id="desc">El agente principal, con la conversación completa, envía un brief al subagente: objetivo, formato de salida, tools y fuentes, límites de la tarea, IDs, permisos y presupuesto. El subagente trabaja en su propio contexto limpio: lee una póliza de 80 páginas con 12 llamadas a tools y no recuerda invocaciones anteriores. Devuelve un resultado compacto: tres exclusiones con su página, el estado, lo que no pudo verificar y una referencia al informe guardado. No cruzan la conversación completa, el PDF crudo ni los resultados intermedios, la memoria de invocaciones anteriores ni las credenciales del principal. Un brief vago hace que dos subagentes repitan trabajo; uno claro fija alcance y formato.</desc>
+<defs>
+<marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M2 1 L9 5 L2 9" fill="none" stroke="#68675F" stroke-width="1.5"/></marker>
+<marker id="arrp" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M2 1 L9 5 L2 9" fill="none" stroke="#534AB7" stroke-width="1.5"/></marker>
+<marker id="arrg" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M2 1 L9 5 L2 9" fill="none" stroke="#0F6E56" stroke-width="1.5"/></marker>
+</defs>
+<g font-family="system-ui,-apple-system,Segoe UI,sans-serif">
+<rect x="0" y="0" width="900" height="668" rx="12" fill="#FBFAF7"/>
+<text x="28" y="35" font-size="17" fill="#68675F" font-weight="600">SUBAGENTS · QUÉ CRUZA Y QUÉ NO</text>
+<rect x="28" y="58" width="214" height="250" rx="12" fill="#F1EFE8" stroke="#444441" stroke-width="1.5"/>
+<text x="44" y="84" font-size="14.5" fill="#444441" font-weight="600">Agente principal</text>
+<text x="44" y="102" font-size="12" fill="#444441">tiene todo el contexto</text>
+<text x="44" y="128" font-size="12.5" fill="#444441">• conversación completa</text>
+<text x="44" y="149" font-size="12.5" fill="#444441">  (30 turnos)</text>
+<text x="44" y="170" font-size="12.5" fill="#444441">• decide qué delegar</text>
+<text x="44" y="191" font-size="12.5" fill="#444441">• integra el resultado</text>
+<text x="44" y="212" font-size="12.5" fill="#444441">• responde al usuario</text>
+<rect x="658" y="58" width="214" height="250" rx="12" fill="#E1F5EE" stroke="#0F6E56" stroke-width="1.5"/>
+<text x="674" y="84" font-size="14.5" fill="#0F6E56" font-weight="600">Subagente</text>
+<text x="674" y="102" font-size="12" fill="#0F6E56">contexto propio y limpio</text>
+<text x="674" y="128" font-size="12.5" fill="#444441">• lee la póliza P-17</text>
+<text x="674" y="149" font-size="12.5" fill="#444441">  (80 páginas)</text>
+<text x="674" y="170" font-size="12.5" fill="#444441">• 12 llamadas a tools</text>
+<text x="674" y="191" font-size="12.5" fill="#444441">• no recuerda invocaciones</text>
+<text x="674" y="212" font-size="12.5" fill="#444441">  anteriores</text>
+<rect x="270" y="58" width="360" height="128" rx="10" fill="#EEEDFE" stroke="#534AB7"/>
+<text x="284" y="80" font-size="13.5" fill="#534AB7" font-weight="600">Brief · lo que viaja de ida</text>
+<text x="284" y="102" font-size="11.5" fill="#534AB7" font-weight="600">objetivo</text>
+<text x="382" y="102" font-size="11.5" fill="#444441">exclusiones de P-17 sobre inundación</text>
+<text x="284" y="119" font-size="11.5" fill="#534AB7" font-weight="600">formato</text>
+<text x="382" y="119" font-size="11.5" fill="#444441">lista con texto, página y certeza</text>
+<text x="284" y="136" font-size="11.5" fill="#534AB7" font-weight="600">tools y fuentes</text>
+<text x="382" y="136" font-size="11.5" fill="#444441">solo el PDF vigente de la póliza</text>
+<text x="284" y="153" font-size="11.5" fill="#534AB7" font-weight="600">límites</text>
+<text x="382" y="153" font-size="11.5" fill="#444441">no cotizar ni escribir; máx. 20 llamadas</text>
+<text x="284" y="170" font-size="11.5" fill="#534AB7" font-weight="600">contexto</text>
+<text x="382" y="170" font-size="11.5" fill="#444441">cliente A, póliza v4, permisos de lectura</text>
+<path d="M244 110 H266" stroke="#534AB7" stroke-width="2" marker-end="url(#arrp)"/>
+<path d="M632 110 H654" stroke="#534AB7" stroke-width="2" marker-end="url(#arrp)"/>
+<rect x="270" y="200" width="360" height="108" rx="10" fill="#FFFFFF" stroke="#0F6E56"/>
+<text x="284" y="222" font-size="13.5" fill="#0F6E56" font-weight="600">Resultado · lo que vuelve</text>
+<text x="284" y="244" font-size="11.5" fill="#444441">3 exclusiones, cada una con su página</text>
+<text x="284" y="261" font-size="11.5" fill="#444441">estado: completo · no pudo leer el anexo B</text>
+<text x="284" y="278" font-size="11.5" fill="#444441">referencia al informe guardado en archivos</text>
+<text x="284" y="295" font-size="11.5" fill="#444441">≈ 400 tokens, no los 60k de su trabajo</text>
+<path d="M654 254 H634" stroke="#0F6E56" stroke-width="2" marker-end="url(#arrg)"/>
+<path d="M268 254 H246" stroke="#0F6E56" stroke-width="2" marker-end="url(#arrg)"/>
+<text x="28" y="336" font-size="14" fill="#993C1D" font-weight="600">No cruza</text>
+<rect x="28" y="348" width="172" height="30" rx="15" fill="#FAECE7" stroke="#993C1D"/>
+<text x="114.0" y="368" font-size="12.5" fill="#993C1D" text-anchor="middle">la conversación completa</text>
+<rect x="208" y="348" width="232" height="30" rx="15" fill="#FAECE7" stroke="#993C1D"/>
+<text x="324.0" y="368" font-size="12.5" fill="#993C1D" text-anchor="middle">el PDF crudo y los pasos intermedios</text>
+<rect x="448" y="348" width="200" height="30" rx="15" fill="#FAECE7" stroke="#993C1D"/>
+<text x="548.0" y="368" font-size="12.5" fill="#993C1D" text-anchor="middle">la memoria entre invocaciones</text>
+<rect x="656" y="348" width="196" height="30" rx="15" fill="#FAECE7" stroke="#993C1D"/>
+<text x="754.0" y="368" font-size="12.5" fill="#993C1D" text-anchor="middle">las credenciales del principal</text>
+<text x="28" y="400" font-size="12" fill="#5F5E5A">Si el subagente necesita parte de la conversación, se la pasás explícitamente en el brief.</text>
+<text x="28" y="432" font-size="14" fill="#444441" font-weight="600">El brief define el trabajo</text>
+<rect x="28" y="444" width="414" height="96" rx="10" fill="#FAECE7" stroke="#993C1D"/>
+<text x="44" y="466" font-size="13" fill="#993C1D" font-weight="600">Vago: “revisá la póliza”</text>
+<text x="44" y="488" font-size="12.5" fill="#444441">dos subagentes leen las mismas secciones,</text>
+<text x="44" y="506" font-size="12.5" fill="#444441">nadie mira los anexos y cada uno devuelve</text>
+<text x="44" y="524" font-size="12.5" fill="#444441">un formato distinto</text>
+<rect x="458" y="444" width="414" height="96" rx="10" fill="#E1F5EE" stroke="#0F6E56"/>
+<text x="474" y="466" font-size="13" fill="#0F6E56" font-weight="600">Claro: alcance, fuentes y formato</text>
+<text x="474" y="488" font-size="12.5" fill="#444441">uno revisa el cuerpo y otro los anexos;</text>
+<text x="474" y="506" font-size="12.5" fill="#444441">los dos devuelven la misma lista con página,</text>
+<text x="474" y="524" font-size="12.5" fill="#444441">así el principal puede integrarlas</text>
+<text x="28" y="572" font-size="14.5" fill="#444441">Cada subagente trabaja en su propia ventana y devuelve poco: más contexto útil, en paralelo.</text>
+<text x="28" y="594" font-size="14.5" fill="#854F0B">El costo sube: el sistema multiagente de Anthropic usó unas 15 veces los tokens de un chat.</text>
+<text x="28" y="618" font-size="12.5" fill="#888780">Patrón de subagents de LangChain y sistema de investigación multiagente de Anthropic, consultados el 25-09-2026. Caso ilustrativo.</text>
+</g></svg>
