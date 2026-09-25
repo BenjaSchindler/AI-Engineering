@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="600" viewBox="0 0 900 600" role="img" aria-labelledby="title desc"><title id="title">Presupuesto de contexto · antes y después de liberar espacio</title><desc id="desc">Ventana de 200k tokens en el turno 30 de un agente: instrucciones y tools 20k, historial 40k, resultados de tools 110k y reserva de salida 30k, sin margen. Después de compactar el historial a 20k y descargar los resultados a 12k de extractos más una referencia, la ventana usa 82k y quedan 118k libres.</desc><g font-family="system-ui,-apple-system,Segoe UI,sans-serif"><rect x="0" y="0" width="900" height="600" rx="12" fill="#FBFAF7" stroke="none"/>
+<text x="28" y="35" font-size="17" fill="#68675F" font-weight="600">PRESUPUESTO DE CONTEXTO · LA VENTANA ES UNA SOLA</text>
+
+<text x="310" y="74" font-size="14" fill="#993C1D" font-weight="600" text-anchor="middle">ANTES · 200k DE 200k</text>
+<text x="590" y="74" font-size="14" fill="#0F6E56" font-weight="600" text-anchor="middle">DESPUÉS · 82k DE 200k</text>
+
+<path d="M370 90 C450 90 450 90 530 90 L530 130 C450 130 450 130 370 130 Z" fill="#E6F1FB" opacity="0.7"/>
+<path d="M370 130 C450 130 450 130 530 130 L530 170 C450 170 450 210 370 210 Z" fill="#EEEDFE" opacity="0.9"/>
+<path d="M370 210 C450 210 450 170 530 170 L530 194 C450 194 450 430 370 430 Z" fill="#FAEEDA" opacity="0.9"/>
+<path d="M370 430 C450 430 450 430 530 430 L530 490 C450 490 450 490 370 490 Z" fill="#E1F5EE" opacity="0.7"/>
+
+<text x="450" y="158" font-size="14" fill="#3C3489" font-weight="600" text-anchor="middle">compactar</text>
+<text x="450" y="176" font-size="13" fill="#534AB7" text-anchor="middle">40k → 20k</text>
+<text x="450" y="244" font-size="14" fill="#633806" font-weight="600" text-anchor="middle">descargar</text>
+<text x="450" y="262" font-size="13" fill="#854F0B" text-anchor="middle">110k → 12k</text>
+<text x="450" y="457" font-size="14" fill="#0F6E56" font-weight="600" text-anchor="middle">reservar</text>
+<text x="450" y="475" font-size="13" fill="#0F6E56" text-anchor="middle">no se toca</text>
+
+<rect x="250" y="90" width="120" height="40" fill="#E6F1FB" stroke="#185FA5"/>
+<rect x="250" y="130" width="120" height="80" fill="#EEEDFE" stroke="#534AB7"/>
+<rect x="250" y="210" width="120" height="220" fill="#FAEEDA" stroke="#854F0B"/>
+<rect x="250" y="430" width="120" height="60" fill="#E1F5EE" stroke="#0F6E56"/>
+
+<text x="236" y="115" font-size="15" fill="#185FA5" text-anchor="end">Instrucciones + tools · 20k</text>
+<text x="236" y="175" font-size="15" fill="#534AB7" text-anchor="end">Historial · 40k</text>
+<text x="236" y="316" font-size="15" fill="#854F0B" text-anchor="end">Resultados de tools · 110k</text>
+<text x="236" y="336" font-size="13" fill="#888780" text-anchor="end">PDF completo, logs</text>
+<text x="236" y="465" font-size="15" fill="#0F6E56" text-anchor="end">Reserva de salida · 30k</text>
+
+<rect x="530" y="90" width="120" height="40" fill="#E6F1FB" stroke="#185FA5"/>
+<rect x="530" y="130" width="120" height="10" fill="#EEEDFE" stroke="#534AB7"/>
+<rect x="530" y="140" width="120" height="30" fill="#EEEDFE" stroke="#534AB7"/>
+<rect x="530" y="170" width="120" height="24" fill="#FAEEDA" stroke="#854F0B"/>
+<rect x="530.5" y="194.5" width="119" height="235" fill="none" stroke="#888780" stroke-dasharray="5 4"/>
+<rect x="530" y="430" width="120" height="60" fill="#E1F5EE" stroke="#0F6E56"/>
+<text x="590" y="306" font-size="16" fill="#0F6E56" font-weight="600" text-anchor="middle">Libre</text>
+<text x="590" y="326" font-size="15" fill="#0F6E56" text-anchor="middle">118k</text>
+
+<text x="664" y="115" font-size="15" fill="#185FA5">Instrucciones + tools · 20k</text>
+<text x="664" y="139" font-size="14" fill="#534AB7">Resumen · 5k</text>
+<text x="664" y="161" font-size="14" fill="#534AB7">Últimos turnos · 15k</text>
+<text x="664" y="187" font-size="14" fill="#854F0B">Extractos + referencia · 12k</text>
+<rect x="664" y="228" width="214" height="88" rx="8" fill="#FAEEDA" stroke="#854F0B" stroke-dasharray="5 4"/>
+<text x="680" y="254" font-size="15" fill="#854F0B" font-weight="600">Fuera del prompt</text>
+<text x="680" y="276" font-size="14" fill="#854F0B">PDF completo · 98k</text>
+<text x="680" y="297" font-size="14" fill="#854F0B">se relee por referencia</text>
+<text x="664" y="465" font-size="15" fill="#0F6E56">Reserva de salida · 30k</text>
+
+<text x="28" y="530" font-size="15" fill="#444441">Contá con el tokenizer del modelo y reservá la salida antes de llamar: si no entra, la respuesta se corta.</text>
+<text x="28" y="553" font-size="15" fill="#993C1D">Que entre no significa que sirva: el resumen puede perder una restricción y lo del medio se usa peor.</text>
+<text x="28" y="584" font-size="13" fill="#888780">Números ilustrativos para una ventana de 200k tokens.</text>
+</g></svg>
