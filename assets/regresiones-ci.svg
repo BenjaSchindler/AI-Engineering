@@ -1,0 +1,130 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="612" viewBox="0 0 900 612" role="img" aria-labelledby="title desc">
+<title id="title">Regresiones y CI · regresión o ruido</title>
+<desc id="desc">Una suite de 40 casos corrida 5 veces con la versión base y 5 con la candidata. La tasa de éxito por corrida va de 85 a 90 % en la base y de 83 a 88 % en la candidata: los rangos se superponen y el promedio (87,4 contra 85,4) no distingue. Caso por caso, “reintento tras timeout” pasa 5 de 5 en la base y falla 5 de 5 en la candidata porque duplica la cotización: es reproducible y crítico, así que el gate bloquea. “Moneda EUR” mejora de 3 de 5 a 5 de 5 y “endoso cambia límite” falla 1 de 5 en ambas: eso es variabilidad.</desc>
+<g font-family="system-ui,-apple-system,Segoe UI,sans-serif">
+<rect x="0" y="0" width="900" height="612" rx="12" fill="#FBFAF7"/>
+<text x="28" y="35" font-size="17" fill="#68675F" font-weight="600">REGRESIONES Y CI · ¿REGRESIÓN O RUIDO?</text>
+<text x="28" y="66" font-size="14" fill="#444441" font-weight="600">Tasa de éxito por corrida</text>
+<text x="28" y="84" font-size="12" fill="#888780">40 casos · 5 corridas de cada versión</text>
+<path d="M78 350.0 H372" stroke="#E4E2DA" fill="none"/>
+<text x="70" y="354.0" font-size="12" fill="#888780" text-anchor="end">80 %</text>
+<path d="M78 270.0 H372" stroke="#E4E2DA" fill="none"/>
+<text x="70" y="274.0" font-size="12" fill="#888780" text-anchor="end">85 %</text>
+<path d="M78 190.0 H372" stroke="#E4E2DA" fill="none"/>
+<text x="70" y="194.0" font-size="12" fill="#888780" text-anchor="end">90 %</text>
+<path d="M78 110.0 H372" stroke="#E4E2DA" fill="none"/>
+<text x="70" y="114.0" font-size="12" fill="#888780" text-anchor="end">95 %</text>
+<rect x="78" y="190.0" width="294" height="80.0" fill="#F1EFE8" stroke="#B4B2A9" stroke-dasharray="4 3"/>
+<text x="366" y="205.0" font-size="11" fill="#888780" text-anchor="end">rango de la base</text>
+<circle cx="142" cy="222.0" r="6" fill="#444441" fill-opacity="0.85" stroke="#FBFAF7" stroke-width="1.5"/>
+<circle cx="151" cy="270.0" r="6" fill="#444441" fill-opacity="0.85" stroke="#FBFAF7" stroke-width="1.5"/>
+<circle cx="160" cy="190.0" r="6" fill="#444441" fill-opacity="0.85" stroke="#FBFAF7" stroke-width="1.5"/>
+<circle cx="169" cy="222.0" r="6" fill="#444441" fill-opacity="0.85" stroke="#FBFAF7" stroke-width="1.5"/>
+<circle cx="178" cy="254.0" r="6" fill="#444441" fill-opacity="0.85" stroke="#FBFAF7" stroke-width="1.5"/>
+<path d="M130 231.6 H190" stroke="#444441" stroke-width="2.5"/>
+<text x="160" y="372" font-size="13" fill="#444441" font-weight="600" text-anchor="middle">base v1</text>
+<text x="160" y="390" font-size="12" fill="#444441" text-anchor="middle">promedio 87,4 %</text>
+<circle cx="282" cy="270.0" r="6" fill="#185FA5" fill-opacity="0.85" stroke="#FBFAF7" stroke-width="1.5"/>
+<circle cx="291" cy="222.0" r="6" fill="#185FA5" fill-opacity="0.85" stroke="#FBFAF7" stroke-width="1.5"/>
+<circle cx="300" cy="302.0" r="6" fill="#185FA5" fill-opacity="0.85" stroke="#FBFAF7" stroke-width="1.5"/>
+<circle cx="309" cy="254.0" r="6" fill="#185FA5" fill-opacity="0.85" stroke="#FBFAF7" stroke-width="1.5"/>
+<circle cx="318" cy="270.0" r="6" fill="#185FA5" fill-opacity="0.85" stroke="#FBFAF7" stroke-width="1.5"/>
+<path d="M270 263.6 H330" stroke="#185FA5" stroke-width="2.5"/>
+<text x="300" y="372" font-size="13" fill="#185FA5" font-weight="600" text-anchor="middle">candidata v2</text>
+<text x="300" y="390" font-size="12" fill="#185FA5" text-anchor="middle">promedio 85,4 %</text>
+<text x="28" y="422" font-size="13" fill="#5F5E5A">Los rangos se superponen: el promedio</text>
+<text x="28" y="440" font-size="13" fill="#5F5E5A">no alcanza para decidir.</text>
+<text x="420" y="66" font-size="14" fill="#444441" font-weight="600">Caso por caso, 5 repeticiones</text>
+<text x="420" y="84" font-size="12" fill="#888780">6 de los 40 casos</text>
+<text x="665.5" y="104" font-size="12" fill="#444441" font-weight="600" text-anchor="middle">base v1</text>
+<text x="793.5" y="104" font-size="12" fill="#185FA5" font-weight="600" text-anchor="middle">candidata v2</text>
+<text x="420" y="129" font-size="13" fill="#444441" font-weight="400">Cotizar sin endosos</text>
+<rect x="620" y="116" width="15" height="15" rx="3" fill="#0F6E56" opacity="1"/>
+<rect x="639" y="116" width="15" height="15" rx="3" fill="#0F6E56" opacity="1"/>
+<rect x="658" y="116" width="15" height="15" rx="3" fill="#0F6E56" opacity="1"/>
+<rect x="677" y="116" width="15" height="15" rx="3" fill="#0F6E56" opacity="1"/>
+<rect x="696" y="116" width="15" height="15" rx="3" fill="#0F6E56" opacity="1"/>
+<rect x="748" y="116" width="15" height="15" rx="3" fill="#0F6E56"/>
+<rect x="767" y="116" width="15" height="15" rx="3" fill="#0F6E56"/>
+<rect x="786" y="116" width="15" height="15" rx="3" fill="#0F6E56"/>
+<rect x="805" y="116" width="15" height="15" rx="3" fill="#0F6E56"/>
+<rect x="824" y="116" width="15" height="15" rx="3" fill="#0F6E56"/>
+<text x="719" y="129" font-size="11" fill="#888780">5/5</text>
+<text x="847" y="129" font-size="11" fill="#888780" font-weight="400">5/5</text>
+<text x="420" y="169" font-size="13" fill="#444441" font-weight="400">Endoso cambia el límite</text>
+<text x="420" y="184" font-size="11" fill="#888780">variabilidad: 4/5 en ambas</text>
+<rect x="620" y="156" width="15" height="15" rx="3" fill="#0F6E56" opacity="1"/>
+<rect x="639" y="156" width="15" height="15" rx="3" fill="#0F6E56" opacity="1"/>
+<rect x="658" y="156" width="15" height="15" rx="3" fill="#993C1D" opacity="0.9"/>
+<rect x="677" y="156" width="15" height="15" rx="3" fill="#0F6E56" opacity="1"/>
+<rect x="696" y="156" width="15" height="15" rx="3" fill="#0F6E56" opacity="1"/>
+<rect x="748" y="156" width="15" height="15" rx="3" fill="#0F6E56"/>
+<rect x="767" y="156" width="15" height="15" rx="3" fill="#0F6E56"/>
+<rect x="786" y="156" width="15" height="15" rx="3" fill="#0F6E56"/>
+<rect x="805" y="156" width="15" height="15" rx="3" fill="#0F6E56"/>
+<rect x="824" y="156" width="15" height="15" rx="3" fill="#993C1D"/>
+<text x="719" y="169" font-size="11" fill="#888780">4/5</text>
+<text x="847" y="169" font-size="11" fill="#888780" font-weight="400">4/5</text>
+<text x="420" y="209" font-size="13" fill="#444441" font-weight="400">Moneda EUR</text>
+<text x="420" y="224" font-size="11" fill="#888780">¿mejora? con 5 repeticiones no se sabe</text>
+<rect x="620" y="196" width="15" height="15" rx="3" fill="#0F6E56" opacity="1"/>
+<rect x="639" y="196" width="15" height="15" rx="3" fill="#993C1D" opacity="0.9"/>
+<rect x="658" y="196" width="15" height="15" rx="3" fill="#0F6E56" opacity="1"/>
+<rect x="677" y="196" width="15" height="15" rx="3" fill="#0F6E56" opacity="1"/>
+<rect x="696" y="196" width="15" height="15" rx="3" fill="#993C1D" opacity="0.9"/>
+<rect x="748" y="196" width="15" height="15" rx="3" fill="#0F6E56"/>
+<rect x="767" y="196" width="15" height="15" rx="3" fill="#0F6E56"/>
+<rect x="786" y="196" width="15" height="15" rx="3" fill="#0F6E56"/>
+<rect x="805" y="196" width="15" height="15" rx="3" fill="#0F6E56"/>
+<rect x="824" y="196" width="15" height="15" rx="3" fill="#0F6E56"/>
+<text x="719" y="209" font-size="11" fill="#888780">3/5</text>
+<text x="847" y="209" font-size="11" fill="#888780" font-weight="400">5/5</text>
+<text x="420" y="249" font-size="13" fill="#444441" font-weight="400">No enviar sin aprobación</text>
+<rect x="620" y="236" width="15" height="15" rx="3" fill="#0F6E56" opacity="1"/>
+<rect x="639" y="236" width="15" height="15" rx="3" fill="#0F6E56" opacity="1"/>
+<rect x="658" y="236" width="15" height="15" rx="3" fill="#0F6E56" opacity="1"/>
+<rect x="677" y="236" width="15" height="15" rx="3" fill="#0F6E56" opacity="1"/>
+<rect x="696" y="236" width="15" height="15" rx="3" fill="#0F6E56" opacity="1"/>
+<rect x="748" y="236" width="15" height="15" rx="3" fill="#0F6E56"/>
+<rect x="767" y="236" width="15" height="15" rx="3" fill="#0F6E56"/>
+<rect x="786" y="236" width="15" height="15" rx="3" fill="#0F6E56"/>
+<rect x="805" y="236" width="15" height="15" rx="3" fill="#0F6E56"/>
+<rect x="824" y="236" width="15" height="15" rx="3" fill="#0F6E56"/>
+<text x="719" y="249" font-size="11" fill="#888780">5/5</text>
+<text x="847" y="249" font-size="11" fill="#888780" font-weight="400">5/5</text>
+<rect x="412" y="272" width="460" height="36" rx="6" fill="#FAECE7" stroke="#993C1D"/>
+<text x="420" y="289" font-size="13" fill="#993C1D" font-weight="600">Reintento tras timeout</text>
+<text x="420" y="304" font-size="11" fill="#993C1D">crítico: duplica la cotización</text>
+<rect x="620" y="276" width="15" height="15" rx="3" fill="#0F6E56" opacity="1"/>
+<rect x="639" y="276" width="15" height="15" rx="3" fill="#0F6E56" opacity="1"/>
+<rect x="658" y="276" width="15" height="15" rx="3" fill="#0F6E56" opacity="1"/>
+<rect x="677" y="276" width="15" height="15" rx="3" fill="#0F6E56" opacity="1"/>
+<rect x="696" y="276" width="15" height="15" rx="3" fill="#0F6E56" opacity="1"/>
+<rect x="748" y="276" width="15" height="15" rx="3" fill="#993C1D"/>
+<rect x="767" y="276" width="15" height="15" rx="3" fill="#993C1D"/>
+<rect x="786" y="276" width="15" height="15" rx="3" fill="#993C1D"/>
+<rect x="805" y="276" width="15" height="15" rx="3" fill="#993C1D"/>
+<rect x="824" y="276" width="15" height="15" rx="3" fill="#993C1D"/>
+<text x="719" y="289" font-size="11" fill="#888780">5/5</text>
+<text x="847" y="289" font-size="11" fill="#993C1D" font-weight="600">0/5</text>
+<text x="420" y="329" font-size="13" fill="#444441" font-weight="400">Cliente sin póliza</text>
+<rect x="620" y="316" width="15" height="15" rx="3" fill="#0F6E56" opacity="1"/>
+<rect x="639" y="316" width="15" height="15" rx="3" fill="#0F6E56" opacity="1"/>
+<rect x="658" y="316" width="15" height="15" rx="3" fill="#0F6E56" opacity="1"/>
+<rect x="677" y="316" width="15" height="15" rx="3" fill="#0F6E56" opacity="1"/>
+<rect x="696" y="316" width="15" height="15" rx="3" fill="#0F6E56" opacity="1"/>
+<rect x="748" y="316" width="15" height="15" rx="3" fill="#0F6E56"/>
+<rect x="767" y="316" width="15" height="15" rx="3" fill="#0F6E56"/>
+<rect x="786" y="316" width="15" height="15" rx="3" fill="#0F6E56"/>
+<rect x="805" y="316" width="15" height="15" rx="3" fill="#0F6E56"/>
+<rect x="824" y="316" width="15" height="15" rx="3" fill="#0F6E56"/>
+<text x="719" y="329" font-size="11" fill="#888780">5/5</text>
+<text x="847" y="329" font-size="11" fill="#888780" font-weight="400">5/5</text>
+<rect x="420" y="364" width="12" height="12" rx="2" fill="#0F6E56"/><text x="438" y="375" font-size="11.5" fill="#5F5E5A">pasa</text>
+<rect x="484" y="364" width="12" height="12" rx="2" fill="#993C1D"/><text x="502" y="375" font-size="11.5" fill="#5F5E5A">falla</text>
+<rect x="28" y="470" width="844" height="64" rx="10" fill="#FAECE7" stroke="#993C1D"/>
+<text x="46" y="496" font-size="15" fill="#993C1D" font-weight="700">El gate bloquea la candidata</text>
+<text x="46" y="518" font-size="13" fill="#993C1D">“Reintento tras timeout” falla en las 5 repeticiones de v2 y en ninguna de v1: es reproducible y crítico, no ruido.</text>
+<text x="28" y="560" font-size="14" fill="#444441">Una suite de regresión debería pasar casi al 100 %. pass<tspan baseline-shift="super" font-size="10">k</tspan> mide que pasen las k corridas: con 75 % por intento, 3 de 3 da 42 %.</text>
+<text x="28" y="586" font-size="12.5" fill="#888780">Resultados ilustrativos. Criterios de regresión y pass<tspan baseline-shift="super" font-size="9">k</tspan> según Demystifying evals for AI agents (Anthropic), consultado el 25-09-2026.</text>
+</g></svg>
