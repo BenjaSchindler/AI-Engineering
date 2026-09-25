@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="640" viewBox="0 0 900 640" role="img" aria-labelledby="title desc">
+<title id="title">Calibración de evaluadores · el acuerdo que esconde errores</title>
+<desc id="desc">Matriz entre la referencia humana y el juez sobre 20 respuestas: de 10 correctas, el juez aprueba 9 y rechaza 1; de 10 incorrectas, aprueba 3 y rechaza 7. El acuerdo es 16 de 20, 80 %, pero el juez aprueba el 30 % de las incorrectas. Tres sesgos documentados en jueces LLM: posición, verbosidad y autopreferencia, con su contramedida. Procedimiento: rúbrica, muestra humana, comparar sin mostrar las etiquetas, ajustar con una muestra y validar en otra reservada.</desc>
+<g font-family="system-ui,-apple-system,Segoe UI,sans-serif">
+<rect x="0" y="0" width="900" height="640" rx="12" fill="#FBFAF7"/>
+<text x="28" y="35" font-size="17" fill="#68675F" font-weight="600">CALIBRACIÓN DE EVALUADORES · EL ACUERDO QUE ESCONDE ERRORES</text>
+<text x="28" y="66" font-size="14" fill="#444441" font-weight="600">Juez frente a la referencia humana · 20 respuestas</text>
+<text x="246.0" y="98" font-size="13" fill="#444441" font-weight="600" text-anchor="middle">Juez aprueba</text>
+<text x="394.0" y="98" font-size="13" fill="#444441" font-weight="600" text-anchor="middle">Juez rechaza</text>
+<text x="162" y="149.0" font-size="13.5" fill="#444441" font-weight="600" text-anchor="end">Correctas</text>
+<text x="162" y="167.0" font-size="12" fill="#888780" text-anchor="end">según humanos</text>
+<rect x="176" y="108" width="140" height="86" rx="10" fill="#E1F5EE" stroke="#0F6E56" stroke-width="1.2"/>
+<text x="246.0" y="154" font-size="30" fill="#0F6E56" font-weight="700" text-anchor="middle">9</text>
+<text x="246.0" y="178" font-size="12.5" fill="#0F6E56" text-anchor="middle">acierto</text>
+<rect x="324" y="108" width="140" height="86" rx="10" fill="#FAEEDA" stroke="#854F0B" stroke-width="1.2"/>
+<text x="394.0" y="154" font-size="30" fill="#854F0B" font-weight="700" text-anchor="middle">1</text>
+<text x="394.0" y="178" font-size="12.5" fill="#854F0B" text-anchor="middle">falso rechazo</text>
+<text x="162" y="243.0" font-size="13.5" fill="#444441" font-weight="600" text-anchor="end">Incorrectas</text>
+<text x="162" y="261.0" font-size="12" fill="#888780" text-anchor="end">según humanos</text>
+<rect x="176" y="202" width="140" height="86" rx="10" fill="#FAECE7" stroke="#993C1D" stroke-width="2.5"/>
+<text x="246.0" y="248" font-size="30" fill="#993C1D" font-weight="700" text-anchor="middle">3</text>
+<text x="246.0" y="272" font-size="12.5" fill="#993C1D" text-anchor="middle">falso aprobado</text>
+<rect x="324" y="202" width="140" height="86" rx="10" fill="#E1F5EE" stroke="#0F6E56" stroke-width="1.2"/>
+<text x="394.0" y="248" font-size="30" fill="#0F6E56" font-weight="700" text-anchor="middle">7</text>
+<text x="394.0" y="272" font-size="12.5" fill="#0F6E56" text-anchor="middle">acierto</text>
+<rect x="500" y="78" width="372" height="210" rx="12" fill="#FFFFFF" stroke="#B4B2A9"/>
+<text x="518" y="104" font-size="13" fill="#444441" font-weight="600">Lo que dice cada número</text>
+<text x="518" y="134" font-size="13.5" fill="#444441" font-weight="600">Acuerdo</text>
+<text x="518" y="152" font-size="12" fill="#888780">(9 + 7) / 20</text>
+<text x="854" y="142" font-size="24" fill="#444441" font-weight="700" text-anchor="end">80 %</text>
+<text x="518" y="178" font-size="13.5" fill="#993C1D" font-weight="600">Falsos aprobados</text>
+<text x="518" y="196" font-size="12" fill="#888780">3 / 10 incorrectas</text>
+<text x="854" y="186" font-size="24" fill="#993C1D" font-weight="700" text-anchor="end">30 %</text>
+<text x="518" y="222" font-size="13.5" fill="#854F0B" font-weight="600">Falsos rechazos</text>
+<text x="518" y="240" font-size="12" fill="#888780">1 / 10 correctas</text>
+<text x="854" y="230" font-size="24" fill="#854F0B" font-weight="700" text-anchor="end">10 %</text>
+<text x="518" y="272" font-size="12.5" fill="#993C1D">Si esas 3 son fallos críticos, el 80 % no sirve.</text>
+<text x="28" y="322" font-size="14" fill="#444441" font-weight="600">Sesgos documentados en jueces LLM, y cómo probarlos</text>
+<rect x="28" y="334" width="272" height="80" rx="10" fill="#FAEEDA" stroke="#854F0B"/>
+<text x="42" y="356" font-size="13.5" fill="#854F0B" font-weight="600">Posición</text>
+<text x="42" y="376" font-size="12" fill="#444441">prefiere la primera o la segunda</text>
+<text x="42" y="398" font-size="12" fill="#0F6E56">→ intercambiá el orden en cada par</text>
+<rect x="314" y="334" width="272" height="80" rx="10" fill="#FAEEDA" stroke="#854F0B"/>
+<text x="328" y="356" font-size="13.5" fill="#854F0B" font-weight="600">Verbosidad</text>
+<text x="328" y="376" font-size="12" fill="#444441">premia la respuesta más larga</text>
+<text x="328" y="398" font-size="12" fill="#0F6E56">→ sumá respuestas largas e incorrectas</text>
+<rect x="600" y="334" width="272" height="80" rx="10" fill="#FAEEDA" stroke="#854F0B"/>
+<text x="614" y="356" font-size="13.5" fill="#854F0B" font-weight="600">Autopreferencia</text>
+<text x="614" y="376" font-size="12" fill="#444441">puede favorecer a su propio modelo</text>
+<text x="614" y="398" font-size="12" fill="#0F6E56">→ compará con un juez de otro modelo</text>
+<text x="28" y="444" font-size="14" fill="#444441" font-weight="600">Procedimiento</text>
+<rect x="28" y="456" width="202" height="70" rx="10" fill="#F1EFE8" stroke="#B4B2A9"/>
+<text x="42" y="478" font-size="13" fill="#444441" font-weight="600">1 · Rúbrica</text>
+<text x="42" y="498" font-size="12" fill="#5F5E5A">qué aprueba, qué falla,</text>
+<text x="42" y="515" font-size="12" fill="#5F5E5A">cuándo falta evidencia</text>
+<rect x="242" y="456" width="202" height="70" rx="10" fill="#F1EFE8" stroke="#B4B2A9"/>
+<text x="256" y="478" font-size="13" fill="#444441" font-weight="600">2 · Muestra humana</text>
+<text x="256" y="498" font-size="12" fill="#5F5E5A">correctas, incorrectas</text>
+<text x="256" y="515" font-size="12" fill="#5F5E5A">y ambiguas; desacuerdos resueltos</text>
+<rect x="456" y="456" width="202" height="70" rx="10" fill="#F1EFE8" stroke="#B4B2A9"/>
+<text x="470" y="478" font-size="13" fill="#444441" font-weight="600">3 · Comparar</text>
+<text x="470" y="498" font-size="12" fill="#5F5E5A">el juez no ve las</text>
+<text x="470" y="515" font-size="12" fill="#5F5E5A">etiquetas humanas</text>
+<rect x="670" y="456" width="202" height="70" rx="10" fill="#F1EFE8" stroke="#B4B2A9"/>
+<text x="684" y="478" font-size="13" fill="#444441" font-weight="600">4 · Ajustar y validar</text>
+<text x="684" y="498" font-size="12" fill="#5F5E5A">en una muestra; confirmar</text>
+<text x="684" y="515" font-size="12" fill="#5F5E5A">en otra reservada</text>
+<text x="28" y="582" font-size="14.5" fill="#444441">Un juez fuerte coincide con las personas más del 80 % de las veces, como las personas entre sí;</text>
+<text x="28" y="604" font-size="14.5" fill="#444441">lo que importa es <tspan font-weight="600">en qué</tspan> no coincide.</text>
+<text x="28" y="628" font-size="12" fill="#888780">Sesgos y acuerdo según Zheng et al., “Judging LLM-as-a-Judge” (NeurIPS 2023), consultado el 25-09-2026. Matriz ilustrativa.</text>
+</g></svg>
