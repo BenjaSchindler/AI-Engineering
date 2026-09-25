@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="614" viewBox="0 0 900 614" role="img" aria-labelledby="title desc">
+<title id="title">Incremental sync · solo lo que cambió, incluido lo que desapareció</title>
+<desc id="desc">El conector guarda el cursor T1, pide los cambios desde T1, procesa cada uno y recién después guarda T2. Cinco documentos: A editado aparece como modificado y el índice borra sus chunks por doc_id, vuelve a trocear y a embeber; B creado aparece como nuevo y se ingesta; C borrado aparece como removed y se borran sus chunks; D perdió el acceso, también aparece como removed y se borran sus chunks; E sin cambios no aparece y no se reprocesa. Tres formas de detectar cambios: updated_at no ve borrados, el hash obliga a leer todo y el change token trae nuevos, cambios y borrados.</desc>
+<defs><marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M2 1 L9 5 L2 9" fill="none" stroke="#68675F" stroke-width="1.5"/></marker></defs>
+<g font-family="system-ui,-apple-system,Segoe UI,sans-serif">
+<rect x="0" y="0" width="900" height="614" rx="12" fill="#FBFAF7"/>
+<text x="28" y="35" font-size="17" fill="#68675F" font-weight="600">INCREMENTAL SYNC · SOLO LO QUE CAMBIÓ, INCLUIDO LO QUE DESAPARECIÓ</text>
+<rect x="28" y="54" width="190" height="50" rx="10" fill="#E6F1FB" stroke="#185FA5"/>
+<text x="123" y="75" font-size="13.5" fill="#185FA5" font-weight="600" text-anchor="middle">cursor T1</text>
+<text x="123" y="93" font-size="11.5" fill="#5F5E5A" text-anchor="middle">guardado la vez anterior</text>
+<path d="M220 79 H238" stroke="#68675F" stroke-width="1.8" marker-end="url(#arr)"/>
+<rect x="242" y="54" width="190" height="50" rx="10" fill="#F1EFE8" stroke="#444441"/>
+<text x="337" y="75" font-size="13.5" fill="#444441" font-weight="600" text-anchor="middle">pedir cambios</text>
+<text x="337" y="93" font-size="11.5" fill="#5F5E5A" text-anchor="middle">desde T1, página a página</text>
+<path d="M434 79 H452" stroke="#68675F" stroke-width="1.8" marker-end="url(#arr)"/>
+<rect x="456" y="54" width="190" height="50" rx="10" fill="#F1EFE8" stroke="#444441"/>
+<text x="551" y="75" font-size="13.5" fill="#444441" font-weight="600" text-anchor="middle">procesar</text>
+<text x="551" y="93" font-size="11.5" fill="#5F5E5A" text-anchor="middle">cada cambio en el índice</text>
+<path d="M648 79 H666" stroke="#68675F" stroke-width="1.8" marker-end="url(#arr)"/>
+<rect x="670" y="54" width="190" height="50" rx="10" fill="#E1F5EE" stroke="#0F6E56"/>
+<text x="765" y="75" font-size="13.5" fill="#0F6E56" font-weight="600" text-anchor="middle">guardar T2</text>
+<text x="765" y="93" font-size="11.5" fill="#5F5E5A" text-anchor="middle">recién al terminar</text>
+<path d="M765 104 V116 H123 V108" stroke="#0F6E56" stroke-width="1.4" fill="none" stroke-dasharray="4 3" marker-end="url(#arr)"/>
+<text x="450" y="130" font-size="11.5" fill="#0F6E56" text-anchor="middle">T2 es el cursor de la próxima vez; si el proceso cae antes, se repite desde T1</text>
+<text x="28" y="160" font-size="13" fill="#444441" font-weight="600">Cambio en la fuente</text>
+<text x="262" y="160" font-size="13" fill="#444441" font-weight="600">Qué devuelve la API</text>
+<text x="468" y="160" font-size="13" fill="#444441" font-weight="600">Qué hace el índice</text>
+<rect x="28" y="174" width="844" height="38" rx="8" fill="#FFFFFF" stroke="#E4E2DA"/>
+<rect x="36" y="181" width="24" height="24" rx="5" fill="#FAEEDA" stroke="#854F0B"/>
+<text x="48" y="198" font-size="12.5" fill="#854F0B" font-weight="700" text-anchor="middle">A</text>
+<text x="72" y="198" font-size="13" fill="#444441">editado</text>
+<path d="M226 193 H254" stroke="#68675F" stroke-width="1.5" marker-end="url(#arr)"/>
+<rect x="262" y="181" width="100" height="24" rx="12" fill="#FAEEDA" stroke="#854F0B"/>
+<text x="312.0" y="197" font-size="12" fill="#854F0B" text-anchor="middle" >modificado</text>
+<path d="M432 193 H460" stroke="#68675F" stroke-width="1.5" marker-end="url(#arr)"/>
+<text x="468" y="198" font-size="13" fill="#854F0B">borrar sus chunks por doc_id; re-trocear y re-embeber</text>
+<rect x="28" y="220" width="844" height="38" rx="8" fill="#FFFFFF" stroke="#E4E2DA"/>
+<rect x="36" y="227" width="24" height="24" rx="5" fill="#E1F5EE" stroke="#0F6E56"/>
+<text x="48" y="244" font-size="12.5" fill="#0F6E56" font-weight="700" text-anchor="middle">B</text>
+<text x="72" y="244" font-size="13" fill="#444441">creado</text>
+<path d="M226 239 H254" stroke="#68675F" stroke-width="1.5" marker-end="url(#arr)"/>
+<rect x="262" y="227" width="60" height="24" rx="12" fill="#E1F5EE" stroke="#0F6E56"/>
+<text x="292.0" y="243" font-size="12" fill="#0F6E56" text-anchor="middle" >nuevo</text>
+<path d="M432 239 H460" stroke="#68675F" stroke-width="1.5" marker-end="url(#arr)"/>
+<text x="468" y="244" font-size="13" fill="#0F6E56">ingestar</text>
+<rect x="28" y="266" width="844" height="38" rx="8" fill="#FFFFFF" stroke="#E4E2DA"/>
+<rect x="36" y="273" width="24" height="24" rx="5" fill="#FAECE7" stroke="#993C1D"/>
+<text x="48" y="290" font-size="12.5" fill="#993C1D" font-weight="700" text-anchor="middle">C</text>
+<text x="72" y="290" font-size="13" fill="#444441">borrado</text>
+<path d="M226 285 H254" stroke="#68675F" stroke-width="1.5" marker-end="url(#arr)"/>
+<rect x="262" y="273" width="76" height="24" rx="12" fill="#FAECE7" stroke="#993C1D"/>
+<text x="300.0" y="289" font-size="12" fill="#993C1D" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace">removed</text>
+<path d="M432 285 H460" stroke="#68675F" stroke-width="1.5" marker-end="url(#arr)"/>
+<text x="468" y="290" font-size="13" fill="#993C1D">borrar sus chunks</text>
+<rect x="28" y="312" width="844" height="38" rx="8" fill="#FFFFFF" stroke="#E4E2DA"/>
+<rect x="36" y="319" width="24" height="24" rx="5" fill="#FAECE7" stroke="#993C1D"/>
+<text x="48" y="336" font-size="12.5" fill="#993C1D" font-weight="700" text-anchor="middle">D</text>
+<text x="72" y="336" font-size="13" fill="#444441">perdió el acceso</text>
+<path d="M226 331 H254" stroke="#68675F" stroke-width="1.5" marker-end="url(#arr)"/>
+<rect x="262" y="319" width="76" height="24" rx="12" fill="#FAECE7" stroke="#993C1D"/>
+<text x="300.0" y="335" font-size="12" fill="#993C1D" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace">removed</text>
+<path d="M432 331 H460" stroke="#68675F" stroke-width="1.5" marker-end="url(#arr)"/>
+<text x="468" y="336" font-size="13" fill="#993C1D">borrar sus chunks: ya no está autorizado</text>
+<rect x="28" y="358" width="844" height="38" rx="8" fill="#FFFFFF" stroke="#E4E2DA"/>
+<rect x="36" y="365" width="24" height="24" rx="5" fill="#F1EFE8" stroke="#888780"/>
+<text x="48" y="382" font-size="12.5" fill="#888780" font-weight="700" text-anchor="middle">E</text>
+<text x="72" y="382" font-size="13" fill="#444441">sin cambios</text>
+<path d="M226 377 H254" stroke="#68675F" stroke-width="1.5" marker-end="url(#arr)"/>
+<rect x="262" y="365" width="100" height="24" rx="12" fill="#F1EFE8" stroke="#888780"/>
+<text x="312.0" y="381" font-size="12" fill="#888780" text-anchor="middle" >no aparece</text>
+<path d="M432 377 H460" stroke="#68675F" stroke-width="1.5" marker-end="url(#arr)"/>
+<text x="468" y="382" font-size="13" fill="#5F5E5A">nada: no se reprocesa</text>
+<text x="28" y="420" font-size="12" fill="#5F5E5A">En Google Drive, <tspan font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace">removed</tspan> marca archivos borrados o a los que se perdió el acceso: los dos salen del índice.</text>
+<text x="28" y="448" font-size="14" fill="#444441" font-weight="600">Cómo saber qué cambió</text>
+<rect x="28" y="460" width="272" height="68" rx="10" fill="#FAECE7" stroke="#993C1D"/>
+<text x="42" y="482" font-size="13.5" fill="#993C1D" font-weight="600" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace">updated_at</text>
+<text x="42" y="501" font-size="12" fill="#444441">barato, pero no ve borrados</text>
+<text x="42" y="518" font-size="12" fill="#444441">ni pérdidas de acceso</text>
+<rect x="314" y="460" width="272" height="68" rx="10" fill="#FAEEDA" stroke="#854F0B"/>
+<text x="328" y="482" font-size="13.5" fill="#854F0B" font-weight="600" font-family="inherit">hash de contenido</text>
+<text x="328" y="501" font-size="12" fill="#444441">detecta cambios reales,</text>
+<text x="328" y="518" font-size="12" fill="#444441">pero hay que leer todo</text>
+<rect x="600" y="460" width="272" height="68" rx="10" fill="#E1F5EE" stroke="#0F6E56"/>
+<text x="614" y="482" font-size="13.5" fill="#0F6E56" font-weight="600" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace">change token</text>
+<text x="614" y="501" font-size="12" fill="#444441">la API trae nuevos, cambios</text>
+<text x="614" y="518" font-size="12" fill="#444441">y borrados desde el cursor</text>
+<text x="28" y="580" font-size="14.5" fill="#444441">Sin <tspan font-weight="600">Document IDs</tspan> estables, un documento modificado se ve como uno nuevo y deja chunks huérfanos.</text>
+<text x="28" y="602" font-size="12" fill="#888780">Cursor y removed según la API de cambios de Google Drive, consultada el 25-09-2026. Documentos ilustrativos.</text>
+</g></svg>
