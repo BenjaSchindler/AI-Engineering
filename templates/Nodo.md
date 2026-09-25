@@ -1,6 +1,8 @@
 ---
 tipo: concepto
 dominio:
+bloque:
+orden:
 estado: por-ver
 parent:
 prereqs: []

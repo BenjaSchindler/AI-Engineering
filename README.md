@@ -1,38 +1,68 @@
 # AI Engineering · grafo de aprendizaje
 
-Vault de Obsidian: cada archivo es un nodo, cada `[[wikilink]]` es una arista. Todo es markdown + Mermaid, así que se lee igual en Obsidian, en GitHub y en cualquier editor.
-
-![Mapa del grafo](assets/mapa.svg)
+Vault de Obsidian con **ocho categorías principales**. Cada nota tiene una ubicación principal; los enlaces conectan sus aplicaciones en otras áreas. Los canvas ordenan las tarjetas por tema y recorrido de lectura.
 
 ## Cómo navegar
-Tres niveles, de lo general a lo específico:
+1. **[[Mapa.canvas|Mapa general]]:** elegir una categoría.
+2. **Sub-mapa:** seguir los grupos numerados, de arriba hacia abajo y de izquierda a derecha.
+3. **Nota:** leer el concepto, el ejemplo y sus conexiones. Las tablas Dataview siguen el mismo orden de estudio.
 
-1. **`Mapa.canvas`** → tres tarjetas (RAG, Multiagente, Evals) con sus nodos como links. Clic en un nombre abre la nota; *Abrir sub-mapa* abre el canvas del tema.
-2. **`canvas/<tema>.canvas`** → cada tarjeta muestra la nota desde su título: nombre, frase y diagrama. Doble clic abre la nota completa.
-3. **Nota hub** (`RAG`, `Multiagente`, `Evals`) → mindmap del tema, orden sugerido y tabla de estado (Dataview). Clic derecho → *Open local graph* muestra solo ese subgrafo; subiendo la profundidad se despliega el resto.
+Las flechas llevan una etiqueta: **flujo** para datos, **lectura** para estudio y **requiere** para una base necesaria. Una línea **contrasta** compara alternativas; no indica que deban ejecutarse seguidas. Estar en el mismo grupo tampoco implica un pipeline.
 
-La vista de grafo global (Ctrl+G) permite explorar las conexiones entre notas. Podés personalizar sus filtros y grupos de colores desde Obsidian. Plugins incluidos en el vault: **Dataview** y **Excalidraw**.
-
-## Estructura
-| Carpeta | Dominio | Nodos |
+## Categorías
+| Categoría | Qué pertenece aquí | Sub-mapa |
 |---|---|---|
-| `rag/` | Hub **RAG**: de los datos a la respuesta | Vector DB (pipeline de ingesta), ANN HNSW, RAG básico, RAG agéntico |
-| `rag/ingesta/` | Las 7 preguntas del pipeline, cuelgan de Vector DB | Connector, Normalization, Incremental sync, Document IDs, Deduplication, Caching, ACLs |
-| `multiagente/` | Hub **Multiagente**: coordinación entre agentes | Orquestador workers, Router handoff |
-| `evals/` | Hub **Evals**: cómo saber si funciona | Golden dataset, Tool evals, Multi-agent evals |
-| `canvas/` | Un sub-canvas por hub | RAG, Multiagente, Evals |
+| [[Fundamentos]] | Modelos, prompts, contexto, tools y elección entre prompting, RAG y fine-tuning | [[Fundamentos.canvas]] |
+| [[MCP]] | Arquitectura, tools, resources, prompts, transportes, stateless, RAG y autenticación | [[MCP.canvas]] |
+| [[RAG]] | Preparación de fuentes, índices, recuperación y respuestas con evidencia | [[RAG.canvas]] |
+| [[Multiagentes]] | Elegir arquitectura, transferir control, delegar y coordinar | [[Multiagentes.canvas]] |
+| [[Runtime de agentes]] | Ejecución, recuperación, caché y operación en producción | [[Runtime de agentes.canvas]] |
+| [[Seguridad]] | Autorización, ACLs, guardrails, aislamiento y auditoría | [[Seguridad.canvas]] |
+| [[Evals]] | Casos, evaluadores, mediciones, regresiones y seguimiento de calidad | [[Evals.canvas]] |
+| [[Programación con agentes]] | Preparar el repositorio, trabajar en cambios y revisarlos | [[Programación con agentes.canvas]] |
 
-## Anatomía de un nodo
-Frontmatter con `tipo` (`mapa` para los hubs), `dominio`, `estado` (`por-ver` → `aprendiendo` → `dominado`), `parent` (el hub del que cuelga), `prereqs`, `se_evalua_con`, `contrasta_con`, `fuentes`. Después: una frase, un diagrama Mermaid, una tabla de cuándo sí / cuándo no, trade-offs. Plantilla en `templates/Nodo.md`.
+## Recorridos
+**Base común:** [[LLMs y elección de modelo]] → [[Prompts y salidas estructuradas]] → [[Contexto, memoria y estado]] → [[Tools y function calling]].
 
-## Tipos de arista
-- `parent` → jerarquía: nodo → hub. Es lo que agrupa el grafo.
-- `prereqs` → orden de estudio.
-- `se_evalua_con` → conecta cada nodo con Evals.
-- `contrasta_con` → pares que conviene entender juntos (RAG vs RAG agéntico, orquestador vs router).
-- Wikilinks en el cuerpo → "se relaciona con".
+Después elegí según la tarea: [[MCP]] para conectar capacidades externas; [[RAG]] si necesitás fuentes; [[Multiagentes]] si necesitás estudiar coordinación; [[Runtime de agentes]] para ejecutar y operar. [[Seguridad]] y [[Evals]] acompañan todas esas decisiones. Programación con agentes puede estudiarse por separado.
 
-## Qué estudiar ahora (Dataview)
+**RAG:** panorama → ingesta → índice y recuperación → variantes. La ingesta prepara los datos; la consulta los recupera. HNSW e IVF son alternativas, no dos pasos del pipeline.
+
+**MCP:** arquitectura → tools, resources y prompts → conexión y estado → servidor de ejemplo → RAG como tool → autenticación y autorización. Las notas distinguen versiones del protocolo y del SDK.
+
+**Evals:** casos y criterios → elegir qué evaluar → coordinación, si aplica → decidir y monitorear → [[Caso práctico - Asistente de soporte]].
+
+## Dónde quedó cada tema transversal
+- **Caché:** [[Caché en agentes]] es un subtema de Runtime con su [[Caché.canvas|propio sub-mapa]]. Empezá por [[Claves e invalidación de caché]]; después elegí [[Prompt caching]], [[Caché de respuestas]] o [[Caché de ingesta y búsqueda]]. Esta última conserva el alias `Caching`.
+- **Permisos de documentos:** [[ACLs]] vive en Seguridad y sigue enlazada desde ingesta y recuperación.
+- **Operación:** [[Trazas y debugging]], [[Operación en producción]] y [[Despliegue y operación bajo carga]] viven en Runtime. [[Evals por cliente y producción]] permanece en Evals porque trata de medir calidad.
+- **Pruebas especializadas:** [[Evals de caché]], [[RAG evals]] y las pruebas de subagentes permanecen en Evals; cada área enlaza a sus pruebas.
+
+## Carpetas
+| Carpeta | Contenido |
+|---|---|
+| `fundamentos/` | Bases y decisiones de adaptación |
+| `mcp/` | Protocolo, conexión, estado e implementación de integraciones |
+| `rag/` y `rag/ingesta/` | Recuperación, variantes y preparación de datos |
+| `multiagente/` y `multiagente/subagents/` | Arquitectura, patrones y delegación |
+| `runtime/` | Ejecución y operación |
+| `runtime/cache/` | Hub y cuatro fichas de caché |
+| `seguridad/` | Permisos, contención y evidencia |
+| `evals/` | Evaluación y caso práctico |
+| `programacion-agentes/` | Prácticas de desarrollo |
+| `canvas/` | Ocho sub-mapas principales y el sub-mapa de Caché |
+
+## Cómo mantener el orden
+La plantilla está en `templates/Nodo.md`. **`dominio`** define la categoría; **`parent`** el hub; **`bloque`** agrupa el tema; **`orden`** fija su posición de lectura. `prereqs` declara conocimientos previos, `se_evalua_con` enlaza a las pruebas y `contrasta_con` a alternativas.
+
+Al sumar una nota, elegí primero una categoría y un bloque existente. Creá otro subtema solo si reúne varias notas con una pregunta común. Actualizá el hub y su canvas; agregá enlaces desde otras áreas sin duplicar la nota.
+
+Los diagramas Mermaid e ilustraciones SVG viven con las notas. Dataview permite recorrerlas por estado: `por-ver` → `aprendiendo` → `dominado`.
+
+## Qué estudiar ahora
 ```dataview
-TABLE WITHOUT ID file.link AS nodo, parent, estado FROM "" WHERE estado = "por-ver" AND tipo != "mapa" SORT parent, file.name
+TABLE WITHOUT ID file.link AS nodo, dominio, bloque, estado
+FROM ""
+WHERE estado = "por-ver" AND tipo != "mapa"
+SORT dominio, orden, file.name
 ```

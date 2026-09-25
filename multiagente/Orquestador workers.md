@@ -1,12 +1,14 @@
 ---
 tipo: patrón
 dominio: multiagente
-parent: "[[Multiagente]]"
+parent: "[[Multiagentes]]"
 estado: por-ver
-prereqs: ["[[RAG agéntico]]"]
+prereqs: ["[[Agente individual vs workflow vs multiagente]]"]
 se_evalua_con: ["[[Multi-agent evals]]"]
 contrasta_con: ["[[Router handoff]]"]
 fuentes: []
+bloque: "02 · Patrones alternativos"
+orden: 220
 ---
 # Orquestador / workers
 
@@ -38,3 +40,5 @@ flowchart TB
 
 ## Se conecta con
 Contrasta con [[Router handoff]]: el router elige *uno*, el orquestador coordina *varios*. Se mide con [[Multi-agent evals]].
+
+[[Subagents]] desarrolla el contrato de delegación; [[Deep Agents]] ofrece una implementación integrada.

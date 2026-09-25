@@ -1,12 +1,42 @@
 {
 	"nodes":[
-		{"id":"gold","type":"file","file":"evals/Golden dataset.md","subpath":"#Golden dataset","x":760,"y":0,"width":1040,"height":1240},
-		{"id":"hub","type":"file","file":"evals/Evals.md","subpath":"#Evals","x":-700,"y":-100,"width":1400,"height":2220},
-		{"id":"tool","type":"file","file":"evals/Tool evals.md","subpath":"#Tool evals","x":2080,"y":80,"width":2080,"height":1080},
-		{"id":"mae","type":"file","file":"evals/Multi-agent evals.md","subpath":"#Multi-agent evals","x":2380,"y":1420,"width":1480,"height":1400}
+		{"id":"g-2","type":"group","x":0,"y":6230,"width":7280,"height":4050,"color":"#888780","label":"02 · Qué evaluar"},
+		{"id":"g-3","type":"group","x":0,"y":10560,"width":6880,"height":3950,"color":"#888780","label":"03 · Coordinación"},
+		{"id":"g-1","type":"group","x":0,"y":1900,"width":5120,"height":3140,"color":"#888780","label":"01 · Casos y criterios"},
+		{"id":"g-5","type":"group","x":0,"y":16540,"width":6880,"height":1920,"color":"#888780","label":"05 · Practicar"},
+		{"id":"g-4","type":"group","x":0,"y":14790,"width":6880,"height":1470,"color":"#888780","label":"04 · Decidir y monitorear"},
+		{"id":"hub","type":"file","file":"evals/Evals.md","subpath":"#Evals","x":100,"y":120,"width":1600,"height":1500},
+		{"id":"guide","type":"text","text":"# Cómo leer este mapa\nCasos y criterios → elegir qué evaluar → coordinación, si aplica → decidir y monitorear → practicar. Las pruebas de RAG, tools y caché son complementarias.\n\n**Grupos numerados:** orden de estudio.\n**Flechas etiquetadas:** flujo, lectura o requisito.\n**Línea sin flecha:** comparación; no indica una secuencia.\n\nCada nota tiene una categoría principal; los enlaces llevan a temas relacionados.","x":1920,"y":120,"width":4860,"height":620,"color":"#888780"},
+		{"id":"n-1-0","type":"file","file":"evals/Golden dataset.md","subpath":"#Golden dataset","x":100,"y":2000,"width":2080,"height":1280},
+		{"id":"n-2-0","type":"file","file":"evals/RAG evals.md","subpath":"#RAG evals","x":100,"y":6330,"width":2080,"height":1500},
+		{"id":"n-2-1","type":"file","file":"evals/Tool evals.md","subpath":"#Tool evals","x":2400,"y":6330,"width":2080,"height":1500},
+		{"id":"n-2-2","type":"file","file":"evals/Evals de caché.md","subpath":"#Evals de caché","x":4700,"y":6330,"width":2080,"height":1500},
+		{"id":"n-2-3","type":"file","file":"evals/Evals de trayectoria.md","subpath":"#Evals de trayectoria","x":100,"y":8830,"width":2080,"height":1230},
+		{"id":"n-2-4","type":"file","file":"evals/Cobertura y uso de información.md","subpath":"#Cobertura y uso de información","x":2400,"y":8830,"width":2080,"height":1230},
+		{"id":"n-3-0","type":"file","file":"evals/Multi-agent evals.md","subpath":"#Multi-agent evals","x":100,"y":10660,"width":2080,"height":1400},
+		{"id":"n-3-1","type":"file","file":"evals/Evaluación de subagentes.md","subpath":"#Evaluación de subagentes","x":2400,"y":10660,"width":2080,"height":1400},
+		{"id":"n-3-2","type":"file","file":"evals/Decisión de delegar.md","subpath":"#Decisión de delegar","x":4700,"y":10660,"width":2080,"height":1400},
+		{"id":"n-3-3","type":"file","file":"evals/Métricas de subagentes.md","subpath":"#Métricas de subagentes","x":100,"y":13060,"width":2080,"height":1230},
+		{"id":"n-3-4","type":"file","file":"evals/Casos de eval de subagentes.md","subpath":"#Casos de eval de subagentes","x":2400,"y":13060,"width":2080,"height":1230},
+		{"id":"n-3-5","type":"file","file":"evals/Evals de Deep Agents.md","subpath":"#Evals de Deep Agents","x":4700,"y":13060,"width":2080,"height":1230},
+		{"id":"n-4-0","type":"file","file":"evals/Regresiones y CI.md","subpath":"#Regresiones y CI","x":100,"y":14890,"width":2080,"height":1150},
+		{"id":"n-4-1","type":"file","file":"evals/Evals por cliente y producción.md","subpath":"#Evals por cliente y producción","x":2400,"y":14890,"width":2080,"height":1150},
+		{"id":"n-5-0","type":"file","file":"evals/Caso práctico - Asistente de soporte.md","subpath":"#Caso práctico - Asistente de soporte","x":100,"y":16640,"width":2080,"height":1600},
+		{"id":"related","type":"text","text":"# Conexiones con otros temas\n**Operar el servicio pertenece a Runtime:** [[Operación en producción]] · [[Despliegue y operación bajo carga]] · [[Trazas y debugging]]. Los incidentes vuelven al [[Golden dataset]].","x":100,"y":18740,"width":4200,"height":440,"color":"#888780"},
+		{"id":"n-1-2","type":"file","file":"evals/Graders.md","subpath":"#Graders","x":100,"y":3480,"width":2080,"height":1450},
+		{"id":"n-1-1","type":"file","file":"evals/Golden cases agénticos.md","subpath":"#Golden cases agénticos","x":2880,"y":2000,"width":2080,"height":1280},
+		{"id":"n-1-3","type":"file","file":"evals/Calibración de evaluadores.md","subpath":"#Calibración de evaluadores","x":2880,"y":3480,"width":2080,"height":1450},
+		{"id":"n-2-5","type":"file","file":"evals/Lost in the middle.md","subpath":"#Lost in the middle","x":5120,"y":8830,"width":2080,"height":1230}
 	],
 	"edges":[
-		{"id":"e1","fromNode":"gold","fromSide":"right","toNode":"tool","toSide":"left","label":"casos"},
-		{"id":"e2","fromNode":"tool","fromSide":"bottom","toNode":"mae","toSide":"top","label":"por agente"}
+		{"id":"e-start","fromNode":"hub","fromSide":"bottom","toNode":"n-1-0","toSide":"top","color":"#888780","label":"lectura: empezar"},
+		{"id":"e-0","fromNode":"n-1-0","fromSide":"right","toNode":"n-1-1","toSide":"left","color":"#888780","label":"lectura: concretar escenarios"},
+		{"id":"e-1","fromNode":"n-1-2","fromSide":"right","toNode":"n-1-3","toSide":"left","color":"#888780","label":"lectura: comprobar el juez"},
+		{"id":"e-2","fromNode":"n-2-4","fromSide":"right","toNode":"n-2-5","toSide":"left","color":"#888780","label":"lectura: variar la posición"},
+		{"id":"e-3","fromNode":"n-3-0","fromSide":"right","toNode":"n-3-1","toSide":"left","color":"#888780","label":"lectura: aislar la delegación"},
+		{"id":"e-4","fromNode":"n-3-1","fromSide":"right","toNode":"n-3-2","toSide":"left","color":"#888780","label":"lectura: cuándo invocar"},
+		{"id":"e-5","fromNode":"n-3-3","fromSide":"right","toNode":"n-3-4","toSide":"left","color":"#888780","label":"lectura: diseñar pruebas"},
+		{"id":"e-6","fromNode":"n-3-4","fromSide":"right","toNode":"n-3-5","toSide":"left","color":"#888780","label":"lectura: probar capacidades del SDK"},
+		{"id":"e-7","fromNode":"n-4-0","fromSide":"right","toNode":"n-4-1","toSide":"left","color":"#888780","label":"lectura: de offline a online"}
 	]
 }

@@ -1,0 +1,20 @@
+{
+	"nodes":[
+		{"id":"hub","type":"file","file":"fundamentos/Fundamentos.md","subpath":"#Fundamentos","x":100,"y":120,"width":1600,"height":1300},
+		{"id":"guide","type":"text","text":"# Cómo leer este mapa\nModelo → instrucciones → contexto → herramientas. Después, elegir cómo mejorar.\n\n**Grupos numerados:** orden de estudio.\n**Flechas etiquetadas:** flujo, lectura o requisito.\n**Línea sin flecha:** comparación; no indica una secuencia.\n\nCada nota tiene una categoría principal; los enlaces llevan a temas relacionados.","x":1920,"y":120,"width":2820,"height":620,"color":"#378ADD"},
+		{"id":"g-1","type":"group","label":"01 · Bases","color":"#378ADD","x":0,"y":1700,"width":4840,"height":3620},
+		{"id":"n-1-0","type":"file","file":"fundamentos/LLMs y elección de modelo.md","subpath":"#LLMs y elección de modelo","x":100,"y":1800,"width":1400,"height":1150},
+		{"id":"n-1-1","type":"file","file":"fundamentos/Prompts y salidas estructuradas.md","subpath":"#Prompts y salidas estructuradas","x":1720,"y":1800,"width":1400,"height":1150},
+		{"id":"n-1-2","type":"file","file":"fundamentos/Contexto, memoria y estado.md","subpath":"#Contexto, memoria y estado","x":100,"y":3950,"width":1400,"height":1150},
+		{"id":"n-1-3","type":"file","file":"fundamentos/Tools y function calling.md","subpath":"#Tools y function calling","x":1720,"y":3950,"width":1400,"height":1150},
+		{"id":"g-2","type":"group","label":"02 · Elegir una mejora","color":"#378ADD","x":0,"y":5600,"width":4840,"height":1620},
+		{"id":"n-2-0","type":"file","file":"fundamentos/Prompting, RAG o fine-tuning.md","subpath":"#Prompting, RAG o fine-tuning","x":100,"y":5700,"width":1400,"height":1300},
+		{"id":"related","type":"text","text":"# Conexiones con otros temas\nAplicar estas bases: [[Runtime de agentes]] · [[RAG]] · [[Multiagentes]]. Controles: [[Seguridad]] · [[Evals]].","x":100,"y":7500,"width":4200,"height":440,"color":"#378ADD"}
+	],
+	"edges":[
+		{"id":"e-start","fromNode":"hub","fromSide":"bottom","toNode":"n-1-0","toSide":"top","label":"lectura: empezar","color":"#378ADD"},
+		{"id":"e-0","fromNode":"n-1-0","fromSide":"right","toNode":"n-1-1","toSide":"left","fromEnd":"none","toEnd":"arrow","label":"lectura: definir la tarea","color":"#378ADD"},
+		{"id":"e-1","fromNode":"n-1-1","fromSide":"bottom","toNode":"n-1-2","toSide":"top","fromEnd":"none","toEnd":"arrow","label":"lectura: aportar información","color":"#378ADD"},
+		{"id":"e-2","fromNode":"n-1-2","fromSide":"right","toNode":"n-1-3","toSide":"left","fromEnd":"none","toEnd":"arrow","label":"lectura: consultar y actuar","color":"#378ADD"}
+	]
+}

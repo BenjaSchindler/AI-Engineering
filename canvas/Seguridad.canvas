@@ -1,0 +1,20 @@
+{
+	"nodes":[
+		{"id":"hub","type":"file","file":"seguridad/Seguridad.md","subpath":"#Seguridad","x":100,"y":120,"width":1600,"height":1300},
+		{"id":"guide","type":"text","text":"# Cómo leer este mapa\nAutorización → controles complementarios → evidencia y auditoría. Son capas de protección, no pasos del procesamiento.\n\n**Grupos numerados:** orden de estudio.\n**Flechas etiquetadas:** flujo, lectura o requisito.\n**Línea sin flecha:** comparación; no indica una secuencia.\n\nCada nota tiene una categoría principal; los enlaces llevan a temas relacionados.","x":1920,"y":120,"width":2820,"height":620,"color":"#1D9E75"},
+		{"id":"g-1","type":"group","label":"01 · Autorización","color":"#1D9E75","x":0,"y":1700,"width":4840,"height":2070},
+		{"id":"n-1-0","type":"file","file":"seguridad/Control humano y permisos.md","subpath":"#Control humano y permisos","x":100,"y":1800,"width":1400,"height":1750},
+		{"id":"n-1-1","type":"file","file":"seguridad/ACLs.md","subpath":"#ACLs","x":1720,"y":1800,"width":1400,"height":1750},
+		{"id":"g-2","type":"group","label":"02 · Contención","color":"#1D9E75","x":0,"y":4050,"width":4840,"height":1670},
+		{"id":"n-2-0","type":"file","file":"seguridad/Guardrails.md","subpath":"#Guardrails","x":100,"y":4150,"width":1400,"height":1350},
+		{"id":"n-2-1","type":"file","file":"seguridad/Sandboxing y aislamiento.md","subpath":"#Sandboxing y aislamiento","x":1720,"y":4150,"width":1400,"height":1350},
+		{"id":"g-3","type":"group","label":"03 · Evidencia y auditoría","color":"#1D9E75","x":0,"y":6000,"width":4840,"height":1470},
+		{"id":"n-3-0","type":"file","file":"seguridad/Seguridad y evidencia documental.md","subpath":"#Seguridad y evidencia documental","x":100,"y":6100,"width":1400,"height":1150},
+		{"id":"related","type":"text","text":"# Conexiones con otros temas\n**Aplicación:** [[RAG]] y [[Runtime de agentes]].\n**Comprobación:** [[Tool evals]] · [[RAG evals]] · [[Evals de caché]].","x":100,"y":7750,"width":4200,"height":440,"color":"#1D9E75"}
+	],
+	"edges":[
+		{"id":"e-start","fromNode":"hub","fromSide":"bottom","toNode":"n-1-0","toSide":"top","label":"lectura: empezar","color":"#1D9E75"},
+		{"id":"e-0","fromNode":"n-1-0","fromSide":"right","toNode":"n-1-1","toSide":"left","fromEnd":"none","toEnd":"arrow","label":"lectura: acceso a documentos","color":"#1D9E75"},
+		{"id":"e-1","fromNode":"n-2-0","fromSide":"right","toNode":"n-2-1","toSide":"left","fromEnd":"none","toEnd":"none","label":"contrasta: detección / aislamiento","color":"#1D9E75"}
+	]
+}

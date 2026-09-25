@@ -1,0 +1,25 @@
+{
+	"nodes":[
+		{"id":"g-3","type":"group","x":0,"y":5460,"width":5680,"height":1470,"color":"#D85A30","label":"03 · Delegación y SDK"},
+		{"id":"g-2","type":"group","x":0,"y":3500,"width":3900,"height":1680,"color":"#D85A30","label":"02 · Patrones alternativos"},
+		{"id":"g-1","type":"group","x":0,"y":1700,"width":2000,"height":1520,"color":"#D85A30","label":"01 · Elegir arquitectura"},
+		{"id":"hub","type":"file","file":"multiagente/Multiagentes.md","subpath":"#Multiagentes","x":100,"y":120,"width":1600,"height":1300},
+		{"id":"guide","type":"text","text":"# Cómo leer este mapa\nElegir arquitectura → comparar patrones → profundizar en delegación y SDK. Router/handoff y orquestador/workers son alternativas; RAG no es un requisito.\n\n**Grupos numerados:** orden de estudio.\n**Flechas etiquetadas:** flujo, lectura o requisito.\n**Línea sin flecha:** comparación; no indica una secuencia.\n\nCada nota tiene una categoría principal; los enlaces llevan a temas relacionados.","x":1920,"y":120,"width":1120,"height":320,"color":"#D85A30"},
+		{"id":"n-1-0","type":"file","file":"multiagente/Agente individual vs workflow vs multiagente.md","subpath":"#Agente individual vs workflow vs multiagente","x":100,"y":1800,"width":1680,"height":1200},
+		{"id":"n-2-0","type":"file","file":"multiagente/Router handoff.md","subpath":"#Router / handoff","x":100,"y":3600,"width":1680,"height":1360},
+		{"id":"n-2-1","type":"file","file":"multiagente/Orquestador workers.md","subpath":"#Orquestador / workers","x":2000,"y":3600,"width":1680,"height":1360},
+		{"id":"n-3-0","type":"file","file":"multiagente/subagents/Subagents y Deep Agents.md","subpath":"#Subagents y Deep Agents","x":100,"y":5560,"width":1680,"height":1150},
+		{"id":"n-3-2","type":"file","file":"multiagente/subagents/Deep Agents.md","subpath":"#Deep Agents","x":3900,"y":5560,"width":1680,"height":1150},
+		{"id":"related","type":"text","text":"# Conexiones con otros temas\n**Ejecutar:** [[Runtime de agentes]].\n**Probar:** [[Multi-agent evals]] · [[Evaluación de subagentes]] · [[Evals de Deep Agents]].","x":100,"y":7210,"width":4200,"height":440,"color":"#D85A30"},
+		{"id":"n-3-1","type":"file","file":"multiagente/subagents/Subagents.md","subpath":"#Subagents","x":2200,"y":5560,"width":1680,"height":1150}
+	],
+	"edges":[
+		{"id":"e-start","fromNode":"hub","fromSide":"bottom","toNode":"n-1-0","toSide":"top","color":"#D85A30","label":"lectura: empezar"},
+		{"id":"e-0","fromNode":"n-1-0","fromSide":"bottom","toNode":"n-2-0","toSide":"top","color":"#D85A30","label":"opción: transferir control"},
+		{"id":"e-1","fromNode":"n-1-0","fromSide":"bottom","toNode":"n-2-1","toSide":"top","color":"#D85A30","label":"opción: delegar trabajo"},
+		{"id":"e-2","fromNode":"n-2-0","fromSide":"right","toNode":"n-2-1","toSide":"left","toEnd":"none","color":"#D85A30","label":"contrasta: transferir / delegar"},
+		{"id":"e-3","fromNode":"n-2-1","fromSide":"bottom","toNode":"n-3-0","toSide":"top","color":"#D85A30","label":"lectura: profundizar en delegación"},
+		{"id":"e-4","fromNode":"n-3-0","fromSide":"right","toNode":"n-3-1","toSide":"left","color":"#D85A30","label":"lectura: entender el patrón"},
+		{"id":"e-5","fromNode":"n-3-1","fromSide":"right","toNode":"n-3-2","toSide":"left","color":"#D85A30","label":"lectura: una opción de SDK"}
+	]
+}

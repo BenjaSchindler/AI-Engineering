@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="270" viewBox="0 0 900 270" role="img" aria-labelledby="title desc">
+<title id="title">RAG evals: recuperación y respuesta</title>
+<desc id="desc">Dos evaluaciones: evidencia recuperada contra pasajes relevantes y respuesta contra contexto, pregunta y referencia.</desc>
+<g font-family="system-ui,-apple-system,Segoe UI,sans-serif">
+<rect width="900" height="270" rx="12" fill="#FBFAF7"/>
+<text x="28" y="35" font-size="17" font-weight="600" fill="#68675F">RAG EVALS · DOS PREGUNTAS DISTINTAS</text>
+<rect x="28" y="61" width="404" height="146" rx="12" fill="#EEEDFE" stroke="#534AB7"/>
+<text x="46" y="91" font-size="14" font-weight="600" fill="#534AB7">01 · RECUPERACIÓN</text>
+<text x="46" y="124" font-size="25" font-weight="600" fill="#534AB7">¿Encontró la evidencia?</text>
+<text x="46" y="157" font-size="19" fill="#534AB7">Recall@k · Precision@k · nDCG@k</text>
+<text x="46" y="185" font-size="17" fill="#534AB7">Comparar con pasajes relevantes.</text>
+<rect x="468" y="61" width="404" height="146" rx="12" fill="#E1F5EE" stroke="#0F6E56"/>
+<text x="486" y="91" font-size="14" font-weight="600" fill="#0F6E56">02 · RESPUESTA</text>
+<text x="486" y="124" font-size="25" font-weight="600" fill="#0F6E56">¿La usó para responder?</text>
+<text x="486" y="157" font-size="19" fill="#0F6E56">Respaldo · relevancia · corrección</text>
+<text x="486" y="185" font-size="17" fill="#0F6E56">Contexto + pregunta + referencia.</text>
+<text x="28" y="244" font-size="19" fill="#30302E">Encontrar bien y responder bien se evalúan por separado.</text>
+</g></svg>

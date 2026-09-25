@@ -7,6 +7,8 @@ prereqs: ["[[Golden dataset]]", "[[Tool evals]]"]
 se_evalua_con: []
 contrasta_con: ["[[Tool evals]]"]
 fuentes: []
+bloque: "03 · Coordinación"
+orden: 310
 ---
 # Multi-agent evals
 
@@ -43,3 +45,5 @@ flowchart LR
 
 ## Se conecta con
 Nivel de sistema de [[Evals]]. Mide [[Orquestador workers]], [[Router handoff]] y las trayectorias de [[RAG agéntico]].
+
+Para aislar responsabilidades y comparar contra un solo agente: [[Evaluación de subagentes]].

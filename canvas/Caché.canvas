@@ -1,0 +1,20 @@
+{
+	"nodes":[
+		{"id":"hub","type":"file","file":"runtime/cache/Caché en agentes.md","subpath":"#Caché en agentes","x":100,"y":120,"width":1600,"height":1500},
+		{"id":"guide","type":"text","text":"# Cómo leer este mapa\nPrimero las reglas de validez; después elegí la capa que reutiliza el trabajo costoso. Las tres capas no son pasos consecutivos.\n\n**Grupos numerados:** orden de estudio.\n**Flechas etiquetadas:** flujo, lectura o requisito.\n**Línea sin flecha:** comparación; no indica una secuencia.\n\nCada nota tiene una categoría principal; los enlaces llevan a temas relacionados.","x":1920,"y":120,"width":2700,"height":620,"color":"#D15378"},
+		{"id":"g-1","type":"group","label":"01 · Reglas comunes","color":"#D15378","x":0,"y":1900,"width":4720,"height":1470},
+		{"id":"n-1-0","type":"file","file":"runtime/cache/Claves e invalidación de caché.md","subpath":"#Claves e invalidación de caché","x":100,"y":2000,"width":1360,"height":1150},
+		{"id":"g-2","type":"group","label":"02 · Capas de reutilización","color":"#D15378","x":0,"y":3650,"width":4720,"height":1470},
+		{"id":"n-2-0","type":"file","file":"runtime/cache/Prompt caching.md","subpath":"#Prompt caching","x":100,"y":3750,"width":1360,"height":1150},
+		{"id":"n-2-1","type":"file","file":"runtime/cache/Caché de respuestas.md","subpath":"#Caché de respuestas","x":1680,"y":3750,"width":1360,"height":1150},
+		{"id":"n-2-2","type":"file","file":"runtime/cache/Caché de ingesta y búsqueda.md","subpath":"#Caché de ingesta y búsqueda","x":3260,"y":3750,"width":1360,"height":1150},
+		{"id":"related","type":"text","text":"# Conexiones con otros temas\n**Volver:** [[Runtime de agentes.canvas|Runtime]].\n**Aplicar:** [[Vector DB]] · [[RAG básico]].\n**Comprobar:** [[Evals de caché]].","x":100,"y":5400,"width":4200,"height":440,"color":"#D15378"}
+	],
+	"edges":[
+		{"id":"e-start","fromNode":"hub","fromSide":"bottom","toNode":"n-1-0","toSide":"top","label":"lectura: empezar","color":"#D15378"},
+		{"id":"e-0","fromNode":"n-1-0","fromSide":"bottom","toNode":"n-2-0","toSide":"top","fromEnd":"none","toEnd":"arrow","label":"aplica: reglas de validez","color":"#D15378"},
+		{"id":"e-1","fromNode":"n-1-0","fromSide":"bottom","toNode":"n-2-1","toSide":"top","fromEnd":"none","toEnd":"arrow","label":"aplica: reglas de validez","color":"#D15378"},
+		{"id":"e-2","fromNode":"n-1-0","fromSide":"bottom","toNode":"n-2-2","toSide":"top","fromEnd":"none","toEnd":"arrow","label":"aplica: reglas de validez","color":"#D15378"},
+		{"id":"e-3","fromNode":"n-2-0","fromSide":"right","toNode":"n-2-1","toSide":"left","fromEnd":"none","toEnd":"none","label":"contrasta: entrada / respuesta","color":"#D15378"}
+	]
+}

@@ -1,12 +1,14 @@
 ---
 tipo: pipeline
 dominio: rag
-parent: "[[Vector DB]]"
+parent: "[[RAG]]"
 estado: por-ver
 prereqs: ["[[Connector]]", "[[Document IDs]]"]
 se_evalua_con: []
 contrasta_con: []
 fuentes: []
+bloque: "02 · Ingesta"
+orden: 270
 ---
 # Incremental sync
 
@@ -36,4 +38,4 @@ flowchart LR
 - Los borrados son lo que todos olvidan; sin ellos la [[Vector DB]] acumula basura.
 - Necesita [[Document IDs]] estables: si el ID cambia, "modificado" se ve como "nuevo + huérfano".
 - Un full re-sync periódico (semanal) atrapa lo que el incremental se perdió.
-- Con [[Caching]] de embeddings, re-sincronizar cuesta solo los chunks que cambiaron.
+- Con [[Caché de ingesta y búsqueda]] de embeddings, re-sincronizar cuesta solo los chunks que cambiaron.

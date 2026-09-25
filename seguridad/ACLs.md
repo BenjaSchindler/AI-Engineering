@@ -1,16 +1,20 @@
 ---
-tipo: pipeline
-dominio: rag
-parent: "[[Vector DB]]"
+tipo: "concepto"
+dominio: "seguridad"
+parent: "[[Seguridad]]"
 estado: por-ver
-prereqs: ["[[Connector]]", "[[Normalization]]"]
+prereqs: ["[[Control humano y permisos]]"]
 se_evalua_con: ["[[Golden dataset]]"]
 contrasta_con: []
 fuentes: []
+bloque: "01 · Autorización"
+orden: 120
 ---
 # ACLs
 
 > **En una frase:** cómo evito que un usuario vea datos que no debería. Los permisos viajan con cada chunk desde la fuente y se aplican **dentro** de la búsqueda, no después.
+
+![Candado: los permisos filtran la búsqueda antes de llegar al LLM](../assets/acls.svg)
 
 ## Diagrama
 ```mermaid
@@ -28,7 +32,7 @@ flowchart LR
     a[top-10 global] --> b[filtrar por acl] --> c["0 a 3 resultados<br/>o el LLM ya vio lo prohibido"]
   end
   subgraph bien["Pre-filtro (bien)"]
-    d[top-10 entre los permitidos] --> e[10 resultados válidos]
+    d[top-10 entre los permitidos] --> e[Hasta 10 resultados permitidos]
   end
 ```
 Post-filtrar el top-k puede dejar la lista vacía, y si el filtro lo hace el prompt en vez de la DB, el dato ya se filtró al contexto.
@@ -40,5 +44,10 @@ Post-filtrar el top-k puede dejar la lista vacía, y si el filtro lo hace el pro
 
 ## Trade-offs
 - Filtros muy selectivos degradan [[ANN HNSW]]: el grafo pierde vecinos válidos. Probá con tus grupos reales.
-- [[Caching]] de respuestas por encima del filtro filtra datos: la key debe incluir la identidad.
+- [[Caché de respuestas]] por encima del filtro filtra datos: la key debe incluir la identidad.
 - Para auditoría, loggeá qué chunks se mostraron a quién.
+
+## También en multimedia
+En [[RAG multimedia]], el candado acompaña el texto extraído, las imágenes, los frames, las miniaturas y el archivo original. Comprobá permisos al recuperar el original e invalidá caches cuando cambien; la identidad sola no refleja una revocación.
+
+[[Seguridad]] reúne este control de lectura con [[Guardrails]] y [[Control humano y permisos]] para las acciones.

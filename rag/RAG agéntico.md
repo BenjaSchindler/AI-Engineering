@@ -6,7 +6,9 @@ estado: por-ver
 prereqs: ["[[RAG básico]]"]
 se_evalua_con: ["[[Tool evals]]", "[[Multi-agent evals]]"]
 contrasta_con: ["[[RAG básico]]"]
-fuentes: []
+fuentes: ["https://www.anthropic.com/engineering/building-effective-agents"]
+bloque: "04 · Variantes"
+orden: 410
 ---
 # RAG agéntico
 
@@ -30,17 +32,19 @@ flowchart TB
 ## RAG vs RAG agéntico
 | | [[RAG básico]] | RAG agéntico |
 |---|---|---|
-| Búsquedas | 1, fija | N, decididas en runtime |
-| Fuentes | Una Vector DB | Varias herramientas |
-| Preguntas compuestas | Mal | Bien (multi-hop) |
-| Latencia y costo | 1x | 3x a 10x |
-| Fallas | Predecibles | Loops, sobre-búsqueda |
+| Búsquedas | Pipeline predefinido | El agente decide los pasos según resultados |
+| Fuentes | Una o varias, configuradas en el pipeline | Una o varias, elegidas durante la ejecución |
+| Preguntas compuestas | Puede resolverlas si el pipeline reúne la evidencia | Puede adaptar búsquedas dependientes; no garantiza acertar |
+| Latencia y costo | Dependen del pipeline | Dependen de llamadas, modelos y límites; medilos |
+| Fallas | Recuperación incompleta o mala interpretación | Añade riesgo de loops y sobre-búsqueda |
 
-## Patrones con nombre
+RAG no exige una Vector DB. La diferencia principal es quién controla la búsqueda: código o decisiones del modelo. Agregá autonomía si mejora tus evals. [Workflows y agentes](https://www.anthropic.com/engineering/building-effective-agents).
+
+## Estrategias
 - **Routing**: elegir índice o herramienta según la pregunta.
 - **Multi-hop**: la respuesta a la sub-pregunta 1 es input de la búsqueda 2.
-- **Corrective RAG**: si los chunks son malos, buscar en otro lado (web).
-- **Self-RAG**: el modelo critica su propia respuesta contra las fuentes.
+- **Corrección de recuperación**: si falta evidencia, reformular o consultar otra fuente autorizada.
+- **Verificación de respaldo**: revisar afirmaciones contra las fuentes; una autocrítica del modelo también puede fallar.
 
 > [!WARNING] Ponele límites
 > Máximo de iteraciones, timeout y presupuesto de tokens. Sin eso, el agente "buscando mejor" se come el costo del mes.

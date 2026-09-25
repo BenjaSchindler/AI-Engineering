@@ -1,16 +1,20 @@
 ---
 tipo: pipeline
 dominio: rag
-parent: "[[Vector DB]]"
+parent: "[[RAG]]"
 estado: por-ver
 prereqs: []
 se_evalua_con: []
 contrasta_con: []
 fuentes: []
+bloque: "02 · Ingesta"
+orden: 210
 ---
 # Connector
 
 > **En una frase:** cómo obtengo los datos. El connector habla el idioma de cada fuente (API, DB, archivos) y entrega documentos crudos al pipeline de [[Vector DB]].
+
+![Enchufe: conectar la fuente y traer contenido con permisos](../../assets/connector.svg)
 
 ## Diagrama
 ```mermaid

@@ -1,0 +1,22 @@
+{
+	"nodes":[
+		{"id":"hub","type":"file","file":"programacion-agentes/Programación con agentes.md","subpath":"#Programación con agentes","x":100,"y":120,"width":1600,"height":1300},
+		{"id":"guide","type":"text","text":"# Cómo leer este mapa\nPreparar el repositorio → realizar un cambio → validar y revisar. Este bloque se estudia de forma independiente.\n\n**Grupos numerados:** orden de estudio.\n**Flechas etiquetadas:** flujo, lectura o requisito.\n**Línea sin flecha:** comparación; no indica una secuencia.\n\nCada nota tiene una categoría principal; los enlaces llevan a temas relacionados.","x":1920,"y":120,"width":2520,"height":620,"color":"#BA7517"},
+		{"id":"g-1","type":"group","label":"01 · Preparar el repositorio","color":"#BA7517","x":0,"y":1700,"width":4540,"height":1480},
+		{"id":"n-1-0","type":"file","file":"programacion-agentes/Instrucciones del repositorio.md","subpath":"#Instrucciones del repositorio","x":100,"y":1800,"width":1300,"height":1160},
+		{"id":"n-1-1","type":"file","file":"programacion-agentes/Skills compartidas.md","subpath":"#Skills compartidas","x":1620,"y":1800,"width":1300,"height":1160},
+		{"id":"n-1-2","type":"file","file":"programacion-agentes/Hooks de desarrollo.md","subpath":"#Hooks de desarrollo","x":3140,"y":1800,"width":1300,"height":1160},
+		{"id":"g-2","type":"group","label":"02 · Trabajar y validar","color":"#BA7517","x":0,"y":3460,"width":4540,"height":1480},
+		{"id":"n-2-0","type":"file","file":"programacion-agentes/Flujo de trabajo y validación.md","subpath":"#Flujo de trabajo y validación","x":100,"y":3560,"width":1300,"height":1160},
+		{"id":"n-2-1","type":"file","file":"programacion-agentes/Worktrees y trabajo paralelo.md","subpath":"#Worktrees y trabajo paralelo","x":1620,"y":3560,"width":1300,"height":1160},
+		{"id":"n-2-2","type":"file","file":"programacion-agentes/Revisión de PR con agentes.md","subpath":"#Revisión de PR con agentes","x":3140,"y":3560,"width":1300,"height":1160},
+		{"id":"related","type":"text","text":"# Conexiones con otros temas\n**Regla estable:** instrucciones. **Procedimiento:** skill. **Evento:** hook. **Resultado:** tests y revisión.","x":100,"y":5220,"width":4200,"height":440,"color":"#BA7517"}
+	],
+	"edges":[
+		{"id":"e-start","fromNode":"hub","fromSide":"bottom","toNode":"n-1-0","toSide":"top","label":"lectura: empezar","color":"#BA7517"},
+		{"id":"e-0","fromNode":"n-1-0","fromSide":"right","toNode":"n-1-1","toSide":"left","fromEnd":"none","toEnd":"arrow","label":"lectura: reglas / procedimientos","color":"#BA7517"},
+		{"id":"e-1","fromNode":"n-1-1","fromSide":"right","toNode":"n-1-2","toSide":"left","fromEnd":"none","toEnd":"arrow","label":"lectura: procedimientos / eventos","color":"#BA7517"},
+		{"id":"e-2","fromNode":"n-2-0","fromSide":"right","toNode":"n-2-1","toSide":"left","fromEnd":"none","toEnd":"arrow","label":"lectura: coordinar cambios","color":"#BA7517"},
+		{"id":"e-3","fromNode":"n-2-1","fromSide":"right","toNode":"n-2-2","toSide":"left","fromEnd":"none","toEnd":"arrow","label":"lectura: revisar la integración","color":"#BA7517"}
+	]
+}

@@ -1,12 +1,14 @@
 ---
 tipo: pipeline
 dominio: rag
-parent: "[[Vector DB]]"
+parent: "[[RAG]]"
 estado: por-ver
 prereqs: ["[[Connector]]"]
 se_evalua_con: []
 contrasta_con: []
 fuentes: []
+bloque: "02 · Ingesta"
+orden: 230
 ---
 # Document IDs
 

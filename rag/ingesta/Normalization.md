@@ -1,12 +1,14 @@
 ---
 tipo: pipeline
 dominio: rag
-parent: "[[Vector DB]]"
+parent: "[[RAG]]"
 estado: por-ver
 prereqs: ["[[Connector]]"]
 se_evalua_con: []
 contrasta_con: []
 fuentes: []
+bloque: "02 · Ingesta"
+orden: 220
 ---
 # Normalization
 
@@ -35,7 +37,7 @@ flowchart LR
   "metadata": { "author": "…", "url": "…", "lang": "es" }
 }
 ```
-Todo lo que viene después (chunking, [[Deduplication]], [[ACLs]]) se programa una sola vez contra este esquema, no una vez por fuente.
+Todo lo que viene después ([[Chunking]], [[Deduplication]], [[ACLs]]) se programa una sola vez contra este esquema, no una vez por fuente.
 
 ## Qué limpiar sí o sí
 - Headers y footers repetidos, menús de navegación, firmas de mail.
@@ -44,3 +46,5 @@ Todo lo que viene después (chunking, [[Deduplication]], [[ACLs]]) se programa u
 
 > [!TIP] Regla
 > Normalizá texto y metadata, pero **no** resumas ni descartes contenido acá. Eso es decisión de chunking o retrieval, y es irreversible.
+
+Para [[RAG multimedia]], extendé el esquema con modalidad, archivo original y página / región / timestamps. Conservá el original además del texto extraído.

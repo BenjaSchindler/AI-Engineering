@@ -7,35 +7,38 @@ fuentes: []
 ---
 # RAG
 
-> **En una frase:** todo lo que hace falta para que un LLM responda con tus datos: cómo entran (pipeline de ingesta), cómo se buscan rápido (ANN) y cómo se usan al generar (RAG básico y agéntico).
+> **En una frase:** preparar las fuentes, recuperar evidencia autorizada y usarla para responder.
 
-## Mapa
+## Dos recorridos
 ```mermaid
-mindmap
-  root((RAG))
-    Pipeline de ingesta
-      Connector
-      Normalization
-      Incremental sync
-      Document IDs
-      Deduplication
-      Caching
-      ACLs
-    ANN HNSW
-    RAG básico
-    RAG agéntico
+flowchart LR
+  a[Fuentes] --> b[Preparar documentos]
+  b --> c[Chunks y embeddings]
+  c --> d[Índice]
+  q[Pregunta] --> r[Recuperar y ordenar]
+  d --> r
+  r --> g[Responder con evidencia]
 ```
 
-## Orden sugerido
-1. [[Vector DB]] · el pipeline de ingesta y sus 7 preguntas
-2. [[ANN HNSW]] · cómo escala la búsqueda
-3. [[RAG básico]] · una búsqueda, una respuesta
-4. [[RAG agéntico]] · el agente decide cuánto buscar
+## Orden de lectura
+1. **Panorama:** [[RAG básico]] muestra la consulta completa.
+2. **Ingesta:** [[Connector]] → [[Normalization]] → [[Document IDs]] → [[Deduplication]] → [[Chunking]] → [[Modelos de embedding]]. [[Incremental sync]] mantiene los datos al día.
+3. **Índice y recuperación:** [[Vector DB]], las alternativas [[ANN HNSW]] / [[ANN IVF]] y [[Búsqueda híbrida y reranking]]. HNSW e IVF no son etapas consecutivas.
+4. **Variantes:** [[RAG agéntico]] adapta la búsqueda; [[RAG multimedia]] cambia qué evidencia se procesa. Su detalle está en [[RAG multimedia - Implementación]].
+
+El diagrama muestra el caso con índice vectorial; RAG también puede recuperar con otros mecanismos. El orden de estudio no obliga a usar todas las técnicas.
+
+## Conexiones con otras categorías
+- **Seguridad:** [[ACLs]] acompaña documentos y búsquedas.
+- **Runtime:** [[Caché de ingesta y búsqueda]] evita repetir trabajo válido.
+- **Evals:** [[RAG evals]] y [[Caso práctico - Asistente de soporte]].
 
 ## Estado de los nodos
 ```dataview
-TABLE WITHOUT ID file.link AS nodo, parent, estado
-FROM "rag" WHERE tipo != "mapa" SORT parent, file.name
+TABLE WITHOUT ID file.link AS nodo, bloque, estado
+FROM "rag" WHERE tipo != "mapa" SORT orden
 ```
 
-[[RAG.canvas|Abrir el canvas de RAG]] · para ver solo este subgrafo: clic derecho en esta nota → *Open local graph*.
+[[RAG.canvas|Abrir el canvas de RAG]]
+
+Para publicar el buscador a hosts compatibles: [[MCP]] → [[RAG como tool MCP]].

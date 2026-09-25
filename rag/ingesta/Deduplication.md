@@ -1,12 +1,14 @@
 ---
 tipo: pipeline
 dominio: rag
-parent: "[[Vector DB]]"
+parent: "[[RAG]]"
 estado: por-ver
 prereqs: ["[[Normalization]]", "[[Document IDs]]"]
 se_evalua_con: ["[[Golden dataset]]"]
 contrasta_con: []
 fuentes: []
+bloque: "02 · Ingesta"
+orden: 240
 ---
 # Deduplication
 

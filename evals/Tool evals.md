@@ -7,10 +7,12 @@ prereqs: ["[[Golden dataset]]"]
 se_evalua_con: []
 contrasta_con: ["[[Multi-agent evals]]"]
 fuentes: []
+bloque: "02 · Qué evaluar"
+orden: 220
 ---
 # Tool evals
 
-> **En una frase:** dado un input, ¿el modelo eligió la herramienta correcta, con los argumentos correctos, y usó bien el resultado? Se testea sin ejecutar la herramienta real.
+> **En una frase:** dado un input, ¿el modelo eligió la herramienta correcta, con los argumentos correctos, y usó bien el resultado? Podés aislar la decisión con herramientas simuladas.
 
 ## Diagrama
 ```mermaid
@@ -34,9 +36,11 @@ flowchart LR
 | Error recovery | Si la tool falla, ¿reintenta o inventa? | Mock que devuelve error |
 
 ## Reglas
-- Mockeá las tools: evals determinísticos, rápidos y sin costo de APIs reales.
+- Mockeá las tools para controlar sus respuestas; el modelo sigue siendo variable. Complementá con pruebas de integración en un entorno de prueba.
 - Un caso por tool por comportamiento: "usa buscar_pedido", "no usa nada", "pide aclaración".
 - Cambiaste la descripción de una tool → corré esto. La descripción es el prompt de la tool.
 
 ## Se conecta con
 Nivel de unidad de [[Evals]]. Los casos salen del [[Golden dataset]]. En [[RAG agéntico]] la "tool" es cada índice o fuente.
+
+La base conceptual está en [[Tools y function calling]]; los permisos y las aprobaciones en [[Control humano y permisos]].
