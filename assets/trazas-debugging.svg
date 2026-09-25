@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="648" viewBox="0 0 900 648" role="img" aria-labelledby="title desc">
+<title id="title">Trazas y debugging · dónde se fue el tiempo</title>
+<desc id="desc">Traza en cascada de una ejecución lenta del agente cotizador: 12,4 segundos en total. La tool calcular_prima vence dos veces por timeout de 3 segundos y el runtime reintenta con esperas; 8 de los 12,4 segundos se van ahí. El span del primer intento muestra estado de error, argumentos y versiones. Desde la versión 3.4 de la tool, su p95 pasó de 1,1 a 3,4 segundos. El recorrido: síntoma, primer paso incorrecto, causa, reproducir y caso de regresión.</desc>
+<g font-family="system-ui,-apple-system,Segoe UI,sans-serif">
+<rect x="0" y="0" width="900" height="648" rx="12" fill="#FBFAF7"/>
+<text x="28" y="35" font-size="17" fill="#68675F" font-weight="600">TRAZAS Y DEBUGGING · DÓNDE SE FUE EL TIEMPO</text>
+<text x="28" y="64" font-size="14" fill="#444441" font-weight="600">Traza de una ejecución lenta</text>
+<text x="252" y="64" font-size="13" fill="#888780">cotizar P-17 · 12,4 s, cuando lo habitual es menos de 5 s</text>
+<path d="M318.0 86 V352" stroke="#E4E2DA" fill="none"/>
+<text x="318.0" y="82" font-size="11" fill="#888780" text-anchor="middle">0 s</text>
+<path d="M405.0 86 V352" stroke="#E4E2DA" fill="none"/>
+<text x="405.0" y="82" font-size="11" fill="#888780" text-anchor="middle">2 s</text>
+<path d="M492.1 86 V352" stroke="#E4E2DA" fill="none"/>
+<text x="492.1" y="82" font-size="11" fill="#888780" text-anchor="middle">4 s</text>
+<path d="M579.1 86 V352" stroke="#E4E2DA" fill="none"/>
+<text x="579.1" y="82" font-size="11" fill="#888780" text-anchor="middle">6 s</text>
+<path d="M666.2 86 V352" stroke="#E4E2DA" fill="none"/>
+<text x="666.2" y="82" font-size="11" fill="#888780" text-anchor="middle">8 s</text>
+<path d="M753.2 86 V352" stroke="#E4E2DA" fill="none"/>
+<text x="753.2" y="82" font-size="11" fill="#888780" text-anchor="middle">10 s</text>
+<path d="M840.2 86 V352" stroke="#E4E2DA" fill="none"/>
+<text x="840.2" y="82" font-size="11" fill="#888780" text-anchor="middle">12 s</text>
+<text x="28" y="115" font-size="12" fill="#888780" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace">invoke_agent</text>
+<text x="123" y="115" font-size="13" fill="#444441" font-weight="600">cotizador</text>
+<rect x="318.0" y="102" width="539.6" height="18" rx="3" fill="#F1EFE8" stroke="#444441"/>
+<text x="587.8" y="115" font-size="11" fill="#444441" text-anchor="middle" font-weight="600">12,4 s</text>
+<text x="44" y="147" font-size="12" fill="#888780" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace">chat</text>
+<text x="80" y="147" font-size="13" fill="#444441" font-weight="400">planificar</text>
+<rect x="318.0" y="134" width="69.6" height="18" rx="3" fill="#EEEDFE" stroke="#534AB7"/>
+<text x="44" y="179" font-size="12" fill="#888780" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace">execute_tool</text>
+<text x="139" y="179" font-size="13" fill="#444441" font-weight="400">buscar_poliza</text>
+<rect x="387.6" y="166" width="17.4" height="18" rx="3" fill="#E6F1FB" stroke="#185FA5"/>
+<rect x="22" y="191" width="286" height="30" rx="6" fill="#FAECE7"/>
+<text x="44" y="211" font-size="12" fill="#888780" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace">execute_tool</text>
+<text x="139" y="211" font-size="13" fill="#993C1D" font-weight="600">calcular_prima · 1</text>
+<rect x="405.0" y="198" width="130.6" height="18" rx="3" fill="#FAECE7" stroke="#993C1D"/>
+<text x="470.3" y="211" font-size="11" fill="#993C1D" text-anchor="middle" font-weight="600">timeout 3 s</text>
+<path d="M531.6 203 l8 8 M539.6 203 l-8 8" stroke="#993C1D" stroke-width="2"/>
+<text x="44" y="243" font-size="12" fill="#888780" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace">execute_tool</text>
+<text x="139" y="243" font-size="13" fill="#993C1D" font-weight="600">calcular_prima · 2</text>
+<rect x="553.0" y="230" width="130.6" height="18" rx="3" fill="#FAECE7" stroke="#993C1D"/>
+<text x="618.3" y="243" font-size="11" fill="#993C1D" text-anchor="middle" font-weight="600">timeout 3 s</text>
+<path d="M679.6 235 l8 8 M687.6 235 l-8 8" stroke="#993C1D" stroke-width="2"/>
+<text x="44" y="275" font-size="12" fill="#888780" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace">execute_tool</text>
+<text x="139" y="275" font-size="13" fill="#444441" font-weight="400">calcular_prima · 3</text>
+<rect x="718.4" y="262" width="34.8" height="18" rx="3" fill="#E6F1FB" stroke="#185FA5"/>
+<text x="44" y="307" font-size="12" fill="#888780" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace">chat</text>
+<text x="80" y="307" font-size="13" fill="#444441" font-weight="400">redactar</text>
+<rect x="753.2" y="294" width="87.0" height="18" rx="3" fill="#EEEDFE" stroke="#534AB7"/>
+<text x="44" y="339" font-size="12" fill="#888780" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace">execute_tool</text>
+<text x="139" y="339" font-size="13" fill="#444441" font-weight="400">guardar_cotizacion</text>
+<rect x="840.2" y="326" width="17.4" height="18" rx="3" fill="#E6F1FB" stroke="#185FA5"/>
+<path d="M535.6 239 H553.0" stroke="#888780" stroke-width="1.5" stroke-dasharray="3 3"/>
+<path d="M683.6 271 H718.4" stroke="#888780" stroke-width="1.5" stroke-dasharray="3 3"/>
+<text x="701.0" y="264" font-size="10" fill="#888780" text-anchor="middle">espera</text>
+<path d="M405.0 195 V189 H753.2 V195" stroke="#993C1D" stroke-width="1.5" fill="none"/>
+<text x="418.1" y="183" font-size="12" fill="#993C1D" font-weight="600">8,0 s de 12,4 s en calcular_prima: dos timeouts y sus esperas</text>
+<rect x="28" y="392" width="520" height="132" rx="10" fill="#FAECE7" stroke="#993C1D"/>
+<text x="44" y="416" font-size="13" fill="#993C1D" font-weight="600">Span seleccionado · execute_tool calcular_prima · intento 1</text>
+<text x="44" y="442" font-size="12" fill="#888780">estado</text>
+<text x="128" y="442" font-size="12" fill="#444441" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace">ERROR · timeout tras 3,0 s</text>
+<text x="44" y="463" font-size="12" fill="#888780">argumentos</text>
+<text x="128" y="463" font-size="12" fill="#444441" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace">póliza P-17 · cliente A</text>
+<text x="44" y="484" font-size="12" fill="#888780">versiones</text>
+<text x="128" y="484" font-size="12" fill="#444441" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace">prompt v12 · modelo sin cambios · tool v3.4</text>
+<text x="44" y="505" font-size="12" fill="#888780">ejecución</text>
+<text x="128" y="505" font-size="12" fill="#444441" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace">trace 7f3c · thread cot-P17 · 2026-09-24 10:12</text>
+<rect x="568" y="392" width="304" height="132" rx="10" fill="#F1EFE8" stroke="#B4B2A9"/>
+<text x="584" y="416" font-size="13" fill="#444441" font-weight="600">Comparar con la versión anterior</text>
+<text x="584" y="440" font-size="12" fill="#5F5E5A">p95 de calcular_prima</text>
+<rect x="584" y="450" width="65.0" height="16" rx="3" fill="#E6F1FB" stroke="#185FA5"/>
+<text x="655.0" y="462" font-size="12" fill="#185FA5" font-weight="600">v3.3 · 1,1 s</text>
+<rect x="584" y="472" width="201.0" height="16" rx="3" fill="#FAECE7" stroke="#993C1D"/>
+<text x="791.0" y="484" font-size="12" fill="#993C1D" font-weight="600">v3.4 · 3,4 s</text>
+<path d="M761.4 446 V494" stroke="#444441" stroke-width="1.5" stroke-dasharray="4 3"/>
+<text x="761.4" y="510" font-size="11" fill="#444441" text-anchor="middle">timeout de la tool: 3 s</text>
+<rect x="28" y="546" width="160" height="50" rx="8" fill="#F1EFE8" stroke="#B4B2A9"/>
+<text x="108.0" y="566" font-size="13" fill="#444441" font-weight="600" text-anchor="middle">Síntoma</text>
+<text x="108.0" y="584" font-size="11.5" fill="#5F5E5A" text-anchor="middle">p95: de 5 a 12 s</text>
+<path d="M189 571 h9" stroke="#68675F" stroke-width="1.5"/>
+<rect x="199" y="546" width="160" height="50" rx="8" fill="#F1EFE8" stroke="#B4B2A9"/>
+<text x="279.0" y="566" font-size="13" fill="#444441" font-weight="600" text-anchor="middle">Primer paso mal</text>
+<text x="279.0" y="584" font-size="11.5" fill="#5F5E5A" text-anchor="middle">timeout de una tool</text>
+<path d="M360 571 h9" stroke="#68675F" stroke-width="1.5"/>
+<rect x="370" y="546" width="160" height="50" rx="8" fill="#F1EFE8" stroke="#B4B2A9"/>
+<text x="450.0" y="566" font-size="13" fill="#444441" font-weight="600" text-anchor="middle">Causa</text>
+<text x="450.0" y="584" font-size="11.5" fill="#5F5E5A" text-anchor="middle">v3.4 supera el timeout</text>
+<path d="M531 571 h9" stroke="#68675F" stroke-width="1.5"/>
+<rect x="541" y="546" width="160" height="50" rx="8" fill="#F1EFE8" stroke="#B4B2A9"/>
+<text x="621.0" y="566" font-size="13" fill="#444441" font-weight="600" text-anchor="middle">Reproducir</text>
+<text x="621.0" y="584" font-size="11.5" fill="#5F5E5A" text-anchor="middle">replay con demora</text>
+<path d="M702 571 h9" stroke="#68675F" stroke-width="1.5"/>
+<rect x="712" y="546" width="160" height="50" rx="8" fill="#E1F5EE" stroke="#0F6E56"/>
+<text x="792.0" y="566" font-size="13" fill="#0F6E56" font-weight="600" text-anchor="middle">Regresión</text>
+<text x="792.0" y="584" font-size="11.5" fill="#0F6E56" text-anchor="middle">caso con tope de latencia</text>
+<text x="28" y="622" font-size="13" fill="#888780">Nombres de spans según las convenciones GenAI de OpenTelemetry (en desarrollo). Ejemplo ilustrativo; consultado el 25-09-2026.</text>
+</g></svg>
