@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="548" viewBox="0 0 900 548" role="img" aria-labelledby="title desc"><title id="title">Ejecución y recuperación · un timeout no significa que falló</title><desc id="desc">Tres carriles: agente, checkpoint y API externa. El agente registra la intención con la clave cot-8f3a, llama a la API con esa clave de idempotencia, la API crea COT-1042 pero la respuesta se pierde por timeout. El agente reintenta con la misma clave, la API devuelve COT-1042 sin duplicar y el agente guarda el resultado. Sin clave, el reintento crea COT-1043 duplicada.</desc><defs><marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M2 1 L9 5 L2 9" fill="none" stroke="#68675F" stroke-width="1.5"/></marker></defs><g font-family="system-ui,-apple-system,Segoe UI,sans-serif"><rect x="0" y="0" width="900" height="548" rx="12" fill="#FBFAF7" stroke="none"/>
+<text x="28" y="35" font-size="17" fill="#68675F" font-weight="600">EJECUCIÓN Y RECUPERACIÓN · UN TIMEOUT NO SIGNIFICA QUE FALLÓ</text>
+
+<path d="M28 150 H872" stroke="#B4B2A9" stroke-dasharray="2 4" fill="none"/>
+<path d="M28 240 H872" stroke="#B4B2A9" stroke-dasharray="2 4" fill="none"/>
+<path d="M28 330 H872" stroke="#B4B2A9" stroke-dasharray="2 4" fill="none"/>
+<text x="28" y="102" font-size="14" fill="#444441" font-weight="600">Agente</text><text x="28" y="120" font-size="12" fill="#888780">tu proceso</text>
+<text x="28" y="192" font-size="14" fill="#444441" font-weight="600">Checkpoint</text><text x="28" y="210" font-size="12" fill="#888780">estado durable</text>
+<text x="28" y="282" font-size="14" fill="#444441" font-weight="600">API externa</text><text x="28" y="300" font-size="12" fill="#888780">cotizaciones</text>
+
+<rect x="168" y="78" width="130" height="50" rx="8" fill="#F1EFE8" stroke="#B4B2A9"/>
+<text x="233" y="99" font-size="14" fill="#444441" font-weight="600" text-anchor="middle">Registrar</text><text x="233" y="117" font-size="13" fill="#5F5E5A" text-anchor="middle">la intención</text>
+<path d="M233 128 V164" stroke="#68675F" stroke-width="2" fill="none" marker-end="url(#arr)"/>
+<rect x="168" y="168" width="130" height="54" rx="8" fill="#FAEEDA" stroke="#854F0B"/>
+<text x="233" y="190" font-size="14" fill="#854F0B" font-weight="600" text-anchor="middle">pendiente</text><text x="233" y="209" font-size="12" fill="#854F0B" text-anchor="middle">clave cot-8f3a</text>
+
+<rect x="318" y="78" width="130" height="50" rx="8" fill="#F1EFE8" stroke="#B4B2A9"/>
+<text x="383" y="99" font-size="14" fill="#444441" font-weight="600" text-anchor="middle">Llamar</text><text x="383" y="117" font-size="13" fill="#5F5E5A" text-anchor="middle">con la clave</text>
+<path d="M383 128 V254" stroke="#68675F" stroke-width="2" fill="none" marker-end="url(#arr)"/>
+<text x="391" y="166" font-size="12" fill="#5F5E5A">Idempotency-Key</text><text x="391" y="182" font-size="12" fill="#5F5E5A">cot-8f3a</text>
+<rect x="318" y="258" width="130" height="54" rx="8" fill="#E1F5EE" stroke="#0F6E56"/>
+<text x="383" y="280" font-size="14" fill="#0F6E56" font-weight="600" text-anchor="middle">crea COT-1042</text><text x="383" y="299" font-size="12" fill="#0F6E56" text-anchor="middle">la acción ocurrió</text>
+
+<path d="M448 262 L522 134" stroke="#993C1D" stroke-width="2" stroke-dasharray="5 4" fill="none"/>
+<path d="M477 190 L493 206 M493 190 L477 206" stroke="#993C1D" stroke-width="3" fill="none"/>
+<rect x="468" y="78" width="130" height="50" rx="8" fill="#FAECE7" stroke="#993C1D"/>
+<text x="533" y="99" font-size="14" fill="#993C1D" font-weight="600" text-anchor="middle">Timeout</text><text x="533" y="117" font-size="13" fill="#993C1D" text-anchor="middle">¿se creó o no?</text>
+
+<rect x="618" y="78" width="130" height="50" rx="8" fill="#F1EFE8" stroke="#B4B2A9"/>
+<text x="683" y="99" font-size="14" fill="#444441" font-weight="600" text-anchor="middle">Reintentar</text><text x="683" y="117" font-size="13" fill="#5F5E5A" text-anchor="middle">con la misma clave</text>
+<path d="M683 128 V254" stroke="#68675F" stroke-width="2" fill="none" marker-end="url(#arr)"/>
+<rect x="618" y="258" width="130" height="54" rx="8" fill="#E1F5EE" stroke="#0F6E56"/>
+<text x="683" y="280" font-size="14" fill="#0F6E56" font-weight="600" text-anchor="middle">ya existe</text><text x="683" y="299" font-size="12" fill="#0F6E56" text-anchor="middle">devuelve COT-1042</text>
+
+<path d="M748 262 L771 134" stroke="#68675F" stroke-width="2" fill="none" marker-end="url(#arr)"/>
+<rect x="768" y="78" width="104" height="50" rx="8" fill="#F1EFE8" stroke="#B4B2A9"/>
+<text x="820" y="99" font-size="14" fill="#444441" font-weight="600" text-anchor="middle">Guardar</text><text x="820" y="117" font-size="13" fill="#5F5E5A" text-anchor="middle">el resultado</text>
+<path d="M827 128 V164" stroke="#68675F" stroke-width="2" fill="none" marker-end="url(#arr)"/>
+<rect x="782" y="168" width="90" height="54" rx="8" fill="#E1F5EE" stroke="#0F6E56"/>
+<text x="827" y="190" font-size="14" fill="#0F6E56" font-weight="600" text-anchor="middle">hecha</text><text x="827" y="209" font-size="12" fill="#0F6E56" text-anchor="middle">COT-1042</text>
+
+<circle cx="168" cy="78" r="10" fill="#444441"/><text x="168" y="82.5" font-size="12" fill="#FBFAF7" font-weight="600" text-anchor="middle">1</text>
+<circle cx="318" cy="78" r="10" fill="#444441"/><text x="318" y="82.5" font-size="12" fill="#FBFAF7" font-weight="600" text-anchor="middle">2</text>
+<circle cx="468" cy="78" r="10" fill="#993C1D"/><text x="468" y="82.5" font-size="12" fill="#FBFAF7" font-weight="600" text-anchor="middle">3</text>
+<circle cx="618" cy="78" r="10" fill="#444441"/><text x="618" y="82.5" font-size="12" fill="#FBFAF7" font-weight="600" text-anchor="middle">4</text>
+<circle cx="768" cy="78" r="10" fill="#444441"/><text x="768" y="82.5" font-size="12" fill="#FBFAF7" font-weight="600" text-anchor="middle">5</text>
+
+<text x="28" y="364" font-size="14" fill="#993C1D" font-weight="600">SIN CLAVE, EL MISMO TIMEOUT DUPLICA</text>
+<text x="28" y="405" font-size="14" fill="#444441" font-weight="600">API externa</text>
+<rect x="318" y="378" width="130" height="50" rx="8" fill="#E1F5EE" stroke="#0F6E56"/>
+<text x="383" y="408" font-size="14" fill="#0F6E56" font-weight="600" text-anchor="middle">crea COT-1042</text>
+<path d="M452 407 H614" stroke="#993C1D" stroke-width="2" fill="none" marker-end="url(#arr)"/>
+<text x="533" y="398" font-size="13" fill="#993C1D" text-anchor="middle">reintento a ciegas</text>
+<rect x="618" y="378" width="130" height="50" rx="8" fill="#FAECE7" stroke="#993C1D"/>
+<text x="683" y="399" font-size="14" fill="#993C1D" font-weight="600" text-anchor="middle">crea COT-1043</text><text x="683" y="417" font-size="12" fill="#993C1D" text-anchor="middle">duplicada</text>
+<text x="768" y="399" font-size="13" fill="#993C1D">el cliente recibe</text><text x="768" y="417" font-size="13" fill="#993C1D">dos cotizaciones</text>
+
+<text x="28" y="470" font-size="15" fill="#444441">Timeout = resultado desconocido. Antes de repetir, consultá el estado o reintentá con la misma clave.</text>
+<text x="28" y="494" font-size="15" fill="#0F6E56">Si no podés comprobar ni deduplicar, dejá la acción pendiente de revisión.</text>
+<text x="28" y="526" font-size="13" fill="#888780">Tu sistema genera la clave una vez por acción y la guarda antes de llamar. Qué garantiza depende del servicio.</text>
+</g></svg>
