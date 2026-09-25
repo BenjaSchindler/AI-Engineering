@@ -1,0 +1,64 @@
+/* Only Vector DB: wide diagrams in Canvas, bounded width in a standalone note. */
+.markdown-preview-view.vector-db-visual {
+  --file-line-width: 1200px;
+}
+.canvas-node:has(.vector-db-visual) .markdown-preview-view,
+.canvas-node:has(img[alt="Pipeline de ingesta: de fuentes a vectores"]) .markdown-preview-view {
+  --file-line-width: 100%;
+  --file-margins: 24px;
+}
+.canvas-node:has(.vector-db-visual) .markdown-preview-sizer,
+.canvas-node:has(img[alt="Pipeline de ingesta: de fuentes a vectores"]) .markdown-preview-sizer {
+  width: 100%;
+  max-width: none !important;
+  margin-inline: 0;
+}
+.vector-db-visual .image-embed:has(img[alt="Pipeline de ingesta: de fuentes a vectores"]),
+.vector-db-visual .image-embed:has(img[alt="Escritura y lectura: un índice compartido"]),
+.canvas-node .image-embed:has(img[alt="Pipeline de ingesta: de fuentes a vectores"]),
+.canvas-node .image-embed:has(img[alt="Escritura y lectura: un índice compartido"]),
+.vector-db-visual img[alt="Pipeline de ingesta: de fuentes a vectores"],
+.vector-db-visual img[alt="Escritura y lectura: un índice compartido"],
+.canvas-node img[alt="Pipeline de ingesta: de fuentes a vectores"],
+.canvas-node img[alt="Escritura y lectura: un índice compartido"] {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+.canvas-node:has(.vector-db-visual) table,
+.canvas-node:has(img[alt="Pipeline de ingesta: de fuentes a vectores"]) table {
+  width: 100%;
+}
+
+/* Compact RAG diagrams: use the card width, preserve natural image proportions. */
+.markdown-preview-view.rag-visual { --file-line-width: 1100px; }
+.canvas-node:has(.rag-visual) .markdown-preview-view,
+.canvas-node:has(img[alt^="RAG visual:"]) .markdown-preview-view {
+  --file-line-width: 100%;
+  --file-margins: 24px;
+}
+.canvas-node:has(.rag-visual) .markdown-preview-sizer,
+.canvas-node:has(img[alt^="RAG visual:"]) .markdown-preview-sizer {
+  width: 100%;
+  max-width: none !important;
+  margin-inline: 0;
+}
+.rag-visual .image-embed:has(img[alt^="RAG visual:"]),
+.canvas-node .image-embed:has(img[alt^="RAG visual:"]),
+.rag-visual img[alt^="RAG visual:"],
+.canvas-node img[alt^="RAG visual:"] {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+.canvas-node:has(.rag-visual) table,
+.canvas-node:has(img[alt^="RAG visual:"]) table { width: 100%; }
+
+/* Canvas cards start at the note title; keep properties available to Dataview. */
+.canvas-node .metadata-container,
+.canvas-node .frontmatter-container,
+.canvas-node .markdown-preview-view .frontmatter {
+  display: none !important;
+}
