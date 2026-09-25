@@ -30,26 +30,15 @@ Un token válido no concede acceso a todos los documentos. Una aprobación en el
 
 ## Conexión HTTP protegida
 
-```mermaid
-sequenceDiagram
-  participant C as Cliente MCP
-  participant M as Servidor MCP
-  participant A as Servidor de autorización
-  C->>M: Petición sin token
-  M-->>C: 401 y ubicación de metadata
-  C->>M: Leer Protected Resource Metadata
-  M-->>C: Emisor y recurso protegido
-  C->>A: Descubrir configuración y autorizar con PKCE
-  Note over C,A: Login y consentimiento del usuario
-  A-->>C: Código de autorización
-  C->>A: Canjear código con verifier y resource
-  A-->>C: Access token
-  C->>M: Petición con Authorization Bearer
-  M->>M: Validar token, scopes y acceso a datos
-  M-->>C: Resultado autorizado
-```
+![Autorización en MCP: del 401 al token con audiencia, en siete pasos](../assets/mcp-autorizacion.svg)
 
-El cliente obtiene una identidad de aplicación mediante un mecanismo de registro compatible. El proveedor de identidad realiza el login; el servidor de autorización emite tokens, y MCP actúa como **resource server**. El cliente debe solicitar un token destinado al servidor MCP mediante `resource` y enviarlo en cada petición protegida. Las revisiones difieren en registro y endurecimiento del flujo; usá la especificación de la versión implementada. [Autorización actual](https://modelcontextprotocol.io/specification/2026-07-28/basic/authorization), [autorización 2025-11-25](https://modelcontextprotocol.io/specification/2025-11-25/basic/authorization).
+1. **401 con pistas.** Sin token, el servidor responde 401 con `WWW-Authenticate`, que incluye `resource_metadata` y, si corresponde, el `scope` necesario.
+2. **Descubrimiento.** El servidor MCP debe publicar su Protected Resource Metadata (RFC 9728); de ahí el cliente saca qué servidor de autorización usar y después lee su metadata (RFC 8414 u OpenID Connect Discovery). El cliente guarda el `issuer` esperado.
+3. **Registro del cliente.** Lo preferido es un Client ID Metadata Document: el `client_id` es una URL HTTPS con la metadata del cliente. También vale el pre-registro. El registro dinámico (RFC 7591) quedó obsoleto en 2026-07-28 y se mantiene por compatibilidad.
+4. **Autorizar y canjear.** El cliente abre el navegador con PKCE, `scope` y `resource`, la URI canónica del servidor MCP. Valida el `iss` de la respuesta contra el emisor guardado antes de canjear el código, y vuelve a enviar `resource` al pedir el token.
+5. **Usar el token.** Va en `Authorization: Bearer` en cada petición HTTP, nunca en la URL. El servidor debe comprobar que el token fue emitido para él como audiencia, y no puede aceptar ni reenviar otros tokens.
+
+El proveedor de identidad hace el login, el servidor de autorización emite tokens y MCP actúa como **resource server**. Token inválido o vencido: 401. Scope insuficiente: 403 con `error="insufficient_scope"` y los scopes que faltan; el cliente vuelve a autorizar con la unión de los scopes que ya tenía y los nuevos, con un límite de reintentos. En stdio este flujo no aplica: las credenciales vienen del entorno. Las revisiones difieren en registro y endurecimiento del flujo; usá la especificación de la versión implementada. [Autorización actual](https://modelcontextprotocol.io/specification/2026-07-28/basic/authorization), [autorización 2025-11-25](https://modelcontextprotocol.io/specification/2025-11-25/basic/authorization).
 
 ## Implementación del lado servidor: laboratorio JWT
 
@@ -140,6 +129,25 @@ Mantené separadas las credenciales **cliente → MCP** y **MCP → API externa*
 | Proveedor/JWKS no disponible | Denegar acceso y registrar diagnóstico sin token |
 
 Un test con JWT firmado localmente prueba validación; el flujo OAuth completo necesita una prueba de integración con el proveedor y el host elegidos.
+
+## Trampas
+- **Token sin audiencia.** Si el servidor solo verifica la firma, acepta tokens emitidos para otra API del mismo proveedor. Validá `aud` contra tu URI canónica.
+- **Reenviar el bearer.** Pasar el token recibido a una API externa convierte al servidor MCP en un intermediario confundido (*confused deputy*): usá una credencial propia para cada destino.
+- **`client_id` como usuario.** Identifica la aplicación, no a la persona: los permisos salen de `subject`.
+- **Pedir todos los scopes de entrada.** Pedí los del desafío o los mínimos de `scopes_supported` y ampliá cuando el servidor lo pida con 403.
+
+> [!TIP] Para recordar
+> **Identidad, scope y ACL son tres controles: el token dice quién y para qué servidor; la ACL decide qué documentos.**
+
+## Practicá
+> [!question]- Tu servidor MCP valida la firma y el vencimiento del JWT, pero no la audiencia. ¿Qué puede pasar?
+> Que acepte un token emitido para otro recurso del mismo proveedor, por ejemplo una API interna que comparte el emisor. Quien tenga un token para ese recurso entra a tu servidor MCP con esos permisos. La especificación exige que el servidor compruebe que el token se emitió para él como audiencia (`resource`, RFC 8707). En el laboratorio lo hace `audience=MCP_RESOURCE_URL` junto con `validate_token_resource=True`.
+
+> [!question]- Una tool de tu servidor necesita llamar a la API de CRM. ¿Puede usar el token que recibió del cliente?
+> No. Ese token tiene como audiencia tu servidor MCP y la especificación prohíbe aceptar o reenviar otros tokens. Tu servidor llama al CRM con su propia credencial, obtenida para ese destino, y aplica los permisos del usuario (`subject`) antes de pedir o devolver datos. Mantené separadas las credenciales cliente → MCP y MCP → API externa.
+
+> [!question]- Un usuario con token válido y scope `docs:read` intenta escribir y recibe 403. ¿Qué debería hacer el cliente?
+> Leer el `WWW-Authenticate` del 403: `error="insufficient_scope"` y el `scope` que falta, por ejemplo `docs:write`. Si actúa en nombre del usuario, vuelve a autorizar pidiendo la unión de `docs:read` y `docs:write`, con consentimiento, y reintenta la operación pocas veces. Si el usuario no debería poder escribir, el servidor de autorización no emite ese scope y el 403 queda como respuesta final.
 
 ## Se conecta con
 
