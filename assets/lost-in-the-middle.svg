@@ -1,0 +1,144 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="640" viewBox="0 0 900 640" role="img" aria-labelledby="title desc">
+<title id="title">Lost in the middle · el mismo dato, en otra posición</title>
+<desc id="desc">Tres variantes del mismo caso con 20 documentos, donde solo cambia la posición del documento con la respuesta: al inicio GPT-3.5-Turbo acierta 75,8 %, en el medio 53,8 % y al final 63,2 %. El gráfico muestra la curva en U por posición, la línea sin documentos (56,1 %) y la línea con solo el documento correcto (88,3 %). La brecha del medio es 15,7 puntos. Datos de Liu et al., 2023.</desc>
+<g font-family="system-ui,-apple-system,Segoe UI,sans-serif">
+<rect x="0" y="0" width="900" height="640" rx="12" fill="#FBFAF7" stroke="none"/>
+<text x="28" y="35" font-size="17" fill="#68675F" font-weight="600">LOST IN THE MIDDLE · EL MISMO DATO, EN OTRA POSICIÓN</text>
+<text x="28" y="66" font-size="14" fill="#444441" font-weight="600">Mismo caso, tres variantes</text>
+<text x="218" y="66" font-size="13" fill="#888780">20 documentos parecidos; solo uno tiene la respuesta y solo cambia su posición</text>
+<text x="28" y="103" font-size="14" fill="#444441">Al inicio</text>
+<rect x="128" y="84" width="20" height="28" rx="4" fill="#0F6E56" stroke="#0F6E56"/>
+<text x="138.0" y="103" font-size="12" fill="#FBFAF7" font-weight="600" text-anchor="middle">R</text>
+<rect x="151" y="84" width="20" height="28" rx="4" fill="#F1EFE8" stroke="#B4B2A9"/>
+<rect x="174" y="84" width="20" height="28" rx="4" fill="#F1EFE8" stroke="#B4B2A9"/>
+<rect x="197" y="84" width="20" height="28" rx="4" fill="#F1EFE8" stroke="#B4B2A9"/>
+<rect x="220" y="84" width="20" height="28" rx="4" fill="#F1EFE8" stroke="#B4B2A9"/>
+<rect x="243" y="84" width="20" height="28" rx="4" fill="#F1EFE8" stroke="#B4B2A9"/>
+<rect x="266" y="84" width="20" height="28" rx="4" fill="#F1EFE8" stroke="#B4B2A9"/>
+<rect x="289" y="84" width="20" height="28" rx="4" fill="#F1EFE8" stroke="#B4B2A9"/>
+<rect x="312" y="84" width="20" height="28" rx="4" fill="#F1EFE8" stroke="#B4B2A9"/>
+<rect x="335" y="84" width="20" height="28" rx="4" fill="#F1EFE8" stroke="#B4B2A9"/>
+<rect x="358" y="84" width="20" height="28" rx="4" fill="#F1EFE8" stroke="#B4B2A9"/>
+<rect x="381" y="84" width="20" height="28" rx="4" fill="#F1EFE8" stroke="#B4B2A9"/>
+<rect x="404" y="84" width="20" height="28" rx="4" fill="#F1EFE8" stroke="#B4B2A9"/>
+<rect x="427" y="84" width="20" height="28" rx="4" fill="#F1EFE8" stroke="#B4B2A9"/>
+<rect x="450" y="84" width="20" height="28" rx="4" fill="#F1EFE8" stroke="#B4B2A9"/>
+<rect x="473" y="84" width="20" height="28" rx="4" fill="#F1EFE8" stroke="#B4B2A9"/>
+<rect x="496" y="84" width="20" height="28" rx="4" fill="#F1EFE8" stroke="#B4B2A9"/>
+<rect x="519" y="84" width="20" height="28" rx="4" fill="#F1EFE8" stroke="#B4B2A9"/>
+<rect x="542" y="84" width="20" height="28" rx="4" fill="#F1EFE8" stroke="#B4B2A9"/>
+<rect x="565" y="84" width="20" height="28" rx="4" fill="#F1EFE8" stroke="#B4B2A9"/>
+<rect x="594" y="84" width="78" height="28" rx="4" fill="#E6F1FB" stroke="#185FA5"/>
+<text x="633" y="103" font-size="13" fill="#185FA5" text-anchor="middle">pregunta</text>
+<rect x="690" y="90" width="120" height="16" rx="3" fill="#F1EFE8"/>
+<rect x="690" y="90" width="91.0" height="16" rx="3" fill="#0F6E56"/>
+<text x="820" y="103" font-size="15" fill="#0F6E56" font-weight="600">75,8 %</text>
+<text x="28" y="143" font-size="14" fill="#444441">En el medio</text>
+<rect x="128" y="124" width="20" height="28" rx="4" fill="#F1EFE8" stroke="#B4B2A9"/>
+<rect x="151" y="124" width="20" height="28" rx="4" fill="#F1EFE8" stroke="#B4B2A9"/>
+<rect x="174" y="124" width="20" height="28" rx="4" fill="#F1EFE8" stroke="#B4B2A9"/>
+<rect x="197" y="124" width="20" height="28" rx="4" fill="#F1EFE8" stroke="#B4B2A9"/>
+<rect x="220" y="124" width="20" height="28" rx="4" fill="#F1EFE8" stroke="#B4B2A9"/>
+<rect x="243" y="124" width="20" height="28" rx="4" fill="#F1EFE8" stroke="#B4B2A9"/>
+<rect x="266" y="124" width="20" height="28" rx="4" fill="#F1EFE8" stroke="#B4B2A9"/>
+<rect x="289" y="124" width="20" height="28" rx="4" fill="#F1EFE8" stroke="#B4B2A9"/>
+<rect x="312" y="124" width="20" height="28" rx="4" fill="#F1EFE8" stroke="#B4B2A9"/>
+<rect x="335" y="124" width="20" height="28" rx="4" fill="#0F6E56" stroke="#0F6E56"/>
+<text x="345.0" y="143" font-size="12" fill="#FBFAF7" font-weight="600" text-anchor="middle">R</text>
+<rect x="358" y="124" width="20" height="28" rx="4" fill="#F1EFE8" stroke="#B4B2A9"/>
+<rect x="381" y="124" width="20" height="28" rx="4" fill="#F1EFE8" stroke="#B4B2A9"/>
+<rect x="404" y="124" width="20" height="28" rx="4" fill="#F1EFE8" stroke="#B4B2A9"/>
+<rect x="427" y="124" width="20" height="28" rx="4" fill="#F1EFE8" stroke="#B4B2A9"/>
+<rect x="450" y="124" width="20" height="28" rx="4" fill="#F1EFE8" stroke="#B4B2A9"/>
+<rect x="473" y="124" width="20" height="28" rx="4" fill="#F1EFE8" stroke="#B4B2A9"/>
+<rect x="496" y="124" width="20" height="28" rx="4" fill="#F1EFE8" stroke="#B4B2A9"/>
+<rect x="519" y="124" width="20" height="28" rx="4" fill="#F1EFE8" stroke="#B4B2A9"/>
+<rect x="542" y="124" width="20" height="28" rx="4" fill="#F1EFE8" stroke="#B4B2A9"/>
+<rect x="565" y="124" width="20" height="28" rx="4" fill="#F1EFE8" stroke="#B4B2A9"/>
+<rect x="594" y="124" width="78" height="28" rx="4" fill="#E6F1FB" stroke="#185FA5"/>
+<text x="633" y="143" font-size="13" fill="#185FA5" text-anchor="middle">pregunta</text>
+<rect x="690" y="130" width="120" height="16" rx="3" fill="#F1EFE8"/>
+<rect x="690" y="130" width="64.6" height="16" rx="3" fill="#993C1D"/>
+<text x="820" y="143" font-size="15" fill="#993C1D" font-weight="600">53,8 %</text>
+<text x="28" y="183" font-size="14" fill="#444441">Al final</text>
+<rect x="128" y="164" width="20" height="28" rx="4" fill="#F1EFE8" stroke="#B4B2A9"/>
+<rect x="151" y="164" width="20" height="28" rx="4" fill="#F1EFE8" stroke="#B4B2A9"/>
+<rect x="174" y="164" width="20" height="28" rx="4" fill="#F1EFE8" stroke="#B4B2A9"/>
+<rect x="197" y="164" width="20" height="28" rx="4" fill="#F1EFE8" stroke="#B4B2A9"/>
+<rect x="220" y="164" width="20" height="28" rx="4" fill="#F1EFE8" stroke="#B4B2A9"/>
+<rect x="243" y="164" width="20" height="28" rx="4" fill="#F1EFE8" stroke="#B4B2A9"/>
+<rect x="266" y="164" width="20" height="28" rx="4" fill="#F1EFE8" stroke="#B4B2A9"/>
+<rect x="289" y="164" width="20" height="28" rx="4" fill="#F1EFE8" stroke="#B4B2A9"/>
+<rect x="312" y="164" width="20" height="28" rx="4" fill="#F1EFE8" stroke="#B4B2A9"/>
+<rect x="335" y="164" width="20" height="28" rx="4" fill="#F1EFE8" stroke="#B4B2A9"/>
+<rect x="358" y="164" width="20" height="28" rx="4" fill="#F1EFE8" stroke="#B4B2A9"/>
+<rect x="381" y="164" width="20" height="28" rx="4" fill="#F1EFE8" stroke="#B4B2A9"/>
+<rect x="404" y="164" width="20" height="28" rx="4" fill="#F1EFE8" stroke="#B4B2A9"/>
+<rect x="427" y="164" width="20" height="28" rx="4" fill="#F1EFE8" stroke="#B4B2A9"/>
+<rect x="450" y="164" width="20" height="28" rx="4" fill="#F1EFE8" stroke="#B4B2A9"/>
+<rect x="473" y="164" width="20" height="28" rx="4" fill="#F1EFE8" stroke="#B4B2A9"/>
+<rect x="496" y="164" width="20" height="28" rx="4" fill="#F1EFE8" stroke="#B4B2A9"/>
+<rect x="519" y="164" width="20" height="28" rx="4" fill="#F1EFE8" stroke="#B4B2A9"/>
+<rect x="542" y="164" width="20" height="28" rx="4" fill="#F1EFE8" stroke="#B4B2A9"/>
+<rect x="565" y="164" width="20" height="28" rx="4" fill="#0F6E56" stroke="#0F6E56"/>
+<text x="575.0" y="183" font-size="12" fill="#FBFAF7" font-weight="600" text-anchor="middle">R</text>
+<rect x="594" y="164" width="78" height="28" rx="4" fill="#E6F1FB" stroke="#185FA5"/>
+<text x="633" y="183" font-size="13" fill="#185FA5" text-anchor="middle">pregunta</text>
+<rect x="690" y="170" width="120" height="16" rx="3" fill="#F1EFE8"/>
+<rect x="690" y="170" width="75.8" height="16" rx="3" fill="#854F0B"/>
+<text x="820" y="183" font-size="15" fill="#854F0B" font-weight="600">63,2 %</text>
+<text x="128" y="218" font-size="12" fill="#888780">R = documento con la respuesta · el resto son distractores recuperados para la misma pregunta</text>
+<text x="690" y="218" font-size="12" fill="#888780">acierto</text>
+<path d="M28 240 H872" stroke="#B4B2A9" stroke-dasharray="2 4" fill="none"/>
+<text x="28" y="272" font-size="14" fill="#444441" font-weight="600">Acierto según la posición del documento con la respuesta</text>
+<rect x="193.4" y="296" width="208.4" height="220" fill="#FAECE7" opacity="0.55"/>
+<text x="297.6" y="326" font-size="12" fill="#993C1D" text-anchor="middle">el medio</text>
+<path d="M96 491.6 H520" stroke="#E4E2DA" fill="none"/>
+<text x="88" y="495.6" font-size="12" fill="#888780" text-anchor="end">50 %</text>
+<path d="M96 442.7 H520" stroke="#E4E2DA" fill="none"/>
+<text x="88" y="446.7" font-size="12" fill="#888780" text-anchor="end">60 %</text>
+<path d="M96 393.8 H520" stroke="#E4E2DA" fill="none"/>
+<text x="88" y="397.8" font-size="12" fill="#888780" text-anchor="end">70 %</text>
+<path d="M96 344.9 H520" stroke="#E4E2DA" fill="none"/>
+<text x="88" y="348.9" font-size="12" fill="#888780" text-anchor="end">80 %</text>
+<path d="M96 296.0 H520" stroke="#E4E2DA" fill="none"/>
+<text x="88" y="300.0" font-size="12" fill="#888780" text-anchor="end">90 %</text>
+<path d="M96 296 V516 H520" stroke="#B4B2A9" fill="none"/>
+<text x="110.0" y="534" font-size="12" fill="#888780" text-anchor="middle">1.º</text>
+<text x="193.4" y="534" font-size="12" fill="#888780" text-anchor="middle">5.º</text>
+<text x="297.6" y="534" font-size="12" fill="#888780" text-anchor="middle">10.º</text>
+<text x="401.8" y="534" font-size="12" fill="#888780" text-anchor="middle">15.º</text>
+<text x="506.0" y="534" font-size="12" fill="#888780" text-anchor="middle">20.º</text>
+<text x="308.0" y="554" font-size="12" fill="#888780" text-anchor="middle">posición entre 20 documentos (~4k tokens)</text>
+<path d="M96 304.3 H520" stroke="#0F6E56" stroke-width="1.5" stroke-dasharray="6 4" fill="none"/>
+<text x="516" y="298.3" font-size="12" fill="#0F6E56" text-anchor="end">solo el documento correcto · 88,3 %</text>
+<path d="M96 461.7 H520" stroke="#993C1D" stroke-width="1.5" stroke-dasharray="6 4" fill="none"/>
+<text x="330" y="454.7" font-size="12" fill="#993C1D" text-anchor="middle">sin documentos · 56,1 %</text>
+<polyline points="110.0,365.4 193.4,456.4 297.6,473.0 401.8,465.2 506.0,427.0" fill="none" stroke="#444441" stroke-width="2.5" stroke-linejoin="round"/>
+<circle cx="110.0" cy="365.4" r="5" fill="#0F6E56" stroke="#FBFAF7" stroke-width="1.5"/>
+<circle cx="193.4" cy="456.4" r="5" fill="#444441" stroke="#FBFAF7" stroke-width="1.5"/>
+<circle cx="297.6" cy="473.0" r="5" fill="#993C1D" stroke="#FBFAF7" stroke-width="1.5"/>
+<circle cx="401.8" cy="465.2" r="5" fill="#444441" stroke="#FBFAF7" stroke-width="1.5"/>
+<circle cx="506.0" cy="427.0" r="5" fill="#854F0B" stroke="#FBFAF7" stroke-width="1.5"/>
+<text x="122.0" y="369.4" font-size="13" fill="#0F6E56" font-weight="600" text-anchor="start">75,8</text>
+<text x="193.4" y="444.4" font-size="13" fill="#444441" font-weight="400" text-anchor="middle">57,2</text>
+<text x="297.6" y="495.0" font-size="13" fill="#993C1D" font-weight="600" text-anchor="middle">53,8</text>
+<text x="401.8" y="487.2" font-size="13" fill="#444441" font-weight="400" text-anchor="middle">55,4</text>
+<text x="496.0" y="417.0" font-size="13" fill="#854F0B" font-weight="600" text-anchor="end">63,2</text>
+<rect x="560" y="290" width="312" height="132" rx="10" fill="#F1EFE8" stroke="#B4B2A9"/>
+<text x="576" y="314" font-size="14" fill="#444441" font-weight="600">Brecha del medio</text>
+<text x="576" y="338" font-size="13" fill="#5F5E5A">inicio y final</text>
+<text x="856" y="338" font-size="13" fill="#5F5E5A" text-anchor="end">(75,8 + 63,2) / 2 = 69,5</text>
+<text x="576" y="360" font-size="13" fill="#5F5E5A">menos el medio (10.º)</text>
+<text x="856" y="360" font-size="13" fill="#993C1D" text-anchor="end">− 53,8</text>
+<path d="M576 372 H856" stroke="#B4B2A9" fill="none"/>
+<text x="576" y="400" font-size="15" fill="#444441" font-weight="600">brecha</text>
+<text x="856" y="402" font-size="22" fill="#993C1D" font-weight="700" text-anchor="end">15,7 pp</text>
+<rect x="560" y="436" width="312" height="80" rx="10" fill="#FAECE7" stroke="#993C1D"/>
+<text x="576" y="460" font-size="14" fill="#993C1D" font-weight="600">En el medio, peor que sin documentos</text>
+<text x="576" y="481" font-size="13" fill="#993C1D">53,8 % con 20 documentos frente a 56,1 %</text>
+<text x="576" y="500" font-size="13" fill="#993C1D">respondiendo de memoria: el contexto restó</text>
+<text x="28" y="580" font-size="15" fill="#444441">Que el dato esté en el contexto no significa que se use: la posición cambió el acierto en 22 puntos.</text>
+<text x="28" y="604" font-size="15" fill="#0F6E56">Medilo con tu modelo, tus documentos y tus longitudes: la forma y el tamaño de la U cambian.</text>
+<text x="28" y="628" font-size="13" fill="#888780">GPT-3.5-Turbo (0613), preguntas de NaturalQuestions-Open. Liu et al., 2023 (tablas 1 y 6), consultado el 25-09-2026.</text>
+</g></svg>
