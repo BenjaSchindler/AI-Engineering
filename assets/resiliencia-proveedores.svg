@@ -1,0 +1,110 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="668" viewBox="0 0 900 668" role="img" aria-labelledby="title desc">
+<title id="title">Resiliencia entre proveedores · clasificar, reintentar con jitter y cortar</title>
+<desc id="desc">Tres partes. 1: clasificar la falla antes de reintentar: 400 se corrige, 401 y 403 son de credencial o permiso, 413 pide achicar, 429 con retry-after espera ese tiempo, 429 por tope de gasto no trae retry-after y hay que detenerse, 500 y 529 se reintentan con espera exponencial y jitter, 504 sugiere streaming, y un timeout de red exige comprobar si la acción ocurrió. 2: sin jitter, los reintentos de muchos clientes caen juntos en 1, 2 y 4 segundos; con full jitter se reparten. 3: un disyuntor pasa de cerrado a abierto tras varias fallas seguidas, deja pasar una prueba en semiabierto y vuelve a cerrado si funciona. Si el SDK, el runtime y el orquestador reintentan cada uno 3 veces, una falla puede generar 27 llamadas.</desc>
+<defs><marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M2 1 L9 5 L2 9" fill="none" stroke="#68675F" stroke-width="1.5"/></marker></defs>
+<g font-family="system-ui,-apple-system,Segoe UI,sans-serif">
+<rect x="0" y="0" width="900" height="668" rx="12" fill="#FBFAF7"/>
+<text x="28" y="35" font-size="17" fill="#68675F" font-weight="600">RESILIENCIA ENTRE PROVEEDORES · CLASIFICAR ANTES DE REINTENTAR</text>
+<text x="28" y="68" font-size="14" fill="#444441" font-weight="600">1 · Qué dice el error</text>
+<text x="28" y="86" font-size="12" fill="#888780">códigos de la API de Claude; otros proveedores son parecidos</text>
+<rect x="28" y="102" width="82" height="28" rx="6" fill="#FAECE7" stroke="#993C1D"/>
+<text x="69" y="121" font-size="12.5" fill="#993C1D" font-weight="600" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace">400</text>
+<text x="122" y="121" font-size="12.5" fill="#444441">corregir la petición; no reintentar</text>
+<rect x="28" y="138" width="82" height="28" rx="6" fill="#FAECE7" stroke="#993C1D"/>
+<text x="69" y="157" font-size="12.5" fill="#993C1D" font-weight="600" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace">401 · 403</text>
+<text x="122" y="157" font-size="12.5" fill="#444441">credencial o permiso: no reintentar</text>
+<rect x="28" y="174" width="82" height="28" rx="6" fill="#FAECE7" stroke="#993C1D"/>
+<text x="69" y="193" font-size="12.5" fill="#993C1D" font-weight="600" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace">413</text>
+<text x="122" y="193" font-size="12.5" fill="#444441">petición demasiado grande: achicarla</text>
+<rect x="28" y="210" width="82" height="28" rx="6" fill="#FAEEDA" stroke="#854F0B"/>
+<text x="69" y="229" font-size="12.5" fill="#854F0B" font-weight="600" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace">429</text>
+<text x="122" y="229" font-size="12.5" fill="#444441">con retry-after: esperar ese tiempo</text>
+<rect x="28" y="246" width="82" height="28" rx="6" fill="#FAECE7" stroke="#993C1D"/>
+<text x="69" y="265" font-size="12.5" fill="#993C1D" font-weight="600" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace">429</text>
+<text x="122" y="265" font-size="12.5" fill="#444441">tope de gasto, sin retry-after: detener</text>
+<rect x="28" y="282" width="82" height="28" rx="6" fill="#E1F5EE" stroke="#0F6E56"/>
+<text x="69" y="301" font-size="12.5" fill="#0F6E56" font-weight="600" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace">500 · 529</text>
+<text x="122" y="301" font-size="12.5" fill="#444441">transitorio: espera exponencial + jitter</text>
+<rect x="28" y="318" width="82" height="28" rx="6" fill="#E6F1FB" stroke="#185FA5"/>
+<text x="69" y="337" font-size="12.5" fill="#185FA5" font-weight="600" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace">504</text>
+<text x="122" y="337" font-size="12.5" fill="#444441">respuesta larga: usar streaming</text>
+<rect x="28" y="354" width="82" height="28" rx="6" fill="#FAEEDA" stroke="#854F0B"/>
+<text x="69" y="373" font-size="12.5" fill="#854F0B" font-weight="600" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace">timeout</text>
+<text x="122" y="373" font-size="12.5" fill="#444441">¿ocurrió la acción? consultar o usar la clave</text>
+<text x="470" y="68" font-size="14" fill="#444441" font-weight="600">2 · Reintentos de 60 clientes tras una caída</text>
+<text x="470" y="96" font-size="12.5" fill="#993C1D" font-weight="600">Sin jitter: llegan todos juntos</text>
+<rect x="521.0" y="108.0" width="8.0" height="58.0" fill="#FAECE7" stroke="#993C1D" stroke-width="0.8"/>
+<rect x="621.0" y="123.5" width="8.0" height="42.5" fill="#FAECE7" stroke="#993C1D" stroke-width="0.8"/>
+<rect x="821.0" y="137.0" width="8.0" height="29.0" fill="#FAECE7" stroke="#993C1D" stroke-width="0.8"/>
+<path d="M470 166 H870" stroke="#B4B2A9"/>
+<text x="470" y="180" font-size="10.5" fill="#888780" text-anchor="middle">0 s</text>
+<text x="570" y="180" font-size="10.5" fill="#888780" text-anchor="middle">2 s</text>
+<text x="670" y="180" font-size="10.5" fill="#888780" text-anchor="middle">4 s</text>
+<text x="770" y="180" font-size="10.5" fill="#888780" text-anchor="middle">6 s</text>
+<text x="870" y="180" font-size="10.5" fill="#888780" text-anchor="middle">8 s</text>
+<text x="470" y="196" font-size="12.5" fill="#0F6E56" font-weight="600">Con full jitter: se reparten</text>
+<rect x="471.0" y="249.6" width="8.0" height="16.4" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.8"/>
+<rect x="481.0" y="252.5" width="8.0" height="13.5" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.8"/>
+<rect x="491.0" y="249.6" width="8.0" height="16.4" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.8"/>
+<rect x="501.0" y="249.6" width="8.0" height="16.4" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.8"/>
+<rect x="511.0" y="254.4" width="8.0" height="11.6" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.8"/>
+<rect x="521.0" y="262.1" width="8.0" height="3.9" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.8"/>
+<rect x="531.0" y="259.2" width="8.0" height="6.8" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.8"/>
+<rect x="541.0" y="263.1" width="8.0" height="2.9" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.8"/>
+<rect x="551.0" y="256.3" width="8.0" height="9.7" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.8"/>
+<rect x="561.0" y="263.1" width="8.0" height="2.9" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.8"/>
+<rect x="571.0" y="260.2" width="8.0" height="5.8" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.8"/>
+<rect x="581.0" y="263.1" width="8.0" height="2.9" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.8"/>
+<rect x="591.0" y="264.1" width="8.0" height="1.9" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.8"/>
+<rect x="611.0" y="261.2" width="8.0" height="4.8" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.8"/>
+<rect x="621.0" y="263.1" width="8.0" height="2.9" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.8"/>
+<rect x="641.0" y="265.0" width="8.0" height="1.0" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.8"/>
+<rect x="661.0" y="263.1" width="8.0" height="2.9" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.8"/>
+<rect x="681.0" y="265.0" width="8.0" height="1.0" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.8"/>
+<rect x="691.0" y="265.0" width="8.0" height="1.0" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.8"/>
+<rect x="721.0" y="265.0" width="8.0" height="1.0" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.8"/>
+<rect x="731.0" y="264.1" width="8.0" height="1.9" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.8"/>
+<rect x="741.0" y="265.0" width="8.0" height="1.0" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.8"/>
+<rect x="761.0" y="265.0" width="8.0" height="1.0" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.8"/>
+<path d="M470 266 H870" stroke="#B4B2A9"/>
+<text x="470" y="280" font-size="10.5" fill="#888780" text-anchor="middle">0 s</text>
+<text x="570" y="280" font-size="10.5" fill="#888780" text-anchor="middle">2 s</text>
+<text x="670" y="280" font-size="10.5" fill="#888780" text-anchor="middle">4 s</text>
+<text x="770" y="280" font-size="10.5" fill="#888780" text-anchor="middle">6 s</text>
+<text x="870" y="280" font-size="10.5" fill="#888780" text-anchor="middle">8 s</text>
+<text x="470" y="308" font-size="12.5" fill="#444441" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace">espera = aleatorio(0, min(tope, base · 2^intento))</text>
+<text x="470" y="360" font-size="14" fill="#444441" font-weight="600">3 · Disyuntor (circuit breaker)</text>
+<rect x="470" y="404" width="112" height="50" rx="10" fill="#E1F5EE" stroke="#0F6E56"/>
+<text x="526" y="425" font-size="13" fill="#0F6E56" font-weight="600" text-anchor="middle">Cerrado</text>
+<text x="526" y="442" font-size="11" fill="#0F6E56" text-anchor="middle">llama normal</text>
+<rect x="616" y="404" width="112" height="50" rx="10" fill="#FAECE7" stroke="#993C1D"/>
+<text x="672" y="425" font-size="13" fill="#993C1D" font-weight="600" text-anchor="middle">Abierto</text>
+<text x="672" y="442" font-size="11" fill="#993C1D" text-anchor="middle">no llama: fallback</text>
+<rect x="762" y="404" width="112" height="50" rx="10" fill="#FAEEDA" stroke="#854F0B"/>
+<text x="818" y="425" font-size="13" fill="#854F0B" font-weight="600" text-anchor="middle">Semiabierto</text>
+<text x="818" y="442" font-size="11" fill="#854F0B" text-anchor="middle">deja pasar 1 prueba</text>
+<path d="M582 429 H612" stroke="#68675F" stroke-width="1.8" marker-end="url(#arr)"/>
+<text x="598" y="400" font-size="10.5" fill="#888780" text-anchor="middle">N fallas</text>
+<path d="M728 429 H758" stroke="#68675F" stroke-width="1.8" marker-end="url(#arr)"/>
+<text x="743" y="468" font-size="10.5" fill="#888780" text-anchor="middle">espera</text>
+<path d="M818 454 V482 H526 V458" stroke="#0F6E56" stroke-width="1.6" fill="none" marker-end="url(#arr)"/>
+<text x="670" y="496" font-size="11" fill="#0F6E56" text-anchor="middle">la prueba funciona: vuelve a cerrado</text>
+<path d="M800 404 V382 H684 V400" stroke="#993C1D" stroke-width="1.4" fill="none" marker-end="url(#arr)"/>
+<text x="742" y="377" font-size="10.5" fill="#993C1D" text-anchor="middle">falla</text>
+<text x="28" y="410" font-size="14" fill="#444441" font-weight="600">Reintentos en capas se multiplican</text>
+<rect x="28" y="424" width="112" height="44" rx="8" fill="#F1EFE8" stroke="#B4B2A9"/>
+<text x="84" y="442" font-size="12.5" fill="#444441" font-weight="600" text-anchor="middle">SDK</text>
+<text x="84" y="459" font-size="12" fill="#5F5E5A" text-anchor="middle">3 intentos</text>
+<rect x="152" y="424" width="112" height="44" rx="8" fill="#F1EFE8" stroke="#B4B2A9"/>
+<text x="208" y="442" font-size="12.5" fill="#444441" font-weight="600" text-anchor="middle">runtime</text>
+<text x="208" y="459" font-size="12" fill="#5F5E5A" text-anchor="middle">× 3</text>
+<rect x="276" y="424" width="112" height="44" rx="8" fill="#F1EFE8" stroke="#B4B2A9"/>
+<text x="332" y="442" font-size="12.5" fill="#444441" font-weight="600" text-anchor="middle">orquestador</text>
+<text x="332" y="459" font-size="12" fill="#5F5E5A" text-anchor="middle">× 3</text>
+<text x="28" y="494" font-size="13" fill="#993C1D" font-weight="600">= hasta 27 llamadas por una sola falla</text>
+<text x="28" y="514" font-size="12.5" fill="#5F5E5A">Los SDK de Claude ya reintentan 2 veces por defecto.</text>
+<text x="28" y="532" font-size="12.5" fill="#5F5E5A">Una sola capa decide y lleva el presupuesto total.</text>
+<text x="28" y="610" font-size="14.5" fill="#444441">Cambiar de proveedor es el último paso: comprobá tools, formato de mensajes, contexto y permisos de datos.</text>
+<text x="28" y="634" font-size="14.5" fill="#0F6E56">Y antes de repetir una acción con efectos tras un timeout, confirmá si ya ocurrió.</text>
+<text x="28" y="656" font-size="12" fill="#888780">Errores y reintentos según la documentación de la API de Claude; full jitter según AWS Architecture Blog (2015). Consultado el 25-09-2026.</text>
+</g></svg>
