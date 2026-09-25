@@ -4,3 +4,7 @@
 .obsidian/plugins/*/data.json
 .trash/
 .DS_Store
+
+# remotely-save se instala desde la tienda: su main.js trae credenciales OAuth del autor
+# que GitHub bloquea en repos públicos, y data.json guarda la conexión a Dropbox.
+.obsidian/plugins/remotely-save/
