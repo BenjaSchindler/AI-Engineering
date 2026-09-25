@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="680" viewBox="0 0 900 680" role="img" aria-labelledby="title desc">
+<title id="title">Streaming y cancelación · qué queda cuando el stream se corta</title>
+<desc id="desc">Eventos de un stream de Claude: message_start; un bloque de texto con content_block_start, dos text_delta y content_block_stop; después un bloque tool_use crear_cotizacion con dos input_json_delta de JSON parcial, y ahí se corta la conexión. Nunca llegan el content_block_stop del bloque 1, el message_delta con stop_reason ni message_stop. El texto del bloque 0 está completo y se puede mostrar como parcial y retomar desde ahí. El JSON del bloque 1 está a medias: no se ejecuta la tool y no se recupera parcialmente. Sin stop_reason, la respuesta no terminó.</desc>
+<g font-family="system-ui,-apple-system,Segoe UI,sans-serif">
+<rect x="0" y="0" width="900" height="680" rx="12" fill="#FBFAF7"/>
+<text x="28" y="35" font-size="17" fill="#68675F" font-weight="600">STREAMING Y CANCELACIÓN · QUÉ QUEDA CUANDO EL STREAM SE CORTA</text>
+<text x="28" y="64" font-size="14" fill="#444441" font-weight="600">Eventos recibidos</text>
+<text x="160" y="64" font-size="12" fill="#888780">server-sent events de la API de Claude</text>
+<rect x="40" y="84" width="460" height="22" rx="4" fill="#FFFFFF" stroke="#E4E2DA"/>
+<text x="48" y="99" font-size="11.5" fill="#444441" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-weight="600">message_start</text>
+<text x="150" y="99" font-size="11.5" fill="#5F5E5A" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace"></text>
+<rect x="58" y="112" width="442" height="22" rx="4" fill="#FFFFFF" stroke="#E4E2DA"/>
+<text x="66" y="127" font-size="11.5" fill="#534AB7" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-weight="600">content_block_start</text>
+<text x="211" y="127" font-size="11.5" fill="#5F5E5A" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace">[0] text</text>
+<rect x="76" y="140" width="424" height="22" rx="4" fill="#FFFFFF" stroke="#E4E2DA"/>
+<text x="84" y="155" font-size="11.5" fill="#534AB7" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-weight="600">content_block_delta</text>
+<text x="229" y="155" font-size="11.5" fill="#5F5E5A" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace">text_delta · “Preparo la cotización”</text>
+<rect x="76" y="168" width="424" height="22" rx="4" fill="#FFFFFF" stroke="#E4E2DA"/>
+<text x="84" y="183" font-size="11.5" fill="#534AB7" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-weight="600">content_block_delta</text>
+<text x="229" y="183" font-size="11.5" fill="#5F5E5A" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace">text_delta · “ de la póliza P-17.”</text>
+<rect x="58" y="196" width="442" height="22" rx="4" fill="#FFFFFF" stroke="#E4E2DA"/>
+<text x="66" y="211" font-size="11.5" fill="#534AB7" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-weight="600">content_block_stop</text>
+<text x="204" y="211" font-size="11.5" fill="#5F5E5A" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace">[0]</text>
+<rect x="58" y="224" width="442" height="22" rx="4" fill="#FFFFFF" stroke="#E4E2DA"/>
+<text x="66" y="239" font-size="11.5" fill="#185FA5" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-weight="600">content_block_start</text>
+<text x="211" y="239" font-size="11.5" fill="#5F5E5A" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace">[1] tool_use · crear_cotizacion</text>
+<rect x="76" y="252" width="424" height="22" rx="4" fill="#FFFFFF" stroke="#E4E2DA"/>
+<text x="84" y="267" font-size="11.5" fill="#185FA5" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-weight="600">content_block_delta</text>
+<text x="229" y="267" font-size="11.5" fill="#5F5E5A" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace">input_json_delta · {"poliza": "P-1</text>
+<rect x="76" y="280" width="424" height="22" rx="4" fill="#FFFFFF" stroke="#E4E2DA"/>
+<text x="84" y="295" font-size="11.5" fill="#185FA5" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-weight="600">content_block_delta</text>
+<text x="229" y="295" font-size="11.5" fill="#5F5E5A" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace">input_json_delta · 7", "monto</text>
+<path d="M28 322 H520" stroke="#993C1D" stroke-width="2" stroke-dasharray="7 5"/>
+<rect x="170" y="310" width="196" height="24" rx="12" fill="#993C1D"/>
+<text x="268" y="326" font-size="12" fill="#FFFFFF" font-weight="600" text-anchor="middle">se corta la conexión</text>
+<rect x="58" y="344" width="442" height="22" rx="4" fill="none" stroke="#B4B2A9" stroke-dasharray="4 3"/>
+<text x="66" y="359" font-size="11.5" fill="#888780" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace">content_block_stop  [1]</text>
+<rect x="40" y="372" width="460" height="22" rx="4" fill="none" stroke="#B4B2A9" stroke-dasharray="4 3"/>
+<text x="48" y="387" font-size="11.5" fill="#888780" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace">message_delta  stop_reason: tool_use · usage</text>
+<rect x="40" y="400" width="460" height="22" rx="4" fill="none" stroke="#B4B2A9" stroke-dasharray="4 3"/>
+<text x="48" y="415" font-size="11.5" fill="#888780" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace">message_stop  </text>
+<text x="40" y="440" font-size="12" fill="#888780">nunca llegan</text>
+<text x="548" y="64" font-size="14" fill="#444441" font-weight="600">Qué tenés en la mano</text>
+<rect x="548" y="84" width="324" height="84" rx="10" fill="#E1F5EE" stroke="#0F6E56"/>
+<text x="562" y="106" font-size="13" fill="#0F6E56" font-weight="600">Bloque 0 · texto completo</text>
+<text x="562" y="126" font-size="12" fill="#444441">llegó su content_block_stop: mostralo como</text>
+<text x="562" y="143" font-size="12" fill="#444441">respuesta parcial y retomá desde acá</text>
+<rect x="548" y="180" width="324" height="102" rx="10" fill="#FAECE7" stroke="#993C1D"/>
+<text x="562" y="202" font-size="13" fill="#993C1D" font-weight="600">Bloque 1 · JSON a medias</text>
+<text x="562" y="222" font-size="12" fill="#444441">{"poliza": "P-17", "monto  ← inválido</text>
+<text x="562" y="239" font-size="12" fill="#444441">no ejecutes la tool: el JSON se interpreta</text>
+<text x="562" y="256" font-size="12" fill="#444441">al cerrar el bloque y un tool_use no se</text>
+<text x="562" y="273" font-size="12" fill="#444441">recupera a medias; se vuelve a generar</text>
+<rect x="548" y="294" width="324" height="66" rx="10" fill="#FAEEDA" stroke="#854F0B"/>
+<text x="562" y="316" font-size="13" fill="#854F0B" font-weight="600">Sin stop_reason</text>
+<text x="562" y="336" font-size="12" fill="#444441">la respuesta no terminó: no la guardes</text>
+<text x="562" y="353" font-size="12" fill="#444441">como final ni la marques como exitosa</text>
+<text x="28" y="474" font-size="14" fill="#444441" font-weight="600">Qué hacer</text>
+<rect x="28" y="488" width="92" height="30" rx="15" fill="#F1EFE8" stroke="#444441"/>
+<text x="74" y="508" font-size="12.5" fill="#444441" font-weight="600" text-anchor="middle">Mostrar</text>
+<text x="134" y="508" font-size="13" fill="#444441">“respuesta incompleta”, con lo recibido y la opción de reintentar</text>
+<rect x="28" y="528" width="92" height="30" rx="15" fill="#E6F1FB" stroke="#185FA5"/>
+<text x="74" y="548" font-size="12.5" fill="#185FA5" font-weight="600" text-anchor="middle">Retomar</text>
+<text x="134" y="548" font-size="13" fill="#444441">en modelos 4.6 o posteriores: un mensaje de usuario con lo recibido y la instrucción de continuar</text>
+<rect x="28" y="568" width="92" height="30" rx="15" fill="#FAEEDA" stroke="#854F0B"/>
+<text x="74" y="588" font-size="12.5" fill="#854F0B" font-weight="600" text-anchor="middle">Cancelar</text>
+<text x="134" y="588" font-size="13" fill="#444441">propagar la señal (AbortSignal) y registrar lo ya ejecutado: cancelar no deshace</text>
+<text x="28" y="636" font-size="14.5" fill="#444441">Recibir fragmentos no es completar una respuesta: el cierre lo marcan content_block_stop y stop_reason.</text>
+<text x="28" y="660" font-size="12.5" fill="#888780">Eventos y recuperación según la documentación de streaming de Claude, consultada el 25-09-2026. Contenido ilustrativo.</text>
+</g></svg>
