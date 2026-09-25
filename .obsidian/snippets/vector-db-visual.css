@@ -91,3 +91,13 @@
   left: 50%;
   transform: translateX(-50%);
 }
+
+/* Tablero de progreso del README: barras más cortas y sin el contador de filas de Dataview,
+   que en estas tablas agregadas no aporta. Las demás tablas Dataview quedan igual. */
+table.dataview progress {
+  width: 96px;
+  vertical-align: middle;
+}
+table.dataview:has(progress) th .dataview.small-text {
+  display: none;
+}

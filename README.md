@@ -2,6 +2,56 @@
 
 Vault de Obsidian con **ocho categorías principales**. Cada nota tiene una ubicación principal; los enlaces conectan sus aplicaciones en otras áreas. Los canvas ordenan las tarjetas por tema y recorrido de lectura.
 
+## Progreso
+Marcá tu avance con `estado` en el frontmatter de cada nota: `por-ver` → `aprendiendo` → `dominado`. Una nota `aprendiendo` cuenta como media en el avance; los mapas no cuentan.
+
+```dataview
+TABLE WITHOUT ID
+  "<progress value='" + sum(rows.puntos) + "' max='" + length(rows) + "'></progress>" AS "Avance",
+  round(100 * sum(rows.puntos) / length(rows)) + " %" AS "%",
+  length(filter(rows.estado, (e) => e = "dominado")) + " / " + length(rows) AS "Dominadas",
+  length(filter(rows.estado, (e) => e = "aprendiendo")) AS "Aprendiendo",
+  length(filter(rows.estado, (e) => e = "por-ver")) AS "Por ver"
+FROM -"templates"
+WHERE estado AND tipo != "mapa"
+FLATTEN choice(estado = "dominado", 1, choice(estado = "aprendiendo", 0.5, 0)) AS puntos
+GROUP BY "vault"
+```
+
+### Por categoría
+El siguiente es la primera nota `por-ver` en el orden de lectura de su categoría. Las notas de un sub-mapa, como Caché, toman la posición de su hub.
+
+```dataview
+TABLE WITHOUT ID
+  object("fundamentos", link("Fundamentos"), "mcp", link("MCP"), "rag", link("RAG"), "multiagente", link("Multiagentes"), "runtime", link("Runtime de agentes"), "seguridad", link("Seguridad"), "evals", link("Evals"), "programacion-agentes", link("Programación con agentes"))[key] AS "Categoría",
+  "<progress value='" + sum(rows.puntos) + "' max='" + length(rows) + "'></progress>" AS "Avance",
+  length(filter(rows.estado, (e) => e = "dominado")) + " / " + length(rows) AS "Dominadas",
+  length(filter(rows.estado, (e) => e = "aprendiendo")) AS "Aprendiendo",
+  filter(rows, (r) => r.estado = "por-ver")[0].file.link AS "Siguiente"
+FROM -"templates"
+WHERE estado AND tipo != "mapa"
+FLATTEN choice(estado = "dominado", 1, choice(estado = "aprendiendo", 0.5, 0)) AS puntos
+SORT default(parent.orden, orden) ASC, orden ASC, file.name ASC
+GROUP BY dominio
+SORT object("fundamentos", 1, "mcp", 2, "rag", 3, "multiagente", 4, "runtime", 5, "seguridad", 6, "evals", 7, "programacion-agentes", 8)[key] ASC
+```
+
+### Estudiando ahora
+```dataview
+TABLE WITHOUT ID file.link AS "Nota", parent AS "Mapa", bloque AS "Bloque"
+FROM -"templates"
+WHERE estado = "aprendiendo" AND tipo != "mapa"
+SORT dominio ASC, default(parent.orden, orden) ASC, orden ASC
+```
+
+> [!note]- Todas las notas por ver
+> ```dataview
+> TABLE WITHOUT ID file.link AS "Nota", parent AS "Mapa", bloque AS "Bloque"
+> FROM -"templates"
+> WHERE estado = "por-ver" AND tipo != "mapa"
+> SORT dominio, default(parent.orden, orden), orden, file.name
+> ```
+
 ## Cómo navegar
 1. **[[Mapa.canvas|Mapa general]]:** elegir una categoría.
 2. **Sub-mapa:** seguir los grupos numerados, de arriba hacia abajo y de izquierda a derecha.
@@ -57,12 +107,4 @@ La plantilla está en `templates/Nodo.md`. **`dominio`** define la categoría; *
 
 Al sumar una nota, elegí primero una categoría y un bloque existente. Creá otro subtema solo si reúne varias notas con una pregunta común. Actualizá el hub y su canvas; agregá enlaces desde otras áreas sin duplicar la nota.
 
-Los diagramas Mermaid e ilustraciones SVG viven con las notas. Dataview permite recorrerlas por estado: `por-ver` → `aprendiendo` → `dominado`.
-
-## Qué estudiar ahora
-```dataview
-TABLE WITHOUT ID file.link AS nodo, dominio, bloque, estado
-FROM ""
-WHERE estado = "por-ver" AND tipo != "mapa"
-SORT dominio, orden, file.name
-```
+Los diagramas Mermaid e ilustraciones SVG viven con las notas. El estado de cada nota alimenta el tablero de [[#Progreso]].
