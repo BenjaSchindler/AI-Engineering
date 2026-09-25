@@ -62,3 +62,32 @@
 .canvas-node .markdown-preview-view .frontmatter {
   display: none !important;
 }
+
+/* Diagramas SVG de assets/: más anchos que la columna de texto (hasta 960px) y centrados,
+   sin pasar el ancho del panel. Solo en pestañas de notas; canvas y popovers quedan igual. */
+.workspace-leaf-content[data-type="markdown"] .view-content {
+  container-type: inline-size;
+  --diagram-width: min(calc(100cqw - 48px), 960px);
+}
+/* Live Preview: la imagen va en div.image-embed > div.image-wrapper > img, dentro de la línea. */
+.workspace-leaf-content[data-type="markdown"] .markdown-source-view.mod-cm6 .cm-content .image-embed:has(img[src*="/assets/"][src*=".svg"]) {
+  display: block;
+  width: var(--diagram-width);
+  max-width: none;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.workspace-leaf-content[data-type="markdown"] .markdown-source-view.mod-cm6 .cm-content .image-embed:has(img[src*="/assets/"][src*=".svg"]) .image-wrapper {
+  width: 100%;
+}
+/* Lectura: la imagen no está recortada por su contenedor. */
+.workspace-leaf-content[data-type="markdown"] .markdown-preview-view img[src*="/assets/"][src*=".svg"] {
+  display: block;
+  width: var(--diagram-width);
+  max-width: none;
+  height: auto;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
