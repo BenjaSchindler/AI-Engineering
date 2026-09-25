@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="630" viewBox="0 0 900 630" role="img" aria-labelledby="title desc"><title id="title">Arquitectura MCP · host, clientes, servidores y una llamada</title><desc id="desc">Un host de IA contiene el modelo, sus políticas y un cliente MCP por servidor. El cliente 1 usa stdio con un servidor local de archivos; los clientes 2 y 3 usan Streamable HTTP con token hacia servidores remotos del manual y del CRM, que consultan su backend. Abajo, seis pasos de una llamada: descubrir, proponer, autorizar, enviar, ejecutar y responder.</desc><defs><marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M2 1 L9 5 L2 9" fill="none" stroke="#68675F" stroke-width="1.5"/></marker></defs><g font-family="system-ui,-apple-system,Segoe UI,sans-serif"><rect x="0" y="0" width="900" height="630" rx="12" fill="#FBFAF7" stroke="none"/>
+<text x="28" y="35" font-size="17" fill="#68675F" font-weight="600">ARQUITECTURA MCP · EL HOST ORQUESTA, CADA CLIENTE HABLA CON UN SERVIDOR</text>
+
+<rect x="28" y="60" width="370" height="340" rx="12" fill="#E6F1FB" stroke="#185FA5"/>
+<text x="48" y="86" font-size="14" fill="#185FA5" font-weight="600">HOST · APP DE IA</text>
+<rect x="48" y="100" width="150" height="60" rx="8" fill="#FBFAF7" stroke="#185FA5"/>
+<text x="123" y="126" font-size="15" fill="#185FA5" font-weight="600" text-anchor="middle">Modelo</text>
+<text x="123" y="147" font-size="13" fill="#185FA5" text-anchor="middle">propone una tool</text>
+<path d="M200 130 H214" stroke="#68675F" stroke-width="2" fill="none" marker-end="url(#arr)"/>
+<rect x="218" y="100" width="160" height="60" rx="8" fill="#FBFAF7" stroke="#185FA5"/>
+<text x="298" y="126" font-size="15" fill="#185FA5" font-weight="600" text-anchor="middle">Políticas</text>
+<text x="298" y="147" font-size="13" fill="#185FA5" text-anchor="middle">permisos · aprobación</text>
+<path d="M233 160 V355" stroke="#185FA5" stroke-width="2" fill="none"/>
+<path d="M233 215 H246" stroke="#185FA5" stroke-width="2" fill="none"/>
+<path d="M233 285 H246" stroke="#185FA5" stroke-width="2" fill="none"/>
+<path d="M233 355 H246" stroke="#185FA5" stroke-width="2" fill="none"/>
+<rect x="248" y="190" width="130" height="50" rx="8" fill="#FBFAF7" stroke="#185FA5"/><text x="313" y="220" font-size="15" fill="#185FA5" font-weight="600" text-anchor="middle">Cliente MCP 1</text>
+<rect x="248" y="260" width="130" height="50" rx="8" fill="#FBFAF7" stroke="#185FA5"/><text x="313" y="290" font-size="15" fill="#185FA5" font-weight="600" text-anchor="middle">Cliente MCP 2</text>
+<rect x="248" y="330" width="130" height="50" rx="8" fill="#FBFAF7" stroke="#185FA5"/><text x="313" y="360" font-size="15" fill="#185FA5" font-weight="600" text-anchor="middle">Cliente MCP 3</text>
+<text x="48" y="218" font-size="13" fill="#185FA5">El modelo no llama al</text>
+<text x="48" y="237" font-size="13" fill="#185FA5">servidor: propone la tool,</text>
+<text x="48" y="256" font-size="13" fill="#185FA5">el host decide y el cliente</text>
+<text x="48" y="275" font-size="13" fill="#185FA5">envía el mensaje.</text>
+
+<text x="520" y="110" font-size="14" fill="#444441">Un cliente MCP por servidor:</text>
+<text x="520" y="130" font-size="14" fill="#444441">cada conexión es dedicada.</text>
+<text x="520" y="172" font-size="13" fill="#68675F" font-weight="600">SERVIDORES MCP</text>
+<text x="770" y="172" font-size="13" fill="#68675F" font-weight="600">BACKEND</text>
+
+<path d="M380 215 H516" stroke="#68675F" stroke-width="2" fill="none" marker-end="url(#arr)"/>
+<text x="449" y="208" font-size="13" fill="#444441" font-weight="600" text-anchor="middle">stdio</text>
+<text x="449" y="231" font-size="12" fill="#888780" text-anchor="middle">proceso hijo</text>
+<path d="M380 285 H516" stroke="#68675F" stroke-width="2" fill="none" marker-end="url(#arr)"/>
+<text x="449" y="278" font-size="13" fill="#444441" font-weight="600" text-anchor="middle">Streamable HTTP</text>
+<text x="449" y="301" font-size="12" fill="#888780" text-anchor="middle">token OAuth</text>
+<path d="M380 355 H516" stroke="#68675F" stroke-width="2" fill="none" marker-end="url(#arr)"/>
+<text x="449" y="348" font-size="13" fill="#444441" font-weight="600" text-anchor="middle">Streamable HTTP</text>
+<text x="449" y="371" font-size="12" fill="#888780" text-anchor="middle">token OAuth</text>
+
+<rect x="520" y="187" width="220" height="56" rx="8" fill="#E1F5EE" stroke="#0F6E56"/>
+<text x="536" y="210" font-size="15" fill="#0F6E56" font-weight="600">Local · archivos</text><text x="536" y="230" font-size="13" fill="#0F6E56">tools · resources</text>
+<rect x="520" y="257" width="220" height="56" rx="8" fill="#E1F5EE" stroke="#0F6E56"/>
+<text x="536" y="280" font-size="15" fill="#0F6E56" font-weight="600">Remoto · manual</text><text x="536" y="300" font-size="13" fill="#0F6E56">tools · resources · prompts</text>
+<rect x="520" y="327" width="220" height="56" rx="8" fill="#E1F5EE" stroke="#0F6E56"/>
+<text x="536" y="350" font-size="15" fill="#0F6E56" font-weight="600">Remoto · CRM</text><text x="536" y="370" font-size="13" fill="#0F6E56">tools</text>
+
+<path d="M742 215 H766" stroke="#68675F" stroke-width="2" fill="none" marker-end="url(#arr)"/>
+<path d="M742 285 H766" stroke="#68675F" stroke-width="2" fill="none" marker-end="url(#arr)"/>
+<path d="M742 355 H766" stroke="#68675F" stroke-width="2" fill="none" marker-end="url(#arr)"/>
+<rect x="770" y="195" width="108" height="40" rx="6" fill="#F1EFE8" stroke="#B4B2A9"/><text x="824" y="220" font-size="14" fill="#5F5E5A" text-anchor="middle">Disco</text>
+<rect x="770" y="265" width="108" height="40" rx="6" fill="#F1EFE8" stroke="#B4B2A9"/><text x="824" y="290" font-size="14" fill="#5F5E5A" text-anchor="middle">Índice</text>
+<rect x="770" y="335" width="108" height="40" rx="6" fill="#F1EFE8" stroke="#B4B2A9"/><text x="824" y="360" font-size="14" fill="#5F5E5A" text-anchor="middle">API del CRM</text>
+
+<circle cx="198" cy="100" r="11" fill="#185FA5"/><text x="198" y="105" font-size="13" fill="#FBFAF7" font-weight="600" text-anchor="middle">2</text>
+<circle cx="378" cy="100" r="11" fill="#185FA5"/><text x="378" y="105" font-size="13" fill="#FBFAF7" font-weight="600" text-anchor="middle">3</text>
+<circle cx="378" cy="260" r="11" fill="#185FA5"/><text x="378" y="265" font-size="13" fill="#FBFAF7" font-weight="600" text-anchor="middle">4</text>
+<circle cx="740" cy="257" r="11" fill="#0F6E56"/><text x="740" y="262" font-size="13" fill="#FBFAF7" font-weight="600" text-anchor="middle">5</text>
+
+<text x="28" y="440" font-size="14" fill="#68675F" font-weight="600">UNA LLAMADA DE PUNTA A PUNTA</text>
+<rect x="28" y="454" width="132" height="80" rx="8" fill="#E6F1FB" stroke="#185FA5"/><circle cx="46" cy="474" r="11" fill="#185FA5"/><text x="46" y="479" font-size="13" fill="#FBFAF7" font-weight="600" text-anchor="middle">1</text><text x="64" y="479" font-size="15" fill="#185FA5" font-weight="600">Descubrir</text><text x="40" y="502" font-size="13" fill="#185FA5">tools/list</text><text x="40" y="521" font-size="13" fill="#185FA5">arma el catálogo</text>
+<rect x="170" y="454" width="132" height="80" rx="8" fill="#E6F1FB" stroke="#185FA5"/><circle cx="188" cy="474" r="11" fill="#185FA5"/><text x="188" y="479" font-size="13" fill="#FBFAF7" font-weight="600" text-anchor="middle">2</text><text x="206" y="479" font-size="15" fill="#185FA5" font-weight="600">Proponer</text><text x="182" y="502" font-size="13" fill="#185FA5">el modelo elige</text><text x="182" y="521" font-size="13" fill="#185FA5">tool y argumentos</text>
+<rect x="312" y="454" width="132" height="80" rx="8" fill="#E6F1FB" stroke="#185FA5"/><circle cx="330" cy="474" r="11" fill="#185FA5"/><text x="330" y="479" font-size="13" fill="#FBFAF7" font-weight="600" text-anchor="middle">3</text><text x="348" y="479" font-size="15" fill="#185FA5" font-weight="600">Autorizar</text><text x="324" y="502" font-size="13" fill="#185FA5">políticas y</text><text x="324" y="521" font-size="13" fill="#185FA5">aprobación</text>
+<rect x="454" y="454" width="132" height="80" rx="8" fill="#E6F1FB" stroke="#185FA5"/><circle cx="472" cy="474" r="11" fill="#185FA5"/><text x="472" y="479" font-size="13" fill="#FBFAF7" font-weight="600" text-anchor="middle">4</text><text x="490" y="479" font-size="15" fill="#185FA5" font-weight="600">Enviar</text><text x="466" y="502" font-size="13" fill="#185FA5">tools/call</text><text x="466" y="521" font-size="13" fill="#185FA5">desde el cliente</text>
+<rect x="596" y="454" width="132" height="80" rx="8" fill="#E1F5EE" stroke="#0F6E56"/><circle cx="614" cy="474" r="11" fill="#0F6E56"/><text x="614" y="479" font-size="13" fill="#FBFAF7" font-weight="600" text-anchor="middle">5</text><text x="632" y="479" font-size="15" fill="#0F6E56" font-weight="600">Ejecutar</text><text x="608" y="502" font-size="13" fill="#0F6E56">valida permisos</text><text x="608" y="521" font-size="13" fill="#0F6E56">y usa el backend</text>
+<rect x="738" y="454" width="132" height="80" rx="8" fill="#E6F1FB" stroke="#185FA5"/><circle cx="756" cy="474" r="11" fill="#185FA5"/><text x="756" y="479" font-size="13" fill="#FBFAF7" font-weight="600" text-anchor="middle">6</text><text x="774" y="479" font-size="15" fill="#185FA5" font-weight="600">Responder</text><text x="750" y="502" font-size="13" fill="#185FA5">resultado al host</text><text x="750" y="521" font-size="13" fill="#185FA5">y al contexto</text>
+
+<text x="28" y="566" font-size="15" fill="#444441">Por stdio o por HTTP viajan los mismos mensajes JSON-RPC: cambia el transporte, no el protocolo.</text>
+<text x="28" y="589" font-size="15" fill="#0F6E56">El servidor vuelve a autorizar: la aprobación del host no reemplaza sus permisos.</text>
+<text x="28" y="616" font-size="13" fill="#888780">Revisión del protocolo 2026-07-28. Azul: lo hace el host y sus clientes. Verde: lo hace el servidor.</text>
+</g></svg>
