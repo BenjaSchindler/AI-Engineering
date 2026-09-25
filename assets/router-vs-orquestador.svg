@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="624" viewBox="0 0 900 624" role="img" aria-labelledby="title desc"><title id="title">Router y handoff frente a orquestador, con la misma consulta</title><desc id="desc">Consulta “Me cobraron dos veces y la app no me deja entrar”. Con router y handoff, el router envía a soporte, que resuelve el acceso y hace handoff a billing con un paquete de contexto; billing toma la conversación. Con orquestador, el orquestador divide en dos sub-tareas, dos workers trabajan en paralelo y devuelven resultados estructurados, y el orquestador sintetiza y responde: siempre habla él con el usuario.</desc><defs><marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M2 1 L9 5 L2 9" fill="none" stroke="#68675F" stroke-width="1.5"/></marker></defs><g font-family="system-ui,-apple-system,Segoe UI,sans-serif"><rect x="0" y="0" width="900" height="624" rx="12" fill="#FBFAF7" stroke="none"/>
+<text x="28" y="35" font-size="17" fill="#68675F" font-weight="600">ROUTER / HANDOFF VS ORQUESTADOR · LA MISMA CONSULTA</text>
+<rect x="28" y="52" width="844" height="36" rx="8" fill="#F1EFE8" stroke="#B4B2A9"/>
+<text x="44" y="75" font-size="15" fill="#444441"><tspan font-weight="600">Usuario:</tspan> “Me cobraron dos veces y la app no me deja entrar”</text>
+
+<rect x="28" y="104" width="410" height="412" rx="12" fill="none" stroke="#B4B2A9"/>
+<text x="48" y="128" font-size="13" fill="#854F0B" font-weight="600">ROUTER + HANDOFF</text>
+<text x="48" y="144" font-size="12" fill="#888780">un agente activo a la vez</text>
+<path d="M230 90 V146" stroke="#68675F" stroke-width="2" fill="none" marker-end="url(#arr)"/>
+<rect x="48" y="150" width="210" height="46" rx="8" fill="#F1EFE8" stroke="#B4B2A9"/>
+<text x="153" y="170" font-size="15" fill="#444441" font-weight="600" text-anchor="middle">Router</text>
+<text x="153" y="188" font-size="13" fill="#5F5E5A" text-anchor="middle">clasifica: acceso</text>
+<path d="M153 196 V216" stroke="#68675F" stroke-width="2" fill="none" marker-end="url(#arr)"/>
+<rect x="48" y="220" width="210" height="46" rx="8" fill="#FAEEDA" stroke="#854F0B"/>
+<text x="153" y="240" font-size="15" fill="#854F0B" font-weight="600" text-anchor="middle">Agente soporte</text>
+<text x="153" y="258" font-size="13" fill="#854F0B" text-anchor="middle">resuelve el acceso</text>
+<circle cx="276" cy="243" r="4" fill="#0F6E56"/><text x="286" y="247" font-size="12" fill="#0F6E56">habla con el usuario</text>
+<path d="M153 266 V356" stroke="#854F0B" stroke-width="2.5" fill="none" marker-end="url(#arr)"/>
+<text x="143" y="305" font-size="14" fill="#854F0B" font-weight="600" text-anchor="end">handoff</text>
+<text x="143" y="322" font-size="12" fill="#854F0B" text-anchor="end">pide reembolso</text>
+<path d="M155 313 H264" stroke="#854F0B" stroke-width="1.5" stroke-dasharray="3 3" fill="none"/>
+<rect x="266" y="282" width="166" height="64" rx="6" fill="#FAEEDA" stroke="#854F0B" stroke-dasharray="5 4"/>
+<text x="278" y="300" font-size="13" fill="#854F0B" font-weight="600">Paquete</text>
+<text x="278" y="317" font-size="12" fill="#854F0B">cuenta y cargo duplicado</text>
+<text x="278" y="334" font-size="12" fill="#854F0B">acceso ya resuelto</text>
+<rect x="48" y="360" width="210" height="46" rx="8" fill="#FAEEDA" stroke="#854F0B"/>
+<text x="153" y="380" font-size="15" fill="#854F0B" font-weight="600" text-anchor="middle">Agente billing</text>
+<text x="153" y="398" font-size="13" fill="#854F0B" text-anchor="middle">toma la conversación</text>
+<circle cx="276" cy="383" r="4" fill="#0F6E56"/><text x="286" y="387" font-size="12" fill="#0F6E56">ahora habla él</text>
+<text x="48" y="452" font-size="13" fill="#444441"><tspan font-weight="600">Qué viaja:</tspan> IDs, lo resuelto y restricciones</text>
+<text x="48" y="474" font-size="13" fill="#444441"><tspan font-weight="600">Riesgo:</tspan> ping-pong o contexto perdido</text>
+<text x="48" y="496" font-size="13" fill="#444441"><tspan font-weight="600">Típico en:</tspan> soporte y chat por intención</text>
+
+<rect x="462" y="104" width="410" height="412" rx="12" fill="none" stroke="#B4B2A9"/>
+<text x="482" y="128" font-size="13" fill="#534AB7" font-weight="600">ORQUESTADOR + WORKERS</text>
+<text x="482" y="144" font-size="12" fill="#888780">el orquestador conserva el control</text>
+<path d="M740 90 V146" stroke="#68675F" stroke-width="2" fill="none" marker-end="url(#arr)"/>
+<rect x="562" y="150" width="210" height="46" rx="8" fill="#EEEDFE" stroke="#534AB7"/>
+<text x="667" y="170" font-size="15" fill="#534AB7" font-weight="600" text-anchor="middle">Orquestador</text>
+<text x="667" y="188" font-size="13" fill="#534AB7" text-anchor="middle">divide en dos sub-tareas</text>
+<path d="M640 196 L569 234" stroke="#68675F" stroke-width="2" fill="none" marker-end="url(#arr)"/>
+<path d="M694 196 L775 234" stroke="#68675F" stroke-width="2" fill="none" marker-end="url(#arr)"/>
+<text x="667" y="226" font-size="13" fill="#534AB7" text-anchor="middle">en paralelo</text>
+<rect x="482" y="238" width="170" height="46" rx="8" fill="#E6F1FB" stroke="#185FA5"/>
+<text x="567" y="258" font-size="15" fill="#185FA5" font-weight="600" text-anchor="middle">Worker acceso</text>
+<text x="567" y="276" font-size="13" fill="#185FA5" text-anchor="middle">revisa el login</text>
+<rect x="692" y="238" width="170" height="46" rx="8" fill="#E6F1FB" stroke="#185FA5"/>
+<text x="777" y="258" font-size="15" fill="#185FA5" font-weight="600" text-anchor="middle">Worker cobros</text>
+<text x="777" y="276" font-size="13" fill="#185FA5" text-anchor="middle">revisa el doble cargo</text>
+<path d="M567 284 L638 336" stroke="#68675F" stroke-width="2" fill="none" marker-end="url(#arr)"/>
+<path d="M777 284 L696 336" stroke="#68675F" stroke-width="2" fill="none" marker-end="url(#arr)"/>
+<text x="667" y="312" font-size="12" fill="#888780" text-anchor="middle">resultado</text>
+<text x="667" y="327" font-size="12" fill="#888780" text-anchor="middle">estructurado</text>
+<rect x="562" y="340" width="210" height="46" rx="8" fill="#EEEDFE" stroke="#534AB7"/>
+<text x="667" y="360" font-size="15" fill="#534AB7" font-weight="600" text-anchor="middle">Orquestador</text>
+<text x="667" y="378" font-size="13" fill="#534AB7" text-anchor="middle">sintetiza y responde</text>
+<circle cx="604" cy="404" r="4" fill="#0F6E56"/><text x="614" y="408" font-size="12" fill="#0F6E56">siempre habla él con el usuario</text>
+<text x="482" y="452" font-size="13" fill="#444441"><tspan font-weight="600">Qué viaja:</tspan> la sub-tarea y su resultado</text>
+<text x="482" y="474" font-size="13" fill="#444441"><tspan font-weight="600">Riesgo:</tspan> síntesis mala o workers con todo</text>
+<text x="482" y="496" font-size="13" fill="#444441"><tspan font-weight="600">Típico en:</tspan> tareas que se dividen</text>
+
+<text x="28" y="548" font-size="15" fill="#444441">Handoff: el especialista se queda con la conversación. Orquestador: los especialistas son tools.</text>
+<text x="28" y="572" font-size="15" fill="#0F6E56">Pregunta clave: ¿el especialista debe tomar la conversación o solo resolver una parte?</text>
+<text x="28" y="604" font-size="13" fill="#888780">Patrones de Building effective agents (Anthropic) y del Agents SDK de OpenAI, consultados el 25-09-2026.</text>
+</g></svg>
