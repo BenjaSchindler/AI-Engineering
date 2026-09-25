@@ -32,6 +32,9 @@ flowchart TB
 > [!TIP] Para recordar
 > “Deep” no exige muchos niveles de agentes. El SDK tampoco demuestra por sí solo calidad, aislamiento ni recuperación correcta.
 
-**Practicá:** ¿qué capacidad concreta del SDK necesitarías además de delegar?
+## Practicá
+> [!question]- ¿Qué capacidad concreta del SDK necesitarías además de delegar?
+> Depende de la tarea, y esa es la prueba para elegirlo. En el ejemplo de la nota harían falta dos: herramientas de archivos, para guardar la evidencia fuera del contexto y releerla, y descarga o resumen de resultados grandes, para que una solicitud extensa no llene la ventana. Si solo necesitás delegar, un agente envuelto como tool alcanza y no hace falta el SDK: [[Subagents]].
 
+## Se conecta con
 [Documentación oficial](https://docs.langchain.com/oss/javascript/deepagents/overview) · [[Runtime de agentes]] · [[Evaluación de subagentes]] · [[Evals de Deep Agents]]

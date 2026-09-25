@@ -32,6 +32,9 @@ flowchart LR
 > [!TIP] Para recordar
 > En TypeScript, estudiá cómo propagar `AbortSignal` a lo largo de la ejecución.
 
-**Practicá:** ¿qué mostrarías al usuario si recibió media respuesta y se cortó la conexión?
+## Practicá
+> [!question]- ¿Qué mostrarías al usuario si recibió media respuesta y se cortó la conexión?
+> Que la respuesta quedó incompleta, sin presentarla como terminada: conservá el texto recibido marcado como parcial y ofrecé reintentar. Si en ese turno se ejecutaron tools, decí cuáles terminaron y cuáles no, por ejemplo “la cotización se creó; el resumen quedó a medias”. Al reintentar, no repitas las acciones confirmadas: retomá desde el estado guardado, con [[Ejecución y recuperación|idempotencia]]. Y si el corte llegó en medio de los argumentos de una tool, no la ejecutes: están incompletos.
 
+## Se conecta con
 [[Resiliencia entre proveedores]] · [[Ejecución y recuperación]]

@@ -45,6 +45,9 @@ En LangSmith: dataset → experimento con trazas anidadas → evaluadores → co
 > [!TIP] Para recordar
 > Código para llamadas, campos y permisos; juez calibrado para explicaciones. Simular tools no elimina la variación del modelo.
 
-**Practicá:** ¿cómo detectarías que el hijo acertó y el principal omitió su hallazgo?
+## Practicá
+> [!question]- ¿Cómo detectarías que el hijo acertó y el principal omitió su hallazgo?
+> Puntuá por separado la salida del hijo y el resultado final, en la misma traza. En el caso de la nota, un check confirma que el hijo detectó la exclusión X con la página 4 y otro comprueba si esa exclusión aparece en la respuesta final. Hijo aprobado y final reprobado es una falla de integración, no de extracción. Para confirmarlo, corré el principal aislado con la respuesta del hijo fija: si la omite igual, el problema está en cómo integra. Es la retención al integrar de [[Métricas de subagentes]].
 
+## Se conecta con
 [[Golden cases agénticos]] · [[Métricas de subagentes]] · [[Evals de trayectoria]] · [[Evals de Deep Agents]]

@@ -37,6 +37,9 @@ Evaluá con la información disponible **en ese momento**, no con hallazgos post
 > [!TIP] Para recordar
 > Una llamada opcional no es innecesaria por definición. Compará calidad, costo y latencia con y sin delegación.
 
-**Practicá:** ¿permitirías dos especialistas distintos si ambos pueden resolver correctamente la tarea?
+## Practicá
+> [!question]- ¿Permitirías dos especialistas distintos si ambos pueden resolver correctamente la tarea?
+> Sí, si la política no exige uno en particular: es un caso opcional y la referencia debe aceptar los dos destinos. Exigir uno solo castigaría un camino válido. En cada camino comprobás lo mismo: que el especialista tenga permisos para esos datos, que reciba el contexto necesario y que calidad, costo y latencia queden dentro del presupuesto. Si uno cuesta mucho más con la misma calidad, eso aparece en las métricas de costo, no como un error de delegación.
 
+## Se conecta con
 [[Métricas de subagentes]] · [[Casos de eval de subagentes]] · [[Tool evals]] · [[Regresiones y CI]]

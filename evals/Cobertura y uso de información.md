@@ -42,6 +42,9 @@ Compará hechos equivalentes, sin contar repeticiones. Denominador cero: “no a
 
 Código verifica campos y reglas explícitas; un juez calibrado compara significado con la referencia y evidencia. Ninguno descubre automáticamente todas las omisiones de una referencia incompleta.
 
-**Practicá:** ¿el dato nunca llegó, fue ignorado o se perdió al resumir?
+## Practicá
+> [!question]- La respuesta usa el límite antiguo aunque el endoso estaba entre los documentos. ¿Cómo sabés si el dato nunca llegó, fue ignorado o se perdió al resumir?
+> Seguí el endoso por las etapas del diagrama con la traza. **Nunca llegó:** no está en la entrada real del modelo porque la tool lo truncó, el OCR falló o el grep no lo encontró. **Se perdió al resumir:** estaba en una entrada anterior, pero no en el resumen que tenía el modelo al responder. **Fue ignorado:** estaba literal en la entrada final y la respuesta igual usó el límite antiguo; ahí probá posición y longitud con [[Lost in the middle]]. Cada causa tiene otro arreglo, por eso no alcanza con medir el resultado final.
 
+## Se conecta con
 [[Lost in the middle]] · [[Evals de trayectoria]] · [[Seguridad y evidencia documental]]

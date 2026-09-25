@@ -41,6 +41,9 @@ flowchart LR
 
 Evaluá con lo conocido en ese paso, sin exigir un único recorrido ni acceder a razonamiento interno. Que una tool haya sido llamada no prueba que tuvo éxito.
 
-**Practicá:** ¿grep era obligatorio o una lectura directa también resolvía correctamente?
+## Practicá
+> [!question]- Tu referencia espera un grep, pero el agente leyó el archivo directo y respondió bien. ¿Falla el caso?
+> Depende de si el grep era obligatorio por una razón que puedas nombrar. Si la política exige buscar, por ejemplo porque leer el archivo entero rompe el presupuesto o porque el grep deja evidencia auditable, ese check falla. Si no, la lectura directa es un camino válido y la referencia estaba sobreespecificada: aceptá los dos caminos o evaluá el resultado en lugar del recorrido exacto. Puntuá lo que importaba, usar el dato correcto dentro del presupuesto, no el recorrido que imaginaste.
 
+## Se conecta con
 [[Tool evals]] · [[Métricas de subagentes]]

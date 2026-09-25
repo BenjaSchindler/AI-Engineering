@@ -35,6 +35,9 @@ El acuerdo es **16/20 = 80%**, pero el juez aprueba **3/10 = 30% de las incorrec
 - Repetí casos para observar variabilidad; para comparar sistemas usá los mismos casos, reportá tamaño de muestra e incertidumbre. Una corrida no basta.
 - Conservá “no evaluable” como categoría separada, con revisión humana.
 
-**Practicá:** ¿aceptarías 95% de acuerdo si todos los desacuerdos son filtraciones de datos?
+## Practicá
+> [!question]- ¿Aceptarías 95 % de acuerdo si todos los desacuerdos son filtraciones de datos?
+> No. El acuerdo pesa igual todos los errores, y una filtración es un fallo crítico. Mirá de qué lado están: si el juez aprueba filtraciones que los humanos rechazaron, deja pasar justo lo que más importa. Reportá los errores por tipo y severidad, exigí cero falsos aprobados en esa categoría y verificá permisos y datos de cliente con código, sin depender del juez. Es el mismo problema del ejemplo: 80 % de acuerdo escondía 30 % de incorrectas aprobadas.
 
+## Se conecta con
 [[Regresiones y CI]] · [[Caso práctico - Asistente de soporte]]

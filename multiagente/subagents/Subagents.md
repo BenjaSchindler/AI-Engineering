@@ -33,6 +33,9 @@ flowchart LR
 > [!TIP] Para recordar
 > Aislar el contexto no aísla automáticamente archivos, permisos ni efectos de las tools.
 
-**Practicá:** ¿qué información mínima enviarías al especialista y qué debería devolverte?
+## Practicá
+> [!question]- ¿Qué información mínima enviarías al especialista y qué debería devolverte?
+> Enviá el objetivo, los IDs y documentos que necesita (cliente, póliza, versión), las restricciones que aplican, sus permisos, el presupuesto y el formato de salida. No hace falta la conversación completa: cada dato extra es ruido. Debería devolver hallazgos estructurados con su evidencia (documento y página), un estado (completo, parcial o fallido), qué no pudo verificar y qué acciones ejecutó. Sin estado ni evidencia, el principal no distingue “no hay exclusiones” de “no pude leer el PDF”.
 
+## Se conecta con
 [Patrón en LangChain](https://docs.langchain.com/oss/javascript/langchain/multi-agent/subagents) · [[Ejecución y recuperación]] · [[Deep Agents]]

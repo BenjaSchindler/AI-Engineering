@@ -33,6 +33,9 @@ Pueden combinarse: un modelo ajustado también puede consultar documentos median
 > [!TIP] Para recordar
 > Fine-tuning no reemplaza un mecanismo para consultar datos que cambian ni asegura citas correctas. Para precios actuales, consultá la fuente; para ejecutar una acción, usá [[Tools y function calling]].
 
-**Practicá:** ¿qué cambiarías primero si el modelo escribe bien, pero responde con una política antigua?
+## Practicá
+> [!question]- ¿Qué cambiarías primero si el modelo escribe bien, pero responde con una política antigua?
+> La fuente, no el estilo. Si escribe bien, el prompt de tono funciona y no hace falta entrenar: le falta la política vigente. Con RAG, comprobá que el índice tenga la versión nueva, que la anterior quede fuera o marcada como vencida, y que el prompt pida responder con la fuente y su fecha. Fine-tuning no lo resuelve: fijaría una versión de la política en el modelo y habría que reentrenar en cada cambio.
 
+## Se conecta con
 [[LLMs y elección de modelo]] · [[RAG básico]]

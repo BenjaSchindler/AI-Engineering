@@ -39,4 +39,6 @@ La clave deriva de esos factores con una serialización estable. **Un hash no ci
 
 No publiques como éxitos respuestas parciales o errores transitorios. Una escritura debe invalidar sus lecturas dependientes tras confirmarse; una caché vacía debería permitir recalcular.
 
-**Practicá:** ¿cómo impedirías que una cotización anterior reaparezca después de actualizar la póliza?
+## Practicá
+> [!question]- ¿Cómo impedirías que una cotización anterior reaparezca después de actualizar la póliza?
+> Con tres controles juntos. En la clave, incluí la versión de la póliza y de sus endosos: la consulta nueva nunca coincide con la entrada anterior. Al escribir, cuando se confirma la actualización, invalidá las entradas que dependían de la póliza sin esperar el TTL. Al servir, comprobá que la versión guardada en la entrada sigue siendo la vigente; si no, recalculá. Como prueba de regresión: actualizá la póliza, repetí la pregunta y verificá que el monto cambie.

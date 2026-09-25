@@ -31,6 +31,9 @@ flowchart LR
 > [!TIP] Para recordar
 > Tener una cita no demuestra que el campo sea correcto: comprobá que la fuente respalde el valor.
 
-**Practicá:** ¿cómo demostrarías de dónde salió un monto y quién autorizó la acción?
+## Practicá
+> [!question]- ¿Cómo demostrarías de dónde salió un monto y quién autorizó la acción?
+> Con dos registros enlazados. Para el monto: documento, versión y página de origen, el valor tal como aparece en la fuente, y el check que comprobó que la fuente respalda monto y moneda. Para la acción: quién la aprobó, cuándo y qué versión exacta aprobó (argumentos y monto), qué se ejecutó y qué devolvió el sistema externo, en un registro de auditoría protegido contra cambios. Si el monto cambió después de la aprobación, esa aprobación no lo cubre: [[Control humano y permisos]].
 
+## Se conecta con
 [[Normalization]] · [[RAG evals]] · [[Presupuesto de contexto]]

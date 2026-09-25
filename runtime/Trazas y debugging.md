@@ -32,6 +32,9 @@ flowchart LR
 > [!TIP] Para recordar
 > Un replay con respuestas grabadas ayuda a aislar fallas; no garantiza repetir la misma salida del modelo.
 
-**Practicá:** ¿qué evidencia pedirías para investigar una falla que ocurre una vez cada cien ejecuciones?
+## Practicá
+> [!question]- ¿Qué evidencia pedirías para investigar una falla que ocurre una vez cada cien ejecuciones?
+> Trazas completas de las ejecuciones que fallaron y de una muestra de las que no, para compararlas: versiones de prompt, modelo, tools e índice, cliente, entradas, llamadas con argumentos y resultados, errores, reintentos y tiempos. Buscá qué comparten las fallidas: un cliente, un tipo de documento, un proveedor, un timeout, la concurrencia. Para reproducirla, grabá las respuestas de las tools de una ejecución fallida y repetí muchos ensayos: con una tasa del 1 %, necesitás cientos para verla varias veces. Protegé los datos sensibles de esas trazas.
 
+## Se conecta con
 [[Operación en producción]] · [[Golden dataset]]

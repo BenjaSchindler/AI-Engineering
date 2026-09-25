@@ -36,9 +36,12 @@ flowchart LR
 > [!TIP] Para recordar
 > Probá timeouts, cancelación y resultados contradictorios. Repetí casos y aceptá caminos distintos si cumplen las restricciones.
 
-**Practicá:** ¿mejora el resultado frente a un agente con presupuesto comparable? Retirá un subagente y medí qué aporte desaparece.
+## Practicá
+> [!question]- ¿Cómo demostrarías que tus subagentes aportan algo frente a un solo agente?
+> Corré los mismos casos con un solo agente con presupuesto comparable, en tokens, costo y tiempo, y con el sistema de subagentes; compará éxito final, costo total y latencia. Después retirá un subagente a la vez y medí qué hallazgos o checks dejan de cumplirse. Si al retirarlo no cae nada, no aporta; si cae algo, sabés qué aporte justifica su costo. Sin el presupuesto comparable, el sistema con subagentes puede ganar solo porque gastó más.
 
 ## Cómo probarlo
 [[Decisión de delegar]] → [[Métricas de subagentes]] → [[Casos de eval de subagentes]] → [[Evals de Deep Agents]].
 
+## Se conecta con
 [[Multi-agent evals]] · [[Golden dataset]] · [[Regresiones y CI]] · [[Trazas y debugging]]

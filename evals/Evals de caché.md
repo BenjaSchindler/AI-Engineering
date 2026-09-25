@@ -45,4 +45,6 @@ Reportá además éxito de tarea, latencia p95 y violaciones de permisos. Denomi
 
 **Para medir cambios del agente**, desactivá el caché de respuestas o aislalo por versión: devolver salidas viejas escondería regresiones. Para evaluar el producto, probá también caché activada, tráfico representativo y concurrencia.
 
-**Practicá:** ¿por qué subir el hit rate puede empeorar el sistema?
+## Practicá
+> [!question]- ¿Por qué subir el hit rate puede empeorar el sistema?
+> Porque el hit rate cuenta reutilizaciones, no reutilizaciones correctas. Bajar el umbral semántico o quitar dependencias de la clave sube los hits, y también sirve respuestas de otro contexto: la de “¿cubre inundaciones?” para “¿excluye inundaciones?”, una cotización anterior al endoso o datos de otro cliente. Mirá el hit rate junto con la reutilización incorrecta, las respuestas obsoletas, las violaciones de permisos y el éxito de la tarea. Muchos hits con algunas reutilizaciones inválidas pueden ser peores que menos hits sin ninguna.

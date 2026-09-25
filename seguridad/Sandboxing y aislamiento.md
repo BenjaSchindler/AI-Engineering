@@ -40,6 +40,9 @@ El aislamiento de archivos y red se complementa: restringir solo uno deja otras 
 - Separá ejecuciones de distintos clientes y limpiá los datos temporales.
 - Las acciones por APIs externas siguen necesitando permisos y aprobación cuando corresponda; estar dentro de un sandbox no las autoriza.
 
-**Practicá:** ¿qué podría hacer un script si hereda todas las credenciales del servidor?
+## Practicá
+> [!question]- ¿Qué podría hacer un script si hereda todas las credenciales del servidor?
+> Todo lo que puede hacer el servidor: leer y modificar datos de todos los clientes, llamar APIs con permisos de escritura, gastar con las claves de los proveedores de modelos y, si tiene red, enviar todo eso afuera. Una prompt injection en una página alcanza para ordenárselo. Dale solo la credencial mínima de su tarea, de corta duración y limitada a ese cliente, o dejá que un proxy fuera del sandbox haga las llamadas autenticadas sin exponer el secreto. Y limitá la red: sin salida, una credencial robada no se puede enviar.
 
+## Se conecta con
 [[Guardrails]] · [[Control humano y permisos]] · [[Seguridad y evidencia documental]]

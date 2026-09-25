@@ -39,6 +39,9 @@ Una cola amortigua picos, pero no aumenta la capacidad sostenida del sistema. [P
 
 Versioná juntos prompt, modelo, tools e índice. Volver atrás requiere compatibilidad del estado; no deshace acciones externas. [Despliegues canary](https://sre.google/workbook/canarying-releases/).
 
-**Practicá:** si llegan tareas más rápido de lo que salen, ¿qué límite protege al usuario y al proveedor?
+## Practicá
+> [!question]- Si llegan tareas más rápido de lo que salen, ¿qué límite protege al usuario y al proveedor?
+> Dos límites distintos. Al proveedor lo protegen la concurrencia máxima y las cuotas por cliente: los workers no hacen más llamadas simultáneas que las acordadas, por más que crezca la cola. Al usuario lo protege el tope de la cola: cuando se llena, o la tarea más vieja supera un tiempo máximo, rechazás las nuevas con un mensaje claro y cuándo reintentar, en lugar de dejarlas esperando sin fin. Si el exceso es sostenido, la cola solo lo posterga: hace falta más capacidad o menos carga.
 
+## Se conecta con
 [[Operación en producción]] · [[Trazas y debugging]]

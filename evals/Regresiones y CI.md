@@ -32,6 +32,9 @@ flowchart LR
 > [!TIP] Para recordar
 > Suite rápida en cada cambio; evaluación más amplia antes del despliegue. Pasar el gate no elimina el monitoreo posterior.
 
-**Practicá:** ¿cómo distinguirías una regresión real de una fluctuación entre ejecuciones?
+## Practicá
+> [!question]- ¿Cómo distinguirías una regresión real de una fluctuación entre ejecuciones?
+> Primero medí la fluctuación: corré la versión base varias veces sobre los mismos casos y mirá cuánto varía sin cambiar nada. Después compará caso por caso, con repeticiones: una regresión real se concentra en casos o grupos concretos y se repite en cada corrida; el ruido cambia de casos entre corridas. Para la tasa de éxito, reportá el intervalo y usá una prueba pareada, porque son los mismos casos. Un fallo crítico que se reproduce bloquea aunque el promedio no cambie.
 
+## Se conecta con
 [[Evals por cliente y producción]] · [[Ejecución y recuperación]]

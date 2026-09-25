@@ -36,6 +36,9 @@ flowchart LR
 > [!TIP] Para recordar
 > Reiniciá archivos, memoria y estado por ensayo. Si probás continuidad, declarala como parte del caso. Un plan marcado “completo” no demuestra éxito.
 
-**Practicá:** ¿la compactación perdió una exclusión que estaba al comienzo del documento?
+## Practicá
+> [!question]- ¿Cómo comprobarías que la compactación no perdió una exclusión que estaba al comienzo del documento?
+> Armá un caso con la exclusión en las primeras páginas y suficiente contenido después para forzar la compactación o la descarga. Después preguntá algo que dependa de ella y comprobá dos cosas: que la respuesta la aplique, y que la traza muestre que sigue en el resumen o que el agente la releyó del archivo con su página. Corré como control la misma variante sin compactar. Si sin compactar acierta y compactando falla, es la compactación; si falla en las dos, buscá antes: en la entrega o en la posición ([[Lost in the middle]]).
 
+## Se conecta con
 [[Lost in the middle]] · [[Cobertura y uso de información]] · [[Presupuesto de contexto]] · [[Ejecución y recuperación]] · [[Trazas y debugging]]

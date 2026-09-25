@@ -38,7 +38,9 @@ Resultados reutilizables, costosos y verificables. Para tools, incluí argumento
 
 **No confundas caché con memoria ni estado durable:** debería poder descartarse y reconstruirse. Un “enviado” cacheado no demuestra que se ejecutó una nueva acción; para reintentos de escrituras usá [[Ejecución y recuperación|idempotencia]].
 
-**Practicá:** ¿qué reutilizarías al hacer cinco preguntas distintas sobre el mismo PDF?
+## Practicá
+> [!question]- ¿Qué reutilizarías al hacer cinco preguntas distintas sobre el mismo PDF?
+> Todo lo que depende del PDF y no de la pregunta. El texto extraído, cacheado por el hash del PDF y la versión del parser, para no procesarlo cinco veces. El prefijo con el documento, con [[Prompt caching]]: la primera pregunta escribe la caché y las siguientes la leen. Los embeddings de sus chunks, si buscás dentro del PDF. La caché de respuestas no sirve: las preguntas son distintas.
 
 ## Orden de lectura
 Primero [[Claves e invalidación de caché]]. Después elegí la capa: [[Prompt caching]], [[Caché de respuestas]] o [[Caché de ingesta y búsqueda]]. Son alternativas de reutilización, no pasos consecutivos.

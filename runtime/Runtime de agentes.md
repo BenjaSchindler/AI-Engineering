@@ -32,7 +32,9 @@ Las capas de caché comparten reglas de validez, pero no forman un pipeline. Tie
 ## Conexiones con otras categorías
 [[Seguridad]] define permisos y aislamiento. [[Evals]] mide calidad y regresiones: [[Regresiones y CI]] antes de publicar, [[Evals por cliente y producción]] durante el uso real. Operar pertenece aquí; evaluar pertenece a Evals.
 
-**Practicá:** explicá una falla, cómo la encontraste en las trazas y cómo comprobaste la recuperación.
+## Practicá
+> [!question]- ¿Cómo contarías una falla de punta a punta: cómo la encontraste en las trazas y cómo comprobaste la recuperación?
+> Con cinco partes: síntoma, traza, causa, arreglo y prueba. Por ejemplo: un cliente recibió dos cotizaciones. En la traza había dos llamadas de creación en la misma ejecución, separadas por un timeout y sin clave de idempotencia; el runtime reintentaba a ciegas. El arreglo fue registrar la clave en el checkpoint antes de llamar y reintentar con la misma. La prueba: un replay que inyecta el timeout después de crear, un golden case que verifica una sola cotización en el estado final, y esa prueba sumada a CI. Ver [[Ejecución y recuperación]] y [[Trazas y debugging]].
 
 ## Estado de los nodos
 ```dataview

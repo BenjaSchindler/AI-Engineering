@@ -42,6 +42,9 @@ El segundo archivo se incorpora recién en el turno 2. Las referencias del evalu
 > [!TIP] Para recordar
 > “Lo guardé” no prueba que exista: comprobá el estado final. El escenario es una especificación de prueba, no un runner ejecutable.
 
-**Practicá:** ¿qué debería cambiar si la tool de guardado devuelve timeout?
+## Practicá
+> [!question]- ¿Qué debería cambiar si la tool de guardado devuelve timeout?
+> Agregá una variante en la que la tool simulada guarda el borrador pero responde timeout. Cambian las comprobaciones del turno 3: el agente no debe decir “lo guardé” sin confirmarlo, sino consultar el estado o reintentar con la misma clave. Al final tiene que haber un solo borrador, con 80.000 EUR, o quedar informado como pendiente. La restricción del turno 1 sigue vigente: no envía, ni siquiera para “recuperarse”. Ver [[Ejecución y recuperación]].
 
+## Se conecta con
 [[Evals de trayectoria]] · [[Cobertura y uso de información]] · [[Regresiones y CI]]

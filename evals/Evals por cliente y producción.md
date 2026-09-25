@@ -32,6 +32,9 @@ flowchart LR
 > [!TIP] Para recordar
 > En LangSmith: dataset → experimento → comparación; trazas → evaluación online → revisión → nuevos casos. Versioná también los criterios.
 
-**Practicá:** ¿cómo elegirías qué trazas revisar sin mirar solo los errores reportados?
+## Practicá
+> [!question]- ¿Cómo elegirías qué trazas revisar sin mirar solo los errores reportados?
+> Los errores reportados son una muestra sesgada: solo ves lo que el usuario notó y se tomó el trabajo de reportar. Combiná tres muestras. Una al azar por cliente, para estimar la calidad real. Otra dirigida por señales: correcciones humanas, reintentos, costo o latencia fuera de lo normal, tools con error, respuestas sin cita o conversaciones abandonadas. Y más muestras donde el impacto es mayor: acciones con efectos, clientes nuevos y cambios recientes. Cada falla que encuentres se vuelve un caso curado del [[Golden dataset]].
 
+## Se conecta con
 [[Regresiones y CI]] · [[Trazas y debugging]] · [[Seguridad y evidencia documental]]

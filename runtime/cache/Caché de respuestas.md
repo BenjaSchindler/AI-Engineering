@@ -40,4 +40,6 @@ flowchart LR
 
 No hace falta `temperature=0` para cachear; tampoco garantiza determinismo. Reutilizar una salida reduce deliberadamente la variedad.
 
-**Practicá:** ¿qué debería pasar si la pregunta es idéntica pero cambió el documento?
+## Practicá
+> [!question]- ¿Qué debería pasar si la pregunta es idéntica pero cambió el documento?
+> Tiene que ser un miss. La versión del documento forma parte de la clave, así que la versión nueva produce otra clave y el agente vuelve a responder. Además, al publicarse el documento nuevo, invalidá las respuestas que dependían del anterior sin esperar el TTL. Si la clave es solo el texto de la pregunta, el usuario recibe la respuesta vieja como si fuera vigente: [[Claves e invalidación de caché]].

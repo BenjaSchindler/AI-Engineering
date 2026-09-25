@@ -40,6 +40,9 @@ Denominador cero: “no aplica”. Reportá resultados por cliente y caso, adem�
 > [!TIP] Para recordar
 > Estas métricas no reemplazan el éxito final: un hijo puede omitir información. Medí también calidad, costo total y latencia frente a un solo agente.
 
-**Practicá:** ¿cómo puntuarías una delegación opcional que mejora calidad y aumenta costo?
+## Practicá
+> [!question]- ¿Cómo puntuarías una delegación opcional que mejora calidad y aumenta costo?
+> No como acierto o error de delegación: es opcional, así que los dos caminos son válidos. Lo que puntuás es el intercambio: calidad, costo total y latencia con y sin delegación, sobre los mismos casos. Decidí antes cuánto costo aceptás por cada punto de calidad; por ejemplo, +20 % de costo puede valer la pena en casos de cobertura y no en consultas simples. Reportalo por tipo de caso: puede convenir en unos y no en otros.
 
+## Se conecta con
 [[Evaluación de subagentes]] · [[Cobertura y uso de información]] · [[Graders]]

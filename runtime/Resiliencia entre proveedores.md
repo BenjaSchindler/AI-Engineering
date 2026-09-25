@@ -32,6 +32,9 @@ flowchart LR
 > [!TIP] Para recordar
 > Los reintentos del SDK y del runtime pueden multiplicarse. Definí quién controla el presupuesto total.
 
-**Practicá:** ¿qué conservarías al cambiar de proveedor a mitad de una ejecución?
+## Practicá
+> [!question]- ¿Qué conservarías al cambiar de proveedor a mitad de una ejecución?
+> El estado de la tarea: IDs, decisiones y restricciones, resultados de tools ya ejecutadas con sus claves de idempotencia, qué acciones están hechas o pendientes, y el presupuesto consumido. Adaptá mensajes y definiciones de tools al formato del nuevo proveedor y volvé a contar tokens: otro tokenizer u otra ventana puede hacer que el mismo historial no entre ([[Presupuesto de contexto]]). No arrastres lo que solo entiende el proveedor anterior, como su caché o sus bloques de razonamiento. Y comprobá que el nuevo proveedor esté autorizado para esos datos.
 
+## Se conecta con
 [[Presupuesto de contexto]] · [[Evals por cliente y producción]]
