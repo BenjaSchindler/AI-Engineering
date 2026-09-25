@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="634" viewBox="0 0 900 634" role="img" aria-labelledby="title desc">
+<title id="title">Prompting, RAG o fine-tuning · dónde actúa cada uno</title>
+<desc id="desc">Arriba, dónde actúa cada palanca: prompting cambia las instrucciones y ejemplos, RAG cambia la evidencia que llega en cada consulta y fine-tuning cambia los parámetros del modelo. Cambiar un prompt lleva minutos, actualizar el índice trae lo vigente en cada consulta y reentrenar exige datos, cómputo y otra versión que mantener. Abajo, qué probar primero según la falla en un asistente de soporte: formato o tono, prompting; política vieja o dato inventado, RAG; clasificación inconsistente con buen prompt y miles de ejemplos, fine-tuning; demasiado lento o caro, otro modelo.</desc>
+<defs><marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M2 1 L9 5 L2 9" fill="none" stroke="#68675F" stroke-width="1.5"/></marker></defs>
+<g font-family="system-ui,-apple-system,Segoe UI,sans-serif">
+<rect x="0" y="0" width="900" height="634" rx="12" fill="#FBFAF7"/>
+<text x="28" y="35" font-size="17" fill="#68675F" font-weight="600">PROMPTING, RAG O FINE-TUNING · DÓNDE ACTÚA CADA UNO</text>
+<rect x="28" y="84" width="200" height="62" rx="10" fill="#EEEDFE" stroke="#534AB7" stroke-width="1.5"/>
+<text x="128.0" y="112.0" font-size="15" fill="#534AB7" font-weight="600" text-anchor="middle">Prompt</text>
+<text x="128.0" y="131.0" font-size="12.5" fill="#534AB7" text-anchor="middle">instrucciones y ejemplos</text>
+<rect x="38" y="73" width="83" height="20" rx="10" fill="#534AB7"/>
+<text x="79" y="87" font-size="11.5" fill="#FBFAF7" font-weight="600" text-anchor="middle">Prompting</text>
+<rect x="28" y="172" width="200" height="62" rx="10" fill="#E6F1FB" stroke="#185FA5" stroke-width="1.5"/>
+<text x="128.0" y="200.0" font-size="15" fill="#185FA5" font-weight="600" text-anchor="middle">Contexto</text>
+<text x="128.0" y="219.0" font-size="12.5" fill="#185FA5" text-anchor="middle">evidencia recuperada</text>
+<rect x="38" y="161" width="40" height="20" rx="10" fill="#185FA5"/>
+<text x="58" y="175" font-size="11.5" fill="#FBFAF7" font-weight="600" text-anchor="middle">RAG</text>
+<rect x="290" y="116" width="150" height="86" rx="10" fill="#FAEEDA" stroke="#854F0B" stroke-width="1.5"/>
+<text x="365.0" y="156.0" font-size="15" fill="#854F0B" font-weight="600" text-anchor="middle">Modelo</text>
+<text x="365.0" y="175.0" font-size="12.5" fill="#854F0B" text-anchor="middle">parámetros</text>
+<rect x="300" y="105" width="97" height="20" rx="10" fill="#854F0B"/>
+<text x="349" y="119" font-size="11.5" fill="#FBFAF7" font-weight="600" text-anchor="middle">Fine-tuning</text>
+<rect x="494" y="134" width="96" height="50" rx="10" fill="#F1EFE8" stroke="#444441" stroke-width="1.5"/>
+<text x="542.0" y="156.0" font-size="15" fill="#444441" font-weight="600" text-anchor="middle">Respuesta</text>
+<text x="542.0" y="175.0" font-size="12.5" fill="#444441" text-anchor="middle"></text>
+<path d="M230 115 C260 115 262 140 286 146" stroke="#68675F" stroke-width="2" fill="none" marker-end="url(#arr)"/>
+<path d="M230 203 C260 203 262 178 286 172" stroke="#68675F" stroke-width="2" fill="none" marker-end="url(#arr)"/>
+<path d="M442 159 H490" stroke="#68675F" stroke-width="2" marker-end="url(#arr)"/>
+<text x="622" y="84" font-size="13" fill="#444441" font-weight="600">Qué implica cambiarlo</text>
+<circle cx="627" cy="106" r="5" fill="#534AB7"/>
+<text x="638" y="110" font-size="12.5" fill="#534AB7" font-weight="600">Prompting</text>
+<text x="638" y="128" font-size="12" fill="#5F5E5A">editás texto: minutos, y se prueba</text>
+<text x="638" y="145" font-size="12" fill="#5F5E5A">con la misma eval</text>
+<circle cx="627" cy="166" r="5" fill="#185FA5"/>
+<text x="638" y="170" font-size="12.5" fill="#185FA5" font-weight="600">RAG</text>
+<text x="638" y="188" font-size="12" fill="#5F5E5A">actualizás el índice; cada consulta</text>
+<text x="638" y="205" font-size="12" fill="#5F5E5A">trae lo vigente y se puede citar</text>
+<circle cx="627" cy="226" r="5" fill="#854F0B"/>
+<text x="638" y="230" font-size="12.5" fill="#854F0B" font-weight="600">Fine-tuning</text>
+<text x="638" y="248" font-size="12" fill="#5F5E5A">reentrenás: datos, cómputo y otra</text>
+<text x="638" y="265" font-size="12" fill="#5F5E5A">versión del modelo que mantener</text>
+<path d="M28 276 H872" stroke="#B4B2A9" stroke-dasharray="2 4" fill="none"/>
+<text x="28" y="306" font-size="14" fill="#444441" font-weight="600">Qué falla → qué probar primero</text>
+<text x="268" y="306" font-size="12.5" fill="#888780">asistente de soporte</text>
+<rect x="28" y="320" width="844" height="50" rx="8" fill="#FFFFFF" stroke="#E4E2DA"/>
+<text x="44" y="350" font-size="13" fill="#444441">Sabe la respuesta, pero no respeta el formato ni el tono</text>
+<path d="M444 345 H476" stroke="#68675F" stroke-width="1.8" marker-end="url(#arr)"/>
+<rect x="480" y="332" width="118" height="26" rx="13" fill="#EEEDFE" stroke="#534AB7"/>
+<text x="539" y="350" font-size="13" fill="#534AB7" font-weight="600" text-anchor="middle">Prompting</text>
+<text x="612" y="350" font-size="12" fill="#5F5E5A">instrucciones, ejemplos y formato de salida</text>
+<rect x="28" y="378" width="844" height="50" rx="8" fill="#FFFFFF" stroke="#E4E2DA"/>
+<text x="44" y="399" font-size="13" fill="#444441">Responde con una política vieja o inventa un dato de la</text>
+<text x="44" y="416" font-size="13" fill="#444441">empresa</text>
+<path d="M444 403 H476" stroke="#68675F" stroke-width="1.8" marker-end="url(#arr)"/>
+<rect x="480" y="390" width="118" height="26" rx="13" fill="#E6F1FB" stroke="#185FA5"/>
+<text x="539" y="408" font-size="13" fill="#185FA5" font-weight="600" text-anchor="middle">RAG</text>
+<text x="612" y="408" font-size="12" fill="#5F5E5A">fuente vigente, con versión y cita</text>
+<rect x="28" y="436" width="844" height="50" rx="8" fill="#FFFFFF" stroke="#E4E2DA"/>
+<text x="44" y="457" font-size="13" fill="#444441">Con buen prompt, clasifica tickets de forma inconsistente,</text>
+<text x="44" y="474" font-size="13" fill="#444441">y hay miles de ejemplos etiquetados</text>
+<path d="M444 461 H476" stroke="#68675F" stroke-width="1.8" marker-end="url(#arr)"/>
+<rect x="480" y="448" width="118" height="26" rx="13" fill="#FAEEDA" stroke="#854F0B"/>
+<text x="539" y="466" font-size="13" fill="#854F0B" font-weight="600" text-anchor="middle">Fine-tuning</text>
+<text x="612" y="466" font-size="12" fill="#5F5E5A">contra la base, con el mismo golden dataset</text>
+<rect x="28" y="494" width="844" height="50" rx="8" fill="#FFFFFF" stroke="#E4E2DA"/>
+<text x="44" y="524" font-size="13" fill="#444441">Resuelve bien, pero tarda o cuesta demasiado</text>
+<path d="M444 519 H476" stroke="#68675F" stroke-width="1.8" marker-end="url(#arr)"/>
+<rect x="480" y="506" width="118" height="26" rx="13" fill="#F1EFE8" stroke="#444441"/>
+<text x="539" y="524" font-size="13" fill="#444441" font-weight="600" text-anchor="middle">Otro modelo</text>
+<text x="612" y="524" font-size="12" fill="#5F5E5A">antes de reescribir el prompt</text>
+<text x="28" y="574" font-size="14.5" fill="#444441">No son escalones obligatorios y se combinan: un modelo ajustado también puede usar RAG.</text>
+<text x="28" y="596" font-size="14.5" fill="#0F6E56">Antes de elegir: un criterio de éxito y una eval para comparar cada cambio contra la base.</text>
+<text x="28" y="622" font-size="12.5" fill="#888780">Según el patrón de tres pasos de Google Cloud y la guía de prompt engineering de Anthropic, consultados el 25-09-2026.</text>
+</g></svg>
