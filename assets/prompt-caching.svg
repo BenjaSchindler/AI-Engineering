@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="612" viewBox="0 0 900 612" role="img" aria-labelledby="title desc"><title id="title">Prompt caching · se reutiliza el prefijo idéntico</title><desc id="desc">Tres llamadas comparten tools, system y una póliza antes del breakpoint: la primera escribe la caché y las siguientes la leen. Un timestamp al inicio hace que cada llamada vuelva a escribir. Costo del prefijo en tres preguntas: 3,00× sin caché, 1,45× con caché y 3,75× con timestamp al inicio.</desc><g font-family="system-ui,-apple-system,Segoe UI,sans-serif"><rect x="0" y="0" width="900" height="612" rx="12" fill="#FBFAF7" stroke="none"/>
+<text x="28" y="35" font-size="17" fill="#68675F" font-weight="600">PROMPT CACHING · SE REUTILIZA EL PREFIJO IDÉNTICO</text>
+
+<text x="28" y="70" font-size="14" fill="#0F6E56" font-weight="600">01 · LO ESTABLE PRIMERO, LO VARIABLE AL FINAL</text>
+<text x="608" y="94" font-size="14" fill="#534AB7" font-weight="600" text-anchor="middle">breakpoint</text>
+<path d="M608 100 V244" stroke="#534AB7" stroke-width="2" stroke-dasharray="5 4" fill="none"/>
+
+<text x="28" y="125" font-size="15" fill="#444441" font-weight="600">Llamada 1</text>
+<rect x="130" y="102" width="58" height="36" rx="6" fill="#FAEEDA" stroke="#854F0B"/><text x="159" y="125" font-size="15" fill="#854F0B" text-anchor="middle">tools</text>
+<rect x="192" y="102" width="96" height="36" rx="6" fill="#FAEEDA" stroke="#854F0B"/><text x="240" y="125" font-size="15" fill="#854F0B" text-anchor="middle">system</text>
+<rect x="292" y="102" width="308" height="36" rx="6" fill="#FAEEDA" stroke="#854F0B"/><text x="446" y="125" font-size="15" fill="#854F0B" text-anchor="middle">póliza · 40k tokens</text>
+<rect x="616" y="102" width="100" height="36" rx="6" fill="#F1EFE8" stroke="#B4B2A9"/><text x="666" y="125" font-size="15" fill="#5F5E5A" text-anchor="middle">pregunta A</text>
+<text x="732" y="117" font-size="15" fill="#854F0B" font-weight="600">escribe</text><text x="732" y="134" font-size="13" fill="#854F0B">prefijo × 1,25</text>
+
+<text x="28" y="175" font-size="15" fill="#444441" font-weight="600">Llamada 2</text>
+<rect x="130" y="152" width="58" height="36" rx="6" fill="#E1F5EE" stroke="#0F6E56"/><text x="159" y="175" font-size="15" fill="#0F6E56" text-anchor="middle">tools</text>
+<rect x="192" y="152" width="96" height="36" rx="6" fill="#E1F5EE" stroke="#0F6E56"/><text x="240" y="175" font-size="15" fill="#0F6E56" text-anchor="middle">system</text>
+<rect x="292" y="152" width="308" height="36" rx="6" fill="#E1F5EE" stroke="#0F6E56"/><text x="446" y="175" font-size="15" fill="#0F6E56" text-anchor="middle">póliza · 40k tokens</text>
+<rect x="616" y="152" width="100" height="36" rx="6" fill="#F1EFE8" stroke="#B4B2A9"/><text x="666" y="175" font-size="15" fill="#5F5E5A" text-anchor="middle">pregunta B</text>
+<text x="732" y="167" font-size="15" fill="#0F6E56" font-weight="600">lee</text><text x="732" y="184" font-size="13" fill="#0F6E56">prefijo × 0,1</text>
+
+<text x="28" y="225" font-size="15" fill="#444441" font-weight="600">Llamada 3</text>
+<rect x="130" y="202" width="58" height="36" rx="6" fill="#E1F5EE" stroke="#0F6E56"/><text x="159" y="225" font-size="15" fill="#0F6E56" text-anchor="middle">tools</text>
+<rect x="192" y="202" width="96" height="36" rx="6" fill="#E1F5EE" stroke="#0F6E56"/><text x="240" y="225" font-size="15" fill="#0F6E56" text-anchor="middle">system</text>
+<rect x="292" y="202" width="308" height="36" rx="6" fill="#E1F5EE" stroke="#0F6E56"/><text x="446" y="225" font-size="15" fill="#0F6E56" text-anchor="middle">póliza · 40k tokens</text>
+<rect x="616" y="202" width="100" height="36" rx="6" fill="#F1EFE8" stroke="#B4B2A9"/><text x="666" y="225" font-size="15" fill="#5F5E5A" text-anchor="middle">pregunta C</text>
+<text x="732" y="217" font-size="15" fill="#0F6E56" font-weight="600">lee</text><text x="732" y="234" font-size="13" fill="#0F6E56">prefijo × 0,1</text>
+
+<text x="365" y="264" font-size="13" fill="#888780" text-anchor="middle">tools + system + póliza = prefijo cacheable</text>
+<text x="666" y="264" font-size="13" fill="#888780" text-anchor="middle">precio normal</text>
+
+<text x="28" y="306" font-size="14" fill="#993C1D" font-weight="600">02 · UN TIMESTAMP AL INICIO LO ROMPE</text>
+<text x="28" y="341" font-size="15" fill="#444441" font-weight="600">Llamada N</text>
+<rect x="130" y="318" width="86" height="36" rx="6" fill="#FAECE7" stroke="#993C1D"/><text x="173" y="341" font-size="15" fill="#993C1D" font-weight="600" text-anchor="middle">09:41:07</text>
+<rect x="220" y="318" width="58" height="36" rx="6" fill="#FAEEDA" stroke="#854F0B"/><text x="249" y="341" font-size="15" fill="#854F0B" text-anchor="middle">tools</text>
+<rect x="282" y="318" width="96" height="36" rx="6" fill="#FAEEDA" stroke="#854F0B"/><text x="330" y="341" font-size="15" fill="#854F0B" text-anchor="middle">system</text>
+<rect x="382" y="318" width="308" height="36" rx="6" fill="#FAEEDA" stroke="#854F0B"/><text x="536" y="341" font-size="15" fill="#854F0B" text-anchor="middle">póliza · 40k tokens</text>
+<path d="M698 312 V360" stroke="#534AB7" stroke-width="2" stroke-dasharray="5 4" fill="none"/>
+<rect x="706" y="318" width="100" height="36" rx="6" fill="#F1EFE8" stroke="#B4B2A9"/><text x="756" y="341" font-size="15" fill="#5F5E5A" text-anchor="middle">pregunta</text>
+<text x="818" y="333" font-size="15" fill="#854F0B" font-weight="600">escribe</text><text x="818" y="350" font-size="13" fill="#854F0B">siempre</text>
+<text x="28" y="386" font-size="15" fill="#444441">El primer byte ya no coincide: ninguna llamada encuentra el prefijo anterior.</text>
+<text x="28" y="409" font-size="15" fill="#993C1D">Cada una vuelve a escribir (× 1,25) y ninguna lee: sale más caro que no cachear.</text>
+<text x="28" y="432" font-size="15" fill="#0F6E56" font-weight="600">Arreglo: mover la hora después del breakpoint, junto a la pregunta.</text>
+
+<text x="28" y="474" font-size="14" fill="#68675F" font-weight="600">03 · COSTO DEL PREFIJO EN TRES PREGUNTAS</text>
+<text x="28" y="503" font-size="15" fill="#444441">Sin caché</text>
+<rect x="200" y="488" width="300" height="22" rx="4" fill="#F1EFE8" stroke="#B4B2A9"/><text x="512" y="504" font-size="15" fill="#5F5E5A">1 + 1 + 1 = 3,00×</text>
+<text x="28" y="533" font-size="15" fill="#0F6E56" font-weight="600">Con caché</text>
+<rect x="200" y="518" width="145" height="22" rx="4" fill="#E1F5EE" stroke="#0F6E56"/><text x="357" y="534" font-size="15" fill="#0F6E56" font-weight="600">1,25 + 0,1 + 0,1 = 1,45×</text>
+<text x="28" y="563" font-size="15" fill="#993C1D">Timestamp al inicio</text>
+<rect x="200" y="548" width="375" height="22" rx="4" fill="#FAECE7" stroke="#993C1D"/><text x="587" y="564" font-size="15" fill="#993C1D">3 × 1,25 = 3,75×</text>
+<text x="28" y="598" font-size="13" fill="#888780">Multiplicadores de Claude con TTL de 5 min, consultados el 25-09-2026. Otros proveedores cobran distinto.</text>
+</g></svg>
