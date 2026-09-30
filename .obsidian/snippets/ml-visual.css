@@ -1,0 +1,49 @@
+/* Only ML notes: keep the Markdown H1 and suppress Obsidian's extra file title. */
+.workspace-leaf-content[data-type="markdown"]:has(.ml-visual) .inline-title,
+.ml-visual .inline-title {
+  display: none !important;
+}
+
+/* Bound diagram width in notes; use the full available width in visual cards. */
+.markdown-preview-view.ml-visual {
+  --file-line-width: 1100px;
+}
+.ml-visual img[alt^="ML visual:"] {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+.canvas-node:has(img[src*="/assets/ml/"]) .markdown-preview-view,
+.canvas-node:has(img[src*="ml-roc.png"]) .markdown-preview-view,
+.canvas-node:has(img[src*="ml-pr.png"]) .markdown-preview-view {
+  --file-line-width: 100%;
+  --file-margins: 28px;
+  font-size: 22px;
+  line-height: 1.45;
+}
+.canvas-node:has(img[src*="/assets/ml/"]) .markdown-preview-sizer,
+.canvas-node:has(img[src*="ml-roc.png"]) .markdown-preview-sizer,
+.canvas-node:has(img[src*="ml-pr.png"]) .markdown-preview-sizer {
+  width: 100%;
+  max-width: none !important;
+  margin-inline: 0;
+}
+.canvas-node:has(img[src*="/assets/ml/"]) h1,
+.canvas-node:has(img[src*="ml-roc.png"]) h1,
+.canvas-node:has(img[src*="ml-pr.png"]) h1 {
+  font-size: 30px;
+  line-height: 1.2;
+}
+.canvas-node:has(img[src*="/assets/ml/"]) .image-embed,
+.canvas-node:has(img[src*="ml-roc.png"]) .image-embed,
+.canvas-node:has(img[src*="ml-pr.png"]) .image-embed {
+  display: block;
+  width: 100%;
+}
+.canvas-node img[src*="/assets/ml/"],
+.canvas-node img[src*="ml-roc.png"],
+.canvas-node img[src*="ml-pr.png"] {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+}

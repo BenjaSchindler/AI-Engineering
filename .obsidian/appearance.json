@@ -1,5 +1,6 @@
 {
   "enabledCssSnippets": [
-    "vector-db-visual"
+    "vector-db-visual",
+    "ml-visual"
   ]
 }

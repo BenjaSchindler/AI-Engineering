@@ -38,7 +38,7 @@ Denominador cero: “no aplica”. Reportá resultados por cliente y caso, adem�
 **Ejemplo:** el hijo encuentra cinco restricciones necesarias; el principal respeta cuatro: retención 4/5. Si la omitida es crítica, el caso falla.
 
 > [!TIP] Para recordar
-> Estas métricas no reemplazan el éxito final: un hijo puede omitir información. Medí también calidad, costo total y latencia frente a un solo agente.
+> Estas métricas no reemplazan el éxito final: un hijo puede omitir información. Medí también calidad, costo total y latencia p95 frente a un solo agente, sobre los mismos casos y carga: [[Evals de rendimiento]]. En ramas paralelas, medí el tiempo total transcurrido; no sumes las duraciones de los hijos.
 
 ## Practicá
 > [!question]- ¿Cómo puntuarías una delegación opcional que mejora calidad y aumenta costo?

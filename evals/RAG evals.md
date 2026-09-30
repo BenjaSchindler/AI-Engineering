@@ -19,6 +19,9 @@ orden: 210
 
 ![RAG visual: evaluar recuperación y respuesta](../assets/rag-evals.svg)
 
+## Bases para entender las métricas
+[[Precision y recall]] explica cobertura y limpieza con fórmulas y ejemplos. [[Métricas de ranking y recuperación]] agrega Hit@k, MRR y nDCG; [[Train, validation, test y leakage]] explica cómo reservar datos de evaluación.
+
 ## Recuperación · ¿qué trajo?
 | Métrica | Recordatorio |
 |---|---|
@@ -43,7 +46,7 @@ En Ragas, **faithfulness = afirmaciones respaldadas / afirmaciones evaluadas**. 
 ## Reglas rápidas
 - Guardá pregunta, pasajes relevantes, contexto recuperado, respuesta generada y referencia en el [[Golden dataset]].
 - Fijá **k** y la unidad (documento, pasaje o escena). Aquí Recall@k usa relevancia etiquetada; el recall de [[ANN HNSW]] compara vecinos con búsqueda exacta.
-- Calibrá el juez LLM con humanos. Agregá casos sin respuesta, permisos restrictivos y citas incorrectas; registrá latencia y costo por caso.
+- Calibrá el juez LLM con humanos. Agregá casos sin respuesta, permisos restrictivos y citas incorrectas; registrá tiempos de recuperación, reranking y respuesta, y costo por caso. Compará p95 total junto con calidad: [[Evals de rendimiento]].
 
 ## Se conecta con
 [[Chunking]] · [[Modelos de embedding]] · [[RAG básico]] · [[RAG multimedia]] · [[Evals]]

@@ -20,7 +20,7 @@ orden: 410
 1. **Base y candidata en las mismas condiciones.** Mismo dataset, mismos graders y misma configuración. Cambiá una cosa por vez: prompt, modelo, tools o índice.
 2. **Varias corridas por caso.** Las salidas del modelo varían entre ejecuciones; repetir los casos permite estimar la tasa de éxito y su incertidumbre. [Evals para agentes](https://www.anthropic.com/engineering/demystifying-evals-for-ai-agents).
 3. **Caso por caso, además del promedio.** Una regresión real se concentra en casos o grupos concretos y se repite en cada corrida; el ruido cambia de casos entre corridas.
-4. **Criterios definidos antes.** Fallos críticos que bloquean siempre, como acciones duplicadas, permisos o datos de otro cliente, y tolerancias de calidad, costo y latencia, también por cliente.
+4. **Criterios definidos antes.** Fallos críticos que bloquean siempre, como acciones duplicadas, permisos o datos de otro cliente, y tolerancias de calidad, costo y latencia p95, también por cliente. [[Evals de rendimiento]] fija cómo medir los tiempos y comparar bajo carga.
 5. **Dos suites.** La de regresión cubre lo que ya funcionaba y debería pasar casi al 100 %; la de capacidad mide lo que todavía cuesta y empieza baja. El gate se apoya en la de regresión; la de capacidad muestra el progreso.
 
 En agentes que actúan importa la consistencia. **pass@k** es la probabilidad de acertar al menos una vez en k intentos; **pass^k**, la de acertar en los k. Con 75 % por intento, pass@3 ronda el 98 %, pero pass^3 es 42 %.

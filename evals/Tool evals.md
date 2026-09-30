@@ -36,7 +36,7 @@ flowchart LR
 | Error recovery | Si la tool falla, ¿reintenta o inventa? | Mock que devuelve error |
 
 ## Reglas
-- Mockeá las tools para controlar sus respuestas; el modelo sigue siendo variable. Complementá con pruebas de integración en un entorno de prueba.
+- Mockeá las tools para controlar sus respuestas; el modelo sigue siendo variable. Complementá con pruebas de integración en un entorno de prueba; medí latencia p95, errores y reintentos con llamadas reales en [[Evals de rendimiento]].
 - Un caso por tool por comportamiento: "usa buscar_pedido", "no usa nada", "pide aclaración".
 - Cambiaste la descripción de una tool → corré esto. La descripción es el prompt de la tool.
 

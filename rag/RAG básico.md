@@ -17,7 +17,9 @@ orden: 110
 
 
 ## Diagrama
-![RAG visual: RAG básico en dos filas](../assets/rag-basico-flujo.svg)
+![RAG visual: pipeline completa con ingesta y consulta](../assets/rag-basico-flujo.svg)
+
+**Consulta:** [[Query rewrite]] → [[Bi-encoder]] + BM25 → [[Búsqueda híbrida y reranking|fusión]] → [[Cross-encoder]] → contexto → respuesta. Rewrite, híbrida y reranking son opcionales.
 
 ## Palancas de calidad del retrieval
 | Palanca | Qué hace | Cuándo |
@@ -25,8 +27,8 @@ orden: 110
 | [[Chunking]] | Tamaño y límites de los pedazos | Siempre. Respetá secciones, no cortes en medio de una tabla |
 | [[Modelos de embedding]] | Modelo, dimensión e idioma del espacio de búsqueda | Comparalos con tus preguntas reales |
 | [[Búsqueda híbrida y reranking\|Búsqueda híbrida]] | BM25 (palabras) + vectores (significado) | Nombres propios, códigos, SKUs |
-| [[Búsqueda híbrida y reranking\|Reranking]] | Reordena candidatos; por ejemplo top-50 → top-5 | Cuando el top-k tiene ruido |
-| Query rewriting | Reformular la pregunta antes de buscar | Preguntas coloquiales o con contexto de chat |
+| [[Cross-encoder\|Reranking con cross-encoder]] | Reordena candidatos; por ejemplo top-50 → top-5 | Cuando el top-k tiene ruido |
+| [[Query rewrite]] | Reformular la pregunta antes de buscar | Preguntas coloquiales o con contexto de chat |
 | Filtros de metadata | Fecha, fuente, [[ACLs]] | Siempre que existan |
 
 ## Fallas típicas y quién las causa

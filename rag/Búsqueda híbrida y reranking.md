@@ -10,7 +10,7 @@ fuentes:
   - https://www.elastic.co/docs/solutions/search/ranking
   - https://www.elastic.co/docs/reference/elasticsearch/rest-apis/reciprocal-rank-fusion
 bloque: "03 · Índice y recuperación"
-orden: 340
+orden: 360
 ---
 # Búsqueda híbrida y reranking
 
@@ -19,9 +19,11 @@ orden: 340
 ![Búsqueda híbrida: BM25 y vectores, fusión RRF y reranker con un ejemplo resuelto](../assets/busqueda-hibrida.svg)
 
 ## Cómo funciona
+La consulta viene de [[Query rewrite]] si hace falta reformularla. El [[Bi-encoder]] aporta la rama vectorial; BM25 usa el texto de la consulta.
+
 1. **Dos búsquedas con los mismos filtros.** BM25 puntúa términos y la búsqueda vectorial compara significado. Ambas aplican [[ACLs]] y filtros de metadata.
 2. **Fusión por posición (RRF).** Los scores de BM25 y de similitud no están en la misma escala, así que no se suman. RRF suma `1 / (k + posición)` por cada lista donde aparece el documento; con k = 60, el valor por defecto en Elasticsearch. Si un documento no aparece en una lista, esa lista no le suma nada. [RRF](https://www.elastic.co/docs/reference/elasticsearch/rest-apis/reciprocal-rank-fusion).
-3. **Reranking.** Un cross-encoder lee pregunta y pasaje juntos y puntúa su relevancia. Es más preciso que comparar embeddings por separado, pero más lento: por eso se aplica solo a los primeros candidatos, por ejemplo 50 → 5.
+3. **Reranking opcional.** Un [[Cross-encoder]] lee pregunta y pasaje juntos y puntúa su relevancia. Suele mejorar el orden frente a comparar embeddings por separado, pero agrega costo: por eso se aplica solo a los primeros candidatos, por ejemplo 50 → 5.
 4. **Recorte.** Solo los mejores pasan al contexto: [[Presupuesto de contexto]].
 
 | Pieza | Encuentra | Se le escapa |

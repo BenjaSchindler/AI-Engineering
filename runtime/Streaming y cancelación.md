@@ -4,7 +4,7 @@ dominio: runtime
 estado: por-ver
 parent: "[[Runtime de agentes]]"
 prereqs: ["[[Ejecución y recuperación]]"]
-se_evalua_con: ["[[Tool evals]]", "[[Regresiones y CI]]"]
+se_evalua_con: ["[[Tool evals]]", "[[Evals de rendimiento]]", "[[Regresiones y CI]]"]
 contrasta_con: []
 fuentes:
   - https://platform.claude.com/docs/en/build-with-claude/streaming
@@ -20,7 +20,7 @@ orden: 130
 
 ## Cómo funciona
 1. **Un orden fijo de eventos.** En la API de Claude: `message_start`; después cada bloque de contenido con `content_block_start`, sus fragmentos (`content_block_delta`) y `content_block_stop`; al final, `message_delta` con el `stop_reason` y el uso acumulado, y `message_stop`. En el medio pueden llegar `ping` y, en el futuro, tipos nuevos que tu código debe ignorar sin romperse. [Streaming](https://platform.claude.com/docs/en/build-with-claude/streaming).
-2. **Texto y argumentos llegan distinto.** El texto llega en `text_delta` y se puede mostrar a medida que llega. Los argumentos de una tool llegan como fragmentos de JSON (`input_json_delta`) que por separado no son válidos: se acumulan y se interpretan al recibir `content_block_stop`.
+2. **Texto y argumentos llegan distinto.** El texto llega en `text_delta` y se puede mostrar a medida que llega. Los argumentos de una tool llegan como fragmentos de JSON (`input_json_delta`) que por separado no son válidos: se acumulan y se interpretan al recibir `content_block_stop`. Medí el [[Latencia y percentiles|tiempo al primer token]], el primer texto visible y el tiempo hasta completar: empezar antes no garantiza terminar antes.
 3. **Los errores pueden llegar tarde.** Un stream puede fallar después de responder 200, con un evento `error`, por ejemplo `overloaded_error`, o con la conexión cortada. Diferenciá respuesta completa, parcial y fallida.
 4. **Retomar.** Guardá lo recibido. En modelos 4.6 o posteriores, se retoma con un mensaje de usuario que incluye la respuesta parcial y pide continuar. Los bloques de tool y de razonamiento no se recuperan a medias: se retoma desde el último bloque de texto.
 5. **Cancelar.** Propagá la señal al proveedor y a las tools que la soporten, dejá de iniciar trabajo y registrá lo que ya se hizo. En TypeScript, eso es pasar un `AbortSignal` a lo largo de toda la ejecución.

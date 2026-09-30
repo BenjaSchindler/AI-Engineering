@@ -32,7 +32,7 @@ flowchart LR
 | Respuestas obsoletas | Respuestas servidas con datos vencidos / respuestas evaluadas |
 | Ahorro neto | Costo sin caché − costo con caché, incluyendo infraestructura y validación |
 
-Reportá además éxito de tarea, latencia p95 y violaciones de permisos. Denominador cero → N/A. Para [[Prompt caching]], medí tokens de entrada cacheados / tokens de entrada y facturación real.
+Reportá además éxito de tarea, [[Latencia y percentiles|latencia p50/p95]] y violaciones de permisos. Separá caché fría, caliente y caída bajo la misma carga: [[Evals de rendimiento]]. Denominador cero → N/A. Para [[Prompt caching]], medí tokens de entrada cacheados / tokens de entrada y facturación real.
 
 ## Golden cases mínimos
 - Misma pregunta, mismo contexto: reutilización válida.

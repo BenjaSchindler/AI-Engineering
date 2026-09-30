@@ -4,7 +4,7 @@ dominio: "runtime"
 estado: por-ver
 parent: "[[Runtime de agentes]]"
 prereqs: ["[[Trazas y debugging]]"]
-se_evalua_con: ["[[RAG evals]]", "[[Tool evals]]", "[[Multi-agent evals]]"]
+se_evalua_con: ["[[RAG evals]]", "[[Tool evals]]", "[[Multi-agent evals]]", "[[Evals de rendimiento]]"]
 contrasta_con: []
 fuentes: ["https://www.anthropic.com/engineering/demystifying-evals-for-ai-agents"]
 bloque: "03 · Operación"
@@ -21,15 +21,15 @@ orden: 320
 |---|---|
 | Calidad | Tareas resueltas, feedback y casos nuevos para el [[Golden dataset]] |
 | Observabilidad | Trazas de llamadas, herramientas, fuentes y errores |
-| Tiempo y costo | Latencia, consumo y costo por tarea resuelta |
+| Tiempo y costo | [[Latencia y percentiles|Latencia p50/p95]], TTFT si hay streaming, consumo y costo por tarea resuelta |
 | Fallas | Timeouts, límites, reintentos y alternativas |
 | Cambios | Versionar modelo, prompt e índice; poder volver a una versión anterior |
 
 **Ejemplo:** aumenta el tiempo de respuesta tras cambiar el modelo. Comparás trazas y métricas con la versión previa, y revertís si el resultado no cumple el objetivo.
 
 ## Antes y después de publicar
-- **Antes:** casos controlados y comparación con la versión anterior.
-- **Después:** monitoreo, muestras de conversaciones y feedback real.
+- **Antes:** casos controlados y [[Evals de rendimiento|comparación de calidad y rendimiento]] con la versión anterior, también bajo carga.
+- **Después:** monitoreo de p95 y errores por cliente y tipo de tarea, muestras de conversaciones y feedback real.
 - **De vuelta a evals:** convertir fallas observadas en casos de regresión.
 
 Las pruebas offline y el seguimiento en producción se complementan. [Evaluación de agentes](https://www.anthropic.com/engineering/demystifying-evals-for-ai-agents).

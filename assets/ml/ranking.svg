@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="720pt" height="360pt" viewBox="0 0 720 360" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <title>Ranking binario de relevancia 0, 1, 1, 0, 1 con precision, recall y reciprocal rank.</title>
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:title>Ranking binario de relevancia 0, 1, 1, 0, 1 con precision, recall y reciprocal rank.</dc:title>
+    <dc:date>2026-09-30T19:22:30.019902</dc:date>
+    <dc:description>Ranking binario de relevancia 0, 1, 1, 0, 1 con precision, recall y reciprocal rank.</dc:description>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.10.3, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 360 
+L 720 360 
+L 720 0 
+L 0 0 
+z
+" style="fill: #fbfaf7"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 47.412 213.7824 
+L 125.388 213.7824 
+Q 134.964 213.7824 134.964 204.5088 
+L 134.964 128.9952 
+Q 134.964 119.7216 125.388 119.7216 
+L 47.412 119.7216 
+Q 37.836 119.7216 37.836 128.9952 
+L 37.836 204.5088 
+Q 37.836 213.7824 47.412 213.7824 
+z
+" clip-path="url(#p0141230694)" style="fill: #fff0d5; stroke: #b27628; stroke-width: 1.1; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 177.372 213.7824 
+L 255.348 213.7824 
+Q 264.924 213.7824 264.924 204.5088 
+L 264.924 128.9952 
+Q 264.924 119.7216 255.348 119.7216 
+L 177.372 119.7216 
+Q 167.796 119.7216 167.796 128.9952 
+L 167.796 204.5088 
+Q 167.796 213.7824 177.372 213.7824 
+z
+" clip-path="url(#p0141230694)" style="fill: #e2f1e6; stroke: #287653; stroke-width: 1.1; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 307.332 213.7824 
+L 385.308 213.7824 
+Q 394.884 213.7824 394.884 204.5088 
+L 394.884 128.9952 
+Q 394.884 119.7216 385.308 119.7216 
+L 307.332 119.7216 
+Q 297.756 119.7216 297.756 128.9952 
+L 297.756 204.5088 
+Q 297.756 213.7824 307.332 213.7824 
+z
+" clip-path="url(#p0141230694)" style="fill: #e2f1e6; stroke: #287653; stroke-width: 1.1; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 437.292 213.7824 
+L 515.268 213.7824 
+Q 524.844 213.7824 524.844 204.5088 
+L 524.844 128.9952 
+Q 524.844 119.7216 515.268 119.7216 
+L 437.292 119.7216 
+Q 427.716 119.7216 427.716 128.9952 
+L 427.716 204.5088 
+Q 427.716 213.7824 437.292 213.7824 
+z
+" clip-path="url(#p0141230694)" style="fill: #fff0d5; stroke: #b27628; stroke-width: 1.1; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 567.252 213.7824 
+L 645.228 213.7824 
+Q 654.804 213.7824 654.804 204.5088 
+L 654.804 128.9952 
+Q 654.804 119.7216 645.228 119.7216 
+L 567.252 119.7216 
+Q 557.676 119.7216 557.676 128.9952 
+L 557.676 204.5088 
+Q 557.676 213.7824 567.252 213.7824 
+z
+" clip-path="url(#p0141230694)" style="fill: #e2f1e6; stroke: #287653; stroke-width: 1.1; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_7">
+    <path d="M 47.412 306.5184 
+L 227.988 306.5184 
+Q 237.564 306.5184 237.564 297.2448 
+L 237.564 248.2272 
+Q 237.564 238.9536 227.988 238.9536 
+L 47.412 238.9536 
+Q 37.836 238.9536 37.836 248.2272 
+L 37.836 297.2448 
+Q 37.836 306.5184 47.412 306.5184 
+z
+" clip-path="url(#p0141230694)" style="fill: #e5eff7; stroke: #306e9b; stroke-width: 1.1; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_8">
+    <path d="M 266.292 306.5184 
+L 446.868 306.5184 
+Q 456.444 306.5184 456.444 297.2448 
+L 456.444 248.2272 
+Q 456.444 238.9536 446.868 238.9536 
+L 266.292 238.9536 
+Q 256.716 238.9536 256.716 248.2272 
+L 256.716 297.2448 
+Q 256.716 306.5184 266.292 306.5184 
+z
+" clip-path="url(#p0141230694)" style="fill: #e5eff7; stroke: #306e9b; stroke-width: 1.1; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_9">
+    <path d="M 485.172 306.5184 
+L 665.748 306.5184 
+Q 675.324 306.5184 675.324 297.2448 
+L 675.324 248.2272 
+Q 675.324 238.9536 665.748 238.9536 
+L 485.172 238.9536 
+Q 475.596 238.9536 475.596 248.2272 
+L 475.596 297.2448 
+Q 475.596 306.5184 485.172 306.5184 
+z
+" clip-path="url(#p0141230694)" style="fill: #e5eff7; stroke: #306e9b; stroke-width: 1.1; stroke-linejoin: miter"/>
+   </g>
+   <g id="text_1">
+    <text style="font-weight: 700; font-size: 19px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #26362d" x="31.68" y="43.206813" transform="rotate(-0 31.68 43.206813)">Top-5: el primer relevante está en posición 2</text>
+   </g>
+   <g id="text_2">
+    <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #657066" x="31.68" y="335.66325" transform="rotate(-0 31.68 335.66325)">Hay 4 pasajes relevantes en el corpus de referencia.</text>
+   </g>
+   <g id="text_3">
+    <text style="font-weight: 700; font-size: 14px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #657066" x="86.4" y="97.751125" transform="rotate(-0 86.4 97.751125)">#1</text>
+   </g>
+   <g id="text_4">
+    <text style="font-weight: 700; font-size: 21px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #b27628" x="86.4" y="158.636288" transform="rotate(-0 86.4 158.636288)">×</text>
+   </g>
+   <g id="text_5">
+    <text style="font-size: 12.5px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #b27628" x="86.4" y="190.603139" transform="rotate(-0 86.4 190.603139)">Ruido</text>
+   </g>
+   <g id="text_6">
+    <text style="font-weight: 700; font-size: 14px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #657066" x="216.36" y="97.751125" transform="rotate(-0 216.36 97.751125)">#2</text>
+   </g>
+   <g id="text_7">
+    <text style="font-weight: 700; font-size: 21px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #287653" x="216.36" y="158.636288" transform="rotate(-0 216.36 158.636288)">✓</text>
+   </g>
+   <g id="text_8">
+    <text style="font-size: 12.5px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #287653" x="216.36" y="190.603139" transform="rotate(-0 216.36 190.603139)">Relevante</text>
+   </g>
+   <g id="text_9">
+    <text style="font-weight: 700; font-size: 14px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #657066" x="346.32" y="97.751125" transform="rotate(-0 346.32 97.751125)">#3</text>
+   </g>
+   <g id="text_10">
+    <text style="font-weight: 700; font-size: 21px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #287653" x="346.32" y="158.636288" transform="rotate(-0 346.32 158.636288)">✓</text>
+   </g>
+   <g id="text_11">
+    <text style="font-size: 12.5px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #287653" x="346.32" y="190.603139" transform="rotate(-0 346.32 190.603139)">Relevante</text>
+   </g>
+   <g id="text_12">
+    <text style="font-weight: 700; font-size: 14px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #657066" x="476.28" y="97.751125" transform="rotate(-0 476.28 97.751125)">#4</text>
+   </g>
+   <g id="text_13">
+    <text style="font-weight: 700; font-size: 21px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #b27628" x="476.28" y="158.636288" transform="rotate(-0 476.28 158.636288)">×</text>
+   </g>
+   <g id="text_14">
+    <text style="font-size: 12.5px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #b27628" x="476.28" y="190.603139" transform="rotate(-0 476.28 190.603139)">Ruido</text>
+   </g>
+   <g id="text_15">
+    <text style="font-weight: 700; font-size: 14px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #657066" x="606.24" y="97.751125" transform="rotate(-0 606.24 97.751125)">#5</text>
+   </g>
+   <g id="text_16">
+    <text style="font-weight: 700; font-size: 21px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #287653" x="606.24" y="158.636288" transform="rotate(-0 606.24 158.636288)">✓</text>
+   </g>
+   <g id="text_17">
+    <text style="font-size: 12.5px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #287653" x="606.24" y="190.603139" transform="rotate(-0 606.24 190.603139)">Relevante</text>
+   </g>
+   <g id="text_18">
+    <text style="font-weight: 700; font-size: 12.5px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #306e9b" x="137.7" y="266.249219" transform="rotate(-0 137.7 266.249219)">Precision@5</text>
+   </g>
+   <g id="text_19">
+    <text style="font-size: 12.5px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #306e9b" x="137.7" y="290.758019" transform="rotate(-0 137.7 290.758019)">3 / 5 = 60%</text>
+   </g>
+   <g id="text_20">
+    <text style="font-weight: 700; font-size: 12.5px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #306e9b" x="356.58" y="266.249219" transform="rotate(-0 356.58 266.249219)">Recall@5</text>
+   </g>
+   <g id="text_21">
+    <text style="font-size: 12.5px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #306e9b" x="356.58" y="290.758019" transform="rotate(-0 356.58 290.758019)">3 / 4 = 75%</text>
+   </g>
+   <g id="text_22">
+    <text style="font-weight: 700; font-size: 12.5px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #306e9b" x="575.46" y="266.249219" transform="rotate(-0 575.46 266.249219)">Reciprocal rank</text>
+   </g>
+   <g id="text_23">
+    <text style="font-size: 12.5px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #306e9b" x="575.46" y="290.758019" transform="rotate(-0 575.46 290.758019)">1 / 2 = 0.5</text>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p0141230694">
+   <rect x="18" y="14.4" width="684" height="331.2"/>
+  </clipPath>
+ </defs>
+</svg>

@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="720pt" height="360pt" viewBox="0 0 720 360" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <title>Separar entrenamiento, validación y test, manteniendo grupos y evitando leakage.</title>
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:title>Separar entrenamiento, validación y test, manteniendo grupos y evitando leakage.</dc:title>
+    <dc:date>2026-09-30T19:22:27.293405</dc:date>
+    <dc:description>Separar entrenamiento, validación y test, manteniendo grupos y evitando leakage.</dc:description>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.10.3, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 360 
+L 720 360 
+L 720 0 
+L 0 0 
+z
+" style="fill: #fbfaf7"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 47.412 193.9104 
+L 330.588 193.9104 
+Q 340.164 193.9104 340.164 184.6368 
+L 340.164 95.8752 
+Q 340.164 86.6016 330.588 86.6016 
+L 47.412 86.6016 
+Q 37.836 86.6016 37.836 95.8752 
+L 37.836 184.6368 
+Q 37.836 193.9104 47.412 193.9104 
+z
+" clip-path="url(#p6c6c8ac608)" style="fill: #e2f1e6; stroke: #287653; stroke-width: 1.1; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 368.892 193.9104 
+L 508.428 193.9104 
+Q 518.004 193.9104 518.004 184.6368 
+L 518.004 95.8752 
+Q 518.004 86.6016 508.428 86.6016 
+L 368.892 86.6016 
+Q 359.316 86.6016 359.316 95.8752 
+L 359.316 184.6368 
+Q 359.316 193.9104 368.892 193.9104 
+z
+" clip-path="url(#p6c6c8ac608)" style="fill: #e5eff7; stroke: #306e9b; stroke-width: 1.1; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 546.732 193.9104 
+L 672.588 193.9104 
+Q 682.164 193.9104 682.164 184.6368 
+L 682.164 95.8752 
+Q 682.164 86.6016 672.588 86.6016 
+L 546.732 86.6016 
+Q 537.156 86.6016 537.156 95.8752 
+L 537.156 184.6368 
+Q 537.156 193.9104 546.732 193.9104 
+z
+" clip-path="url(#p6c6c8ac608)" style="fill: #efeaf8; stroke: #7160a6; stroke-width: 1.1; stroke-linejoin: miter"/>
+   </g>
+   <g id="line2d_1">
+    <path d="M 100.08 272.736 
+L 619.92 272.736 
+" clip-path="url(#p6c6c8ac608)" style="fill: none; stroke-dasharray: 7.4,3.2; stroke-dashoffset: 0; stroke: #ad5353; stroke-width: 2"/>
+   </g>
+   <g id="text_1">
+    <text style="font-weight: 700; font-size: 19px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #26362d" x="31.68" y="42.826813" transform="rotate(-0 31.68 42.826813)">Tres usos diferentes de los datos</text>
+   </g>
+   <g id="text_2">
+    <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #657066" x="31.68" y="335.90325" transform="rotate(-0 31.68 335.90325)">Proporciones ilustrativas: no existe una división universal.</text>
+   </g>
+   <g id="text_3">
+    <text style="font-weight: 700; font-size: 15px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #287653" x="189" y="128.497463" transform="rotate(-0 189 128.497463)">Train</text>
+   </g>
+   <g id="text_4">
+    <text style="font-size: 12.5px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #287653" x="189" y="167.271699" transform="rotate(-0 189 167.271699)">Aprender parámetros</text>
+   </g>
+   <g id="text_5">
+    <text style="font-weight: 700; font-size: 15px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #306e9b" x="438.66" y="128.497463" transform="rotate(-0 438.66 128.497463)">Validation</text>
+   </g>
+   <g id="text_6">
+    <text style="font-size: 12.5px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #306e9b" x="438.66" y="167.271699" transform="rotate(-0 438.66 167.271699)">Elegir configuración</text>
+   </g>
+   <g id="text_7">
+    <text style="font-weight: 700; font-size: 15px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #7160a6" x="609.66" y="128.497463" transform="rotate(-0 609.66 128.497463)">Test</text>
+   </g>
+   <g id="text_8">
+    <text style="font-size: 12.5px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #7160a6" x="609.66" y="167.021699" transform="rotate(-0 609.66 167.021699)">Medir al final</text>
+   </g>
+   <g id="text_9">
+    <text style="font-weight: 700; font-size: 14px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #26362d" x="360" y="243.704438" transform="rotate(-0 360 243.704438)">Cada conversación permanece en un solo conjunto</text>
+   </g>
+   <g id="text_10">
+    <text style="font-weight: 700; font-size: 14px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #ad5353" x="360" y="296.471125" transform="rotate(-0 360 296.471125)">×  No filtrar respuestas del test hacia train</text>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p6c6c8ac608">
+   <rect x="18" y="14.4" width="684" height="331.2"/>
+  </clipPath>
+ </defs>
+</svg>

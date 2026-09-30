@@ -24,8 +24,8 @@ flowchart LR
 
 ## Tres ideas
 - **Por cliente:** combiná una suite común con casos de sus documentos, reglas e idiomas. Separá permisos y datos; reportá resultados por grupo.
-- **Offline:** compará versiones con referencias curadas. Medí éxito de tarea, costo por tarea resuelta y latencia.
-- **Online:** muestreá trazas y correcciones humanas. Sin una referencia, una señal automática de calidad no prueba que la respuesta sea correcta.
+- **Offline:** compará versiones con referencias curadas. Medí éxito de tarea, costo por tarea resuelta y latencia p50/p95 en condiciones equivalentes: [[Evals de rendimiento]].
+- **Online:** muestreá trazas y correcciones humanas; seguí p95 y errores por cliente y tipo de tarea, con ventana y cantidad de mediciones. Sin una referencia, una señal automática de calidad no prueba que la respuesta sea correcta.
 
 **Ejemplo:** mejora el promedio, pero empeora la extracción de moneda para un cliente. Su conjunto de evals hace visible la regresión.
 

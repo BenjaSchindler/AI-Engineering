@@ -1,0 +1,420 @@
+{
+  "nodes": [
+    {
+      "id": "group-3",
+      "type": "group",
+      "x": 0,
+      "y": 6700,
+      "width": 3900,
+      "height": 3580,
+      "color": "#5B9A4B",
+      "label": "04 · Métricas y decisiones"
+    },
+    {
+      "id": "group-2",
+      "type": "group",
+      "x": 0,
+      "y": 4040,
+      "width": 3900,
+      "height": 2440,
+      "color": "#5B9A4B",
+      "label": "03 · Modelos y entrenamiento"
+    },
+    {
+      "id": "group-0",
+      "type": "group",
+      "x": 0,
+      "y": 1000,
+      "width": 3900,
+      "height": 1300,
+      "color": "#5B9A4B",
+      "label": "01 · Bases matemáticas"
+    },
+    {
+      "id": "group-1",
+      "type": "group",
+      "x": 0,
+      "y": 2520,
+      "width": 3900,
+      "height": 1300,
+      "color": "#5B9A4B",
+      "label": "02 · Datos y validación"
+    },
+    {
+      "id": "group-4",
+      "type": "group",
+      "x": 0,
+      "y": 10500,
+      "width": 3900,
+      "height": 2440,
+      "color": "#5B9A4B",
+      "label": "05 · De ML a LLMs"
+    },
+    {
+      "id": "group-5",
+      "type": "group",
+      "x": 0,
+      "y": 13160,
+      "width": 3900,
+      "height": 1300,
+      "color": "#5B9A4B",
+      "label": "06 · Adaptación y uso real"
+    },
+    {
+      "id": "group-6",
+      "type": "group",
+      "x": 0,
+      "y": 14680,
+      "width": 1380,
+      "height": 1300,
+      "color": "#5B9A4B",
+      "label": "07 · Practicar"
+    },
+    {
+      "id": "guide",
+      "type": "text",
+      "text": "# Cómo recorrer el mapa\n\n**Cada tarjeta:** una idea visual, dos claves y el acceso a la nota completa.\n\n**Desde cero:** seguí los bloques numerados.\n\n**Solo métricas:** matriz → precision / recall → F1 → umbrales → ROC / PR → calibración.\n\nLas flechas muestran bases previas. Marcá **estado** en la nota para registrar el avance.",
+      "x": 1800,
+      "y": -100,
+      "width": 1950,
+      "height": 680,
+      "color": "#5B9A4B"
+    },
+    {
+      "id": "note-0",
+      "type": "text",
+      "x": 100,
+      "y": 1100,
+      "width": 1120,
+      "height": 970,
+      "text": "# ML, tareas y tipos de aprendizaje\n\n![[assets/ml/tareas.svg]]\n\n- Clasificar, predecir números, ordenar y generar son tareas distintas.\n- Entrenar cambia parámetros; inferir usa lo aprendido.\n\n[[ml-gen-ai/ML, tareas y tipos de aprendizaje|Abrir explicación completa →]]"
+    },
+    {
+      "id": "note-1",
+      "type": "text",
+      "x": 1360,
+      "y": 1100,
+      "width": 1120,
+      "height": 970,
+      "text": "# Álgebra lineal para embeddings\n\n![[assets/ml/vectores.svg]]\n\n- Un embedding es un vector: una representación aprendida.\n- Coseno mide alineación, no probabilidad de corrección.\n\n[[ml-gen-ai/Álgebra lineal para embeddings|Abrir explicación completa →]]"
+    },
+    {
+      "id": "note-2",
+      "type": "text",
+      "x": 2620,
+      "y": 1100,
+      "width": 1120,
+      "height": 970,
+      "text": "# Probabilidad y estadística para ML\n\n![[assets/ml/bayes.svg]]\n\n- Una clase rara puede producir muchas falsas alarmas.\n- Probabilidad condicional y precision dependen de qué observamos.\n\n[[ml-gen-ai/Probabilidad y estadística para ML|Abrir explicación completa →]]"
+    },
+    {
+      "id": "note-3",
+      "type": "text",
+      "x": 100,
+      "y": 2620,
+      "width": 1120,
+      "height": 970,
+      "text": "# Datos, features y etiquetas\n\n![[assets/ml/datos.svg]]\n\n- Las features deben existir antes de tomar la decisión.\n- Una etiqueta ambigua enseña una tarea ambigua.\n\n[[ml-gen-ai/Datos, features y etiquetas|Abrir explicación completa →]]"
+    },
+    {
+      "id": "note-4",
+      "type": "text",
+      "x": 1360,
+      "y": 2620,
+      "width": 1120,
+      "height": 970,
+      "text": "# Train, validation, test y leakage\n\n![[assets/ml/splits.svg]]\n\n- Train aprende; validation elige; test mide al final.\n- Separá conversaciones y duplicados para evitar leakage.\n\n[[ml-gen-ai/Train, validation, test y leakage|Abrir explicación completa →]]"
+    },
+    {
+      "id": "note-5",
+      "type": "text",
+      "x": 2620,
+      "y": 2620,
+      "width": 1120,
+      "height": 970,
+      "text": "# Desbalance y calidad de etiquetas\n\n![[assets/ml/desbalance.svg]]\n\n- La clase mayoritaria puede esconder el fallo de la clase rara.\n- Medí por clase y evaluá con tráfico representativo.\n\n[[ml-gen-ai/Desbalance y calidad de etiquetas|Abrir explicación completa →]]"
+    },
+    {
+      "id": "note-6",
+      "type": "text",
+      "x": 100,
+      "y": 4140,
+      "width": 1120,
+      "height": 970,
+      "text": "# Modelos clásicos y baselines\n\n![[assets/ml/baselines.svg]]\n\n- El baseline permite medir qué aporta un modelo más complejo.\n- Compará calidad, costo y latencia sobre los mismos casos.\n\n[[ml-gen-ai/Modelos clásicos y baselines|Abrir explicación completa →]]"
+    },
+    {
+      "id": "note-7",
+      "type": "text",
+      "x": 1360,
+      "y": 4140,
+      "width": 1120,
+      "height": 970,
+      "text": "# Clustering y reducción de dimensionalidad\n\n![[assets/ml/clustering.svg]]\n\n- Los clusters descubren estructura; sus nombres los interpretamos.\n- Una proyección en 2D no demuestra desempeño en la tarea.\n\n[[ml-gen-ai/Clustering y reducción de dimensionalidad|Abrir explicación completa →]]"
+    },
+    {
+      "id": "note-8",
+      "type": "text",
+      "x": 2620,
+      "y": 4140,
+      "width": 1120,
+      "height": 970,
+      "text": "# Funciones de pérdida\n\n![[assets/ml/loss.svg]]\n\n- MSE castiga más los errores grandes que MAE.\n- Mejor loss no garantiza mejores respuestas verificadas.\n\n[[ml-gen-ai/Funciones de pérdida|Abrir explicación completa →]]"
+    },
+    {
+      "id": "note-9",
+      "type": "text",
+      "x": 100,
+      "y": 5280,
+      "width": 1120,
+      "height": 970,
+      "text": "# Gradiente, backpropagation y optimización\n\n![[assets/ml/gradiente.svg]]\n\n- Backpropagation calcula gradientes; el optimizador actualiza pesos.\n- El learning rate controla el tamaño del paso.\n\n[[ml-gen-ai/Gradiente, backpropagation y optimización|Abrir explicación completa →]]"
+    },
+    {
+      "id": "note-10",
+      "type": "text",
+      "x": 1360,
+      "y": 5280,
+      "width": 1120,
+      "height": 970,
+      "text": "# Overfitting, bias, variance y regularización\n\n![[assets/ml/overfitting.svg]]\n\n- Train puede mejorar mientras validation empeora.\n- Regularización y early stopping ayudan a generalizar.\n\n[[ml-gen-ai/Overfitting, bias, variance y regularización|Abrir explicación completa →]]"
+    },
+    {
+      "id": "note-11",
+      "type": "text",
+      "x": 100,
+      "y": 6800,
+      "width": 1120,
+      "height": 970,
+      "text": "# Matriz de confusión y accuracy\n\n![[assets/ml/confusion.svg]]\n\n- Positivo significa necesita derivación, no significa bueno.\n- TP y TN son aciertos; FP y FN son errores diferentes.\n\n[[ml-gen-ai/Matriz de confusión y accuracy|Abrir explicación completa →]]"
+    },
+    {
+      "id": "note-12",
+      "type": "text",
+      "x": 1360,
+      "y": 6800,
+      "width": 1120,
+      "height": 970,
+      "text": "# Precision y recall\n\n![[assets/ml/precision-recall.svg]]\n\n- Precision: 15 correctas entre 25 alertas = 60%.\n- Recall: 15 detectadas entre 20 necesarias = 75%.\n\n[[ml-gen-ai/Precision y recall|Abrir explicación completa →]]"
+    },
+    {
+      "id": "note-15",
+      "type": "text",
+      "x": 1360,
+      "y": 7940,
+      "width": 1120,
+      "height": 970,
+      "text": "# Curvas ROC y AUC\n\n![[assets/ml/roc.svg]]\n\n- ROC compara TPR y FPR al variar el umbral.\n- AUC mide el ranking; no es porcentaje de respuestas correctas.\n\n[[ml-gen-ai/Curvas ROC y AUC|Abrir explicación completa →]]"
+    },
+    {
+      "id": "note-13",
+      "type": "text",
+      "x": 2620,
+      "y": 6800,
+      "width": 1120,
+      "height": 970,
+      "text": "# F1, F-beta y promedios por clase\n\n![[assets/ml/f1.svg]]\n\n- F1 combina precision y recall con una media armónica.\n- Macro da igual peso a cada clase; weighted usa su frecuencia.\n\n[[ml-gen-ai/F1, F-beta y promedios por clase|Abrir explicación completa →]]"
+    },
+    {
+      "id": "note-14",
+      "type": "text",
+      "x": 100,
+      "y": 7940,
+      "width": 1120,
+      "height": 970,
+      "text": "# Umbrales y costo de errores\n\n![[assets/ml/umbrales.svg]]\n\n- Bajar el umbral detecta más positivos y suma falsas alertas.\n- Elegí en validation según errores, costo y capacidad humana.\n\n[[ml-gen-ai/Umbrales y costo de errores|Abrir explicación completa →]]"
+    },
+    {
+      "id": "note-16",
+      "type": "text",
+      "x": 2620,
+      "y": 7940,
+      "width": 1120,
+      "height": 970,
+      "text": "# Curva Precision-Recall y Average Precision\n\n![[assets/ml/pr.svg]]\n\n- PR compara precision y recall; mirá la prevalencia.\n- AP resume la curva ponderando incrementos de recall.\n\n[[ml-gen-ai/Curva Precision-Recall y Average Precision|Abrir explicación completa →]]"
+    },
+    {
+      "id": "note-17",
+      "type": "text",
+      "x": 100,
+      "y": 9080,
+      "width": 1120,
+      "height": 970,
+      "text": "# Calibración y confianza\n\n![[assets/ml/calibracion.svg]]\n\n- Si p = 0.8 está calibrado, cerca del 80% de esos casos son positivos.\n- Un buen ranking puede anunciar probabilidades incorrectas.\n\n[[ml-gen-ai/Calibración y confianza|Abrir explicación completa →]]"
+    },
+    {
+      "id": "note-18",
+      "type": "text",
+      "x": 1360,
+      "y": 9080,
+      "width": 1120,
+      "height": 970,
+      "text": "# Métricas de regresión\n\n![[assets/ml/regresion.svg]]\n\n- MAE y RMSE se expresan en las unidades del target.\n- R² compara contra predecir la media; puede ser negativo.\n\n[[ml-gen-ai/Métricas de regresión|Abrir explicación completa →]]"
+    },
+    {
+      "id": "note-19",
+      "type": "text",
+      "x": 2620,
+      "y": 9080,
+      "width": 1120,
+      "height": 970,
+      "text": "# Métricas de ranking y recuperación\n\n![[assets/ml/ranking.svg]]\n\n- Recall@k mide cobertura; precision@k mide limpieza del top-k.\n- MRR mira el primer relevante; nDCG evalúa el orden.\n\n[[ml-gen-ai/Métricas de ranking y recuperación|Abrir explicación completa →]]"
+    },
+    {
+      "id": "note-20",
+      "type": "text",
+      "x": 100,
+      "y": 10600,
+      "width": 1120,
+      "height": 970,
+      "text": "# Redes neuronales y deep learning\n\n![[assets/ml/red.svg]]\n\n- Las activaciones no lineales permiten modelar relaciones complejas.\n- Los logits se convierten en probabilidades con softmax.\n\n[[ml-gen-ai/Redes neuronales y deep learning|Abrir explicación completa →]]"
+    },
+    {
+      "id": "note-21",
+      "type": "text",
+      "x": 1360,
+      "y": 10600,
+      "width": 1120,
+      "height": 970,
+      "text": "# Embeddings y aprendizaje de representaciones\n\n![[assets/ml/embeddings.svg]]\n\n- Pares relacionados pueden aprender a quedar cerca.\n- Similitud temática no garantiza evidencia ni acuerdo factual.\n\n[[ml-gen-ai/Embeddings y aprendizaje de representaciones|Abrir explicación completa →]]"
+    },
+    {
+      "id": "note-22",
+      "type": "text",
+      "x": 2620,
+      "y": 10600,
+      "width": 1120,
+      "height": 970,
+      "text": "# Attention y Transformers\n\n![[assets/ml/attention.svg]]\n\n- Queries y keys producen pesos que combinan los values.\n- Los pesos de atención no indican si una afirmación es verdadera.\n\n[[ml-gen-ai/Attention y Transformers|Abrir explicación completa →]]"
+    },
+    {
+      "id": "note-23",
+      "type": "text",
+      "x": 100,
+      "y": 11740,
+      "width": 1120,
+      "height": 970,
+      "text": "# Objetivos de lenguaje y perplexity\n\n![[assets/ml/perplexity.svg]]\n\n- El modelo aprende probabilidades de tokens condicionadas al contexto.\n- Perplexity mide sorpresa sobre texto, no factualidad.\n\n[[ml-gen-ai/Objetivos de lenguaje y perplexity|Abrir explicación completa →]]"
+    },
+    {
+      "id": "note-24",
+      "type": "text",
+      "x": 100,
+      "y": 13260,
+      "width": 1120,
+      "height": 970,
+      "text": "# Fine-tuning, LoRA y alineación\n\n![[assets/ml/lora.svg]]\n\n- SFT aprende respuestas objetivo; preferencias orientan comportamiento.\n- LoRA entrena una actualización pequeña sobre pesos base congelados.\n\n[[ml-gen-ai/Fine-tuning, LoRA y alineación|Abrir explicación completa →]]"
+    },
+    {
+      "id": "note-25",
+      "type": "text",
+      "x": 1360,
+      "y": 13260,
+      "width": 1120,
+      "height": 970,
+      "text": "# Experimentos e incertidumbre\n\n![[assets/ml/incertidumbre.svg]]\n\n- 15/20 y 150/200 tienen el mismo recall, pero distinta incertidumbre.\n- Compará versiones sobre las mismas consultas y reservá test.\n\n[[ml-gen-ai/Experimentos e incertidumbre|Abrir explicación completa →]]"
+    },
+    {
+      "id": "note-26",
+      "type": "text",
+      "x": 2620,
+      "y": 13260,
+      "width": 1120,
+      "height": 970,
+      "text": "# Distribución, drift y monitoreo\n\n![[assets/ml/drift.svg]]\n\n- Un cambio de distribución no prueba por sí solo una caída de calidad.\n- Confirmá con etiquetas, segmentos y versiones del pipeline.\n\n[[ml-gen-ai/Distribución, drift y monitoreo|Abrir explicación completa →]]"
+    },
+    {
+      "id": "note-27",
+      "type": "text",
+      "x": 100,
+      "y": 14780,
+      "width": 1120,
+      "height": 970,
+      "text": "# Caso práctico - Métricas de un router Gen AI\n\n![[assets/ml/router.svg]]\n\n- Mayor accuracy, mayor F1 y menor costo eligen umbrales diferentes.\n- Los scores del ejemplo son sintéticos, no probabilidades calibradas.\n\n[[ml-gen-ai/Caso práctico - Métricas de un router Gen AI|Abrir explicación completa →]]"
+    },
+    {
+      "id": "related",
+      "type": "text",
+      "text": "# Aplicar estas bases\n[[Fundamentos]] · [[RAG]] · [[Evals]] · [[Runtime de agentes]]\n\nMétricas de recuperación → [[RAG evals]]. Calidad de respuestas → [[Graders]]. Operación → [[Operación en producción]].",
+      "x": 100,
+      "y": 16200,
+      "width": 3550,
+      "height": 430,
+      "color": "#5B9A4B"
+    },
+    {
+      "id": "hub",
+      "type": "text",
+      "x": -120,
+      "y": -480,
+      "width": 1650,
+      "height": 1240,
+      "text": "# ML para Gen AI\n\n![[assets/ml/recorrido.svg]]\n\n**28 notas · siete bloques · fórmulas y ejemplos.**\n\nElegí un concepto, mirá su diagrama y abrí la explicación completa.\n\n[[ml-gen-ai/ML para Gen AI|Abrir índice y progreso →]]"
+    }
+  ],
+  "edges": [
+    {
+      "id": "start",
+      "fromNode": "hub",
+      "fromSide": "bottom",
+      "toNode": "note-0",
+      "toSide": "top",
+      "color": "#5B9A4B",
+      "label": "lectura: empezar"
+    },
+    {
+      "id": "requires-0",
+      "fromNode": "note-12",
+      "fromSide": "left",
+      "toNode": "note-11",
+      "toSide": "right",
+      "color": "#5B9A4B",
+      "label": "requiere: base previa"
+    },
+    {
+      "id": "requires-1",
+      "fromNode": "note-13",
+      "fromSide": "left",
+      "toNode": "note-12",
+      "toSide": "right",
+      "color": "#5B9A4B",
+      "label": "requiere: base previa"
+    },
+    {
+      "id": "requires-2",
+      "fromNode": "note-15",
+      "fromSide": "left",
+      "toNode": "note-14",
+      "toSide": "right",
+      "color": "#5B9A4B",
+      "label": "requiere: base previa"
+    },
+    {
+      "id": "requires-3",
+      "fromNode": "note-16",
+      "fromSide": "left",
+      "toNode": "note-15",
+      "toSide": "right",
+      "color": "#5B9A4B",
+      "label": "requiere: base previa"
+    },
+    {
+      "id": "requires-4",
+      "fromNode": "note-22",
+      "fromSide": "left",
+      "toNode": "note-20",
+      "toSide": "right",
+      "color": "#5B9A4B",
+      "label": "requiere: base previa"
+    },
+    {
+      "id": "requires-5",
+      "fromNode": "note-23",
+      "fromSide": "left",
+      "toNode": "note-22",
+      "toSide": "right",
+      "color": "#5B9A4B",
+      "label": "requiere: base previa"
+    }
+  ]
+}

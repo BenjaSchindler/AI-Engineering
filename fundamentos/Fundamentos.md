@@ -25,6 +25,9 @@ fuentes: []
 Modelo → prompt → contexto → tools; después elegí cómo mejorar con [[Prompting, RAG o fine-tuning]]. Después: [[RAG]] para trabajar con fuentes y [[Multiagentes]] para decidir cómo organizar la tarea. [[Runtime de agentes]] lleva esas piezas a ejecuciones recuperables. [[Seguridad]] y [[Evals]] acompañan todo el recorrido.
 
 
+## Bases que vienen de ML
+[[ML para Gen AI]] explica datos, entrenamiento, probabilidades y métricas. Para entender cómo aprende un LLM: [[Redes neuronales y deep learning]] → [[Attention y Transformers]] → [[Objetivos de lenguaje y perplexity]]. Para adaptar pesos: [[Fine-tuning, LoRA y alineación]].
+
 ## Estado de los nodos
 ```dataview
 TABLE WITHOUT ID file.link AS nodo, estado

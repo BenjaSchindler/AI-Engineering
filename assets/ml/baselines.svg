@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="720pt" height="360pt" viewBox="0 0 720 360" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <title>Comparar reglas, modelos clásicos, embeddings y LLMs como alternativas de complejidad creciente.</title>
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:title>Comparar reglas, modelos clásicos, embeddings y LLMs como alternativas de complejidad creciente.</dc:title>
+    <dc:date>2026-09-30T19:22:27.410361</dc:date>
+    <dc:description>Comparar reglas, modelos clásicos, embeddings y LLMs como alternativas de complejidad creciente.</dc:description>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.10.3, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 360 
+L 720 360 
+L 720 0 
+L 0 0 
+z
+" style="fill: #fbfaf7"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 47.412 233.6544 
+L 173.268 233.6544 
+Q 182.844 233.6544 182.844 224.3808 
+L 182.844 109.1232 
+Q 182.844 99.8496 173.268 99.8496 
+L 47.412 99.8496 
+Q 37.836 99.8496 37.836 109.1232 
+L 37.836 224.3808 
+Q 37.836 233.6544 47.412 233.6544 
+z
+" clip-path="url(#paf5e526ce8)" style="fill: #eceee8; stroke: #657066; stroke-width: 1.1; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 211.572 233.6544 
+L 337.428 233.6544 
+Q 347.004 233.6544 347.004 224.3808 
+L 347.004 109.1232 
+Q 347.004 99.8496 337.428 99.8496 
+L 211.572 99.8496 
+Q 201.996 99.8496 201.996 109.1232 
+L 201.996 224.3808 
+Q 201.996 233.6544 211.572 233.6544 
+z
+" clip-path="url(#paf5e526ce8)" style="fill: #e5eff7; stroke: #306e9b; stroke-width: 1.1; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 375.732 233.6544 
+L 501.588 233.6544 
+Q 511.164 233.6544 511.164 224.3808 
+L 511.164 109.1232 
+Q 511.164 99.8496 501.588 99.8496 
+L 375.732 99.8496 
+Q 366.156 99.8496 366.156 109.1232 
+L 366.156 224.3808 
+Q 366.156 233.6544 375.732 233.6544 
+z
+" clip-path="url(#paf5e526ce8)" style="fill: #e2f1e6; stroke: #287653; stroke-width: 1.1; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 539.892 233.6544 
+L 665.748 233.6544 
+Q 675.324 233.6544 675.324 224.3808 
+L 675.324 109.1232 
+Q 675.324 99.8496 665.748 99.8496 
+L 539.892 99.8496 
+Q 530.316 99.8496 530.316 109.1232 
+L 530.316 224.3808 
+Q 530.316 233.6544 539.892 233.6544 
+z
+" clip-path="url(#paf5e526ce8)" style="fill: #efeaf8; stroke: #7160a6; stroke-width: 1.1; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 184.161401 166.752 
+Q 192.419268 166.752 198.664673 166.752 
+" clip-path="url(#paf5e526ce8)" style="fill: none; stroke: #657066; stroke-width: 1.8; stroke-linecap: round"/>
+    <path d="M 191.864673 163.352 
+L 198.664673 166.752 
+L 191.864673 170.152 
+z
+" clip-path="url(#paf5e526ce8)" style="fill: #657066; stroke: #657066; stroke-width: 1.8; stroke-linecap: round"/>
+   </g>
+   <g id="patch_7">
+    <path d="M 348.321401 166.752 
+Q 356.579268 166.752 362.824673 166.752 
+" clip-path="url(#paf5e526ce8)" style="fill: none; stroke: #657066; stroke-width: 1.8; stroke-linecap: round"/>
+    <path d="M 356.024673 163.352 
+L 362.824673 166.752 
+L 356.024673 170.152 
+z
+" clip-path="url(#paf5e526ce8)" style="fill: #657066; stroke: #657066; stroke-width: 1.8; stroke-linecap: round"/>
+   </g>
+   <g id="patch_8">
+    <path d="M 512.481401 166.752 
+Q 520.739268 166.752 526.984673 166.752 
+" clip-path="url(#paf5e526ce8)" style="fill: none; stroke: #657066; stroke-width: 1.8; stroke-linecap: round"/>
+    <path d="M 520.184673 163.352 
+L 526.984673 166.752 
+L 520.184673 170.152 
+z
+" clip-path="url(#paf5e526ce8)" style="fill: #657066; stroke: #657066; stroke-width: 1.8; stroke-linecap: round"/>
+   </g>
+   <g id="text_1">
+    <text style="font-weight: 700; font-size: 19px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #26362d" x="31.68" y="42.752594" transform="rotate(-0 31.68 42.752594)">¿La complejidad aporta valor en esta tarea?</text>
+   </g>
+   <g id="text_2">
+    <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #657066" x="31.68" y="335.66325" transform="rotate(-0 31.68 335.66325)">Comparar con los mismos datos y medir calidad, costo y latencia.</text>
+   </g>
+   <g id="text_3">
+    <text style="font-weight: 700; font-size: 14px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #657066" x="110.34" y="150.688438" transform="rotate(-0 110.34 150.688438)">Regla</text>
+   </g>
+   <g id="text_4">
+    <text style="font-size: 12.5px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #657066" x="110.34" y="199.346819" transform="rotate(-0 110.34 199.346819)">Palabras clave</text>
+   </g>
+   <g id="text_5">
+    <text style="font-weight: 700; font-size: 14px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #306e9b" x="274.5" y="150.968438" transform="rotate(-0 274.5 150.968438)">Logística</text>
+   </g>
+   <g id="text_6">
+    <text style="font-size: 12.5px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #306e9b" x="274.5" y="199.346819" transform="rotate(-0 274.5 199.346819)">Features o TF-IDF</text>
+   </g>
+   <g id="text_7">
+    <text style="font-weight: 700; font-size: 14px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #287653" x="438.66" y="150.688438" transform="rotate(-0 438.66 150.688438)">Embeddings</text>
+   </g>
+   <g id="text_8">
+    <text style="font-size: 12.5px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #287653" x="438.66" y="199.346819" transform="rotate(-0 438.66 199.346819)">Clasificador simple</text>
+   </g>
+   <g id="text_9">
+    <text style="font-weight: 700; font-size: 14px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #7160a6" x="602.82" y="150.743125" transform="rotate(-0 602.82 150.743125)">LLM</text>
+   </g>
+   <g id="text_10">
+    <text style="font-size: 12.5px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #7160a6" x="602.82" y="199.596819" transform="rotate(-0 602.82 199.596819)">Prompt o adaptación</text>
+   </g>
+   <g id="text_11">
+    <text style="font-weight: 700; font-size: 15px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #b27628" x="360" y="296.688469" transform="rotate(-0 360 296.688469)">Mayor complejidad ≠ mejora garantizada</text>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="paf5e526ce8">
+   <rect x="18" y="14.4" width="684" height="331.2"/>
+  </clipPath>
+ </defs>
+</svg>

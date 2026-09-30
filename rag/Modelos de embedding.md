@@ -79,4 +79,6 @@ Sumá índice [[ANN HNSW]], metadata, texto, réplicas y overhead. Cuantizar cam
 | Un modelo multimodal alinea texto e imágenes | Solo tenés un modelo de texto: una URL de imagen no representa sus píxeles |
 
 ## Se conecta con
+El [[Bi-encoder]] usa estos embeddings tanto en la ingesta de pasajes como en cada consulta.
+
 [[Chunking]] · [[Vector DB]] · [[ANN HNSW]] · [[RAG multimedia]] · [[Golden dataset]]

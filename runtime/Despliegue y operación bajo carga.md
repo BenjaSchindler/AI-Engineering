@@ -4,7 +4,7 @@ dominio: runtime
 estado: por-ver
 parent: "[[Runtime de agentes]]"
 prereqs: ["[[Ejecución y recuperación]]", "[[Resiliencia entre proveedores]]"]
-se_evalua_con: ["[[Regresiones y CI]]", "[[Evals por cliente y producción]]"]
+se_evalua_con: ["[[Evals de rendimiento]]", "[[Regresiones y CI]]", "[[Evals por cliente y producción]]"]
 contrasta_con: []
 fuentes:
   - https://learn.microsoft.com/en-us/azure/architecture/patterns/queue-based-load-leveling
@@ -26,7 +26,7 @@ flowchart LR
 ```
 
 ## Absorber picos
-- **Cola:** desacopla llegada y procesamiento; sirve para tareas que toleran espera. Medí profundidad y edad del trabajo pendiente.
+- **Cola:** desacopla llegada y procesamiento; sirve para tareas que toleran espera. Medí profundidad, edad del trabajo pendiente y espera en cola; esa espera cuenta en la [[Latencia y percentiles|latencia total]].
 - **Concurrencia y cuotas:** limitá llamadas simultáneas y consumo por cliente/proveedor. Cada tarea conserva timeout y presupuesto.
 - **Backpressure:** frená o rechazá entradas cuando no hay capacidad; una cola infinita convierte sobrecarga en espera infinita. Los reintentos de mensajes requieren [[Ejecución y recuperación|idempotencia]].
 
@@ -34,8 +34,8 @@ Una cola amortigua picos, pero no aumenta la capacidad sostenida del sistema. [P
 
 ## Publicar con control
 1. **Objetivos:** definí SLOs —objetivos de servicio— con ventana y población: por ejemplo, 99% de tareas sin error técnico en 7 días. Medí calidad y costo aparte.
-2. **Canary:** tras pasar evals, enviá una fracción pequeña de tráfico a la versión nueva y comparala con la anterior.
-3. **Avanzar o revertir:** fijá antes límites de errores, latencia, calidad y costo; reuní evidencia suficiente antes de ampliar tráfico.
+2. **Canary:** tras pasar evals de calidad y [[Evals de rendimiento|rendimiento bajo carga]], enviá una fracción pequeña de tráfico a la versión nueva y comparala con la anterior.
+3. **Avanzar o revertir:** fijá antes límites de errores, latencia p95, calidad y costo, con ventana y tipo de tarea; reuní evidencia suficiente antes de ampliar tráfico.
 
 Versioná juntos prompt, modelo, tools e índice. Volver atrás requiere compatibilidad del estado; no deshace acciones externas. [Despliegues canary](https://sre.google/workbook/canarying-releases/).
 

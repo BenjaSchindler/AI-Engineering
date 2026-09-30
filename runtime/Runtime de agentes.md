@@ -25,12 +25,12 @@ flowchart LR
 |---|---|
 | **Ejecución** | [[Presupuesto de contexto]] → [[Ejecución y recuperación]]; después [[Streaming y cancelación]] y [[Resiliencia entre proveedores]] |
 | **Caché** | [[Caché en agentes]] → claves e invalidación → elegir entre prompts, respuestas o ingesta/búsqueda |
-| **Operación** | [[Trazas y debugging]] → [[Operación en producción]] → [[Despliegue y operación bajo carga]] |
+| **Operación** | [[Latencia y percentiles]] → [[Trazas y debugging]] → [[Operación en producción]] → [[Despliegue y operación bajo carga]] |
 
 Las capas de caché comparten reglas de validez, pero no forman un pipeline. Tienen su [[Caché.canvas|sub-mapa de Caché]] para no mezclar sus detalles con la ejecución.
 
 ## Conexiones con otras categorías
-[[Seguridad]] define permisos y aislamiento. [[Evals]] mide calidad y regresiones: [[Regresiones y CI]] antes de publicar, [[Evals por cliente y producción]] durante el uso real. Operar pertenece aquí; evaluar pertenece a Evals.
+[[Seguridad]] define permisos y aislamiento. [[Evals]] mide calidad y rendimiento: [[Evals de rendimiento]] compara tiempos, errores y costo; [[Regresiones y CI]] controla cambios antes de publicar y [[Evals por cliente y producción]] durante el uso real. Operar pertenece aquí; evaluar pertenece a Evals.
 
 ## Practicá
 > [!question]- ¿Cómo contarías una falla de punta a punta: cómo la encontraste en las trazas y cómo comprobaste la recuperación?

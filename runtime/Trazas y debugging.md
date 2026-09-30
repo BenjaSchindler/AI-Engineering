@@ -3,8 +3,8 @@ tipo: concepto
 dominio: runtime
 estado: por-ver
 parent: "[[Runtime de agentes]]"
-prereqs: ["[[Ejecución y recuperación]]"]
-se_evalua_con: ["[[Regresiones y CI]]", "[[Evals por cliente y producción]]"]
+prereqs: ["[[Ejecución y recuperación]]", "[[Latencia y percentiles]]"]
+se_evalua_con: ["[[Evals de rendimiento]]", "[[Regresiones y CI]]", "[[Evals por cliente y producción]]"]
 contrasta_con: []
 fuentes:
   - https://docs.langchain.com/langsmith/observability-concepts
@@ -23,7 +23,7 @@ orden: 310
 1. **Una traza por ejecución.** Reúne todo lo que hizo el agente para responder: cada llamada al modelo, cada tool y cada reintento. En LangSmith, cada unidad de trabajo es un *run*, la traza agrupa los runs de una operación y un *thread* agrupa las trazas de una conversación de varios turnos. [Conceptos de observabilidad](https://docs.langchain.com/langsmith/observability-concepts).
 2. **Cada paso es un span con atributos.** Qué operación fue, cuándo empezó, cuánto duró, si falló, con qué argumentos y con qué versiones de prompt, modelo, tools e índice. En las llamadas al modelo, también tokens y costo.
 3. **Leer de arriba hacia abajo.** Buscá el primer paso que se desvía: una decisión del modelo, un error del runtime, una tool que falla o el proveedor. Lo que viene después suele ser consecuencia.
-4. **Comparar.** Con una traza sana del mismo caso y con la versión anterior. El p95 —el valor bajo el que cae el 95 % de las mediciones— dice que algo cambió; la traza dice dónde.
+4. **Comparar.** Con una traza sana del mismo caso y con la versión anterior. El [[Latencia y percentiles|p95]] —el valor en el que o por debajo del cual cae el 95 % de las mediciones— muestra si cambió la zona lenta; la traza dice dónde. Compará la misma población y ventana.
 5. **Reproducir y fijar.** Un replay con respuestas grabadas de tools e inyección de fallas: timeouts, esquemas inválidos, desconexiones. La falla se vuelve un caso de [[Regresiones y CI]].
 
 OpenTelemetry tiene convenciones para IA generativa: spans `chat {modelo}` para llamadas al modelo, `execute_tool {tool}` para tools e `invoke_agent {agente}` para agentes, con atributos como `gen_ai.request.model` y `gen_ai.usage.input_tokens`. Todavía están en desarrollo, y registrar el contenido de los mensajes es opcional porque puede tener datos sensibles. [Convenciones GenAI](https://github.com/open-telemetry/semantic-conventions-genai).

@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="720pt" height="360pt" viewBox="0 0 720 360" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <title>Atención ilustrativa con valores escalares diez y veinte, pesos 0.7 y 0.3, y salida trece.</title>
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:title>Atención ilustrativa con valores escalares diez y veinte, pesos 0.7 y 0.3, y salida trece.</dc:title>
+    <dc:date>2026-09-30T19:22:30.187005</dc:date>
+    <dc:description>Atención ilustrativa con valores escalares diez y veinte, pesos 0.7 y 0.3, y salida trece.</dc:description>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.10.3, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 360 
+L 720 360 
+L 720 0 
+L 0 0 
+z
+" style="fill: #fbfaf7"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 47.412 180.6624 
+L 234.828 180.6624 
+Q 244.404 180.6624 244.404 171.3888 
+L 244.404 95.8752 
+Q 244.404 86.6016 234.828 86.6016 
+L 47.412 86.6016 
+Q 37.836 86.6016 37.836 95.8752 
+L 37.836 171.3888 
+Q 37.836 180.6624 47.412 180.6624 
+z
+" clip-path="url(#p34ac45eb86)" style="fill: #e2f1e6; stroke: #287653; stroke-width: 1.1; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 47.412 299.8944 
+L 234.828 299.8944 
+Q 244.404 299.8944 244.404 290.6208 
+L 244.404 215.1072 
+Q 244.404 205.8336 234.828 205.8336 
+L 47.412 205.8336 
+Q 37.836 205.8336 37.836 215.1072 
+L 37.836 290.6208 
+Q 37.836 299.8944 47.412 299.8944 
+z
+" clip-path="url(#p34ac45eb86)" style="fill: #e5eff7; stroke: #306e9b; stroke-width: 1.1; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 334.692 246.9024 
+L 467.388 246.9024 
+Q 476.964 246.9024 476.964 237.6288 
+L 476.964 142.2432 
+Q 476.964 132.9696 467.388 132.9696 
+L 334.692 132.9696 
+Q 325.116 132.9696 325.116 142.2432 
+L 325.116 237.6288 
+Q 325.116 246.9024 334.692 246.9024 
+z
+" clip-path="url(#p34ac45eb86)" style="fill: #efeaf8; stroke: #7160a6; stroke-width: 1.1; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 567.252 246.9024 
+L 665.748 246.9024 
+Q 675.324 246.9024 675.324 237.6288 
+L 675.324 142.2432 
+Q 675.324 132.9696 665.748 132.9696 
+L 567.252 132.9696 
+Q 557.676 132.9696 557.676 142.2432 
+L 557.676 237.6288 
+Q 557.676 246.9024 567.252 246.9024 
+z
+" clip-path="url(#p34ac45eb86)" style="fill: #fff0d5; stroke: #b27628; stroke-width: 1.1; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 245.521011 134.504068 
+Q 284.76016 153.504077 322.188014 171.627038 
+" clip-path="url(#p34ac45eb86)" style="fill: none; stroke: #657066; stroke-width: 1.8; stroke-linecap: round"/>
+    <path d="M 317.549495 165.603406 
+L 322.188014 171.627038 
+L 314.585997 171.723674 
+z
+" clip-path="url(#p34ac45eb86)" style="fill: #657066; stroke: #657066; stroke-width: 1.8; stroke-linecap: round"/>
+   </g>
+   <g id="patch_7">
+    <path d="M 245.460894 251.880548 
+Q 284.758848 229.680651 322.304599 208.470595 
+" clip-path="url(#p34ac45eb86)" style="fill: none; stroke: #657066; stroke-width: 1.8; stroke-linecap: round"/>
+    <path d="M 314.711688 208.854914 
+L 322.304599 208.470595 
+L 318.056308 214.775515 
+z
+" clip-path="url(#p34ac45eb86)" style="fill: #657066; stroke: #657066; stroke-width: 1.8; stroke-linecap: round"/>
+   </g>
+   <g id="patch_8">
+    <path d="M 478.281401 189.936 
+Q 517.321184 189.936 554.348506 189.936 
+" clip-path="url(#p34ac45eb86)" style="fill: none; stroke: #657066; stroke-width: 1.8; stroke-linecap: round"/>
+    <path d="M 547.548506 186.536 
+L 554.348506 189.936 
+L 547.548506 193.336 
+z
+" clip-path="url(#p34ac45eb86)" style="fill: #657066; stroke: #657066; stroke-width: 1.8; stroke-linecap: round"/>
+   </g>
+   <g id="text_1">
+    <text style="font-weight: 700; font-size: 19px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #26362d" x="31.68" y="43.206813" transform="rotate(-0 31.68 43.206813)">Atención: una combinación ponderada</text>
+   </g>
+   <g id="text_2">
+    <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #657066" x="31.68" y="335.66325" transform="rotate(-0 31.68 335.66325)">Ejemplo escalar para simplificar: los values reales son vectores.</text>
+   </g>
+   <g id="text_3">
+    <text style="font-weight: 700; font-size: 15px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #287653" x="141.12" y="123.860663" transform="rotate(-0 141.12 123.860663)">Value 1 = 10</text>
+   </g>
+   <g id="text_4">
+    <text style="font-size: 12.5px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #287653" x="141.12" y="157.483139" transform="rotate(-0 141.12 157.483139)">Peso 0.7</text>
+   </g>
+   <g id="text_5">
+    <text style="font-weight: 700; font-size: 15px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #306e9b" x="141.12" y="243.092662" transform="rotate(-0 141.12 243.092662)">Value 2 = 20</text>
+   </g>
+   <g id="text_6">
+    <text style="font-size: 12.5px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #306e9b" x="141.12" y="276.715139" transform="rotate(-0 141.12 276.715139)">Peso 0.3</text>
+   </g>
+   <g id="text_7">
+    <text style="font-weight: 700; font-size: 15px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #7160a6" x="401.04" y="177.183863" transform="rotate(-0 401.04 177.183863)">Combinar</text>
+   </g>
+   <g id="text_8">
+    <text style="font-size: 12.5px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #7160a6" x="401.04" y="218.158979" transform="rotate(-0 401.04 218.158979)">0.7 × 10 + 0.3 × 20</text>
+   </g>
+   <g id="text_9">
+    <text style="font-weight: 700; font-size: 27px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #b27628" x="616.5" y="180.495113" transform="rotate(-0 616.5 180.495113)">13</text>
+   </g>
+   <g id="text_10">
+    <text style="font-size: 12.5px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #b27628" x="616.5" y="218.158979" transform="rotate(-0 616.5 218.158979)">Salida</text>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p34ac45eb86">
+   <rect x="18" y="14.4" width="684" height="331.2"/>
+  </clipPath>
+ </defs>
+</svg>

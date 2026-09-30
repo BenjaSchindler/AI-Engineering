@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="720pt" height="360pt" viewBox="0 0 720 360" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <title>Cuatro tareas de ML y sus salidas: clasificación, regresión, ranking y generación.</title>
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:title>Cuatro tareas de ML y sus salidas: clasificación, regresión, ranking y generación.</dc:title>
+    <dc:date>2026-09-30T19:22:26.997113</dc:date>
+    <dc:description>Cuatro tareas de ML y sus salidas: clasificación, regresión, ranking y generación.</dc:description>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.10.3, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 360 
+L 720 360 
+L 720 0 
+L 0 0 
+z
+" style="fill: #fbfaf7"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 47.412 180.6624 
+L 330.588 180.6624 
+Q 340.164 180.6624 340.164 171.3888 
+L 340.164 95.8752 
+Q 340.164 86.6016 330.588 86.6016 
+L 47.412 86.6016 
+Q 37.836 86.6016 37.836 95.8752 
+L 37.836 171.3888 
+Q 37.836 180.6624 47.412 180.6624 
+z
+" clip-path="url(#p1fbd7c544b)" style="fill: #e2f1e6; stroke: #287653; stroke-width: 1.1; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 382.572 180.6624 
+L 665.748 180.6624 
+Q 675.324 180.6624 675.324 171.3888 
+L 675.324 95.8752 
+Q 675.324 86.6016 665.748 86.6016 
+L 382.572 86.6016 
+Q 372.996 86.6016 372.996 95.8752 
+L 372.996 171.3888 
+Q 372.996 180.6624 382.572 180.6624 
+z
+" clip-path="url(#p1fbd7c544b)" style="fill: #e5eff7; stroke: #306e9b; stroke-width: 1.1; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 47.412 299.8944 
+L 330.588 299.8944 
+Q 340.164 299.8944 340.164 290.6208 
+L 340.164 215.1072 
+Q 340.164 205.8336 330.588 205.8336 
+L 47.412 205.8336 
+Q 37.836 205.8336 37.836 215.1072 
+L 37.836 290.6208 
+Q 37.836 299.8944 47.412 299.8944 
+z
+" clip-path="url(#p1fbd7c544b)" style="fill: #efeaf8; stroke: #7160a6; stroke-width: 1.1; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 382.572 299.8944 
+L 665.748 299.8944 
+Q 675.324 299.8944 675.324 290.6208 
+L 675.324 215.1072 
+Q 675.324 205.8336 665.748 205.8336 
+L 382.572 205.8336 
+Q 372.996 205.8336 372.996 215.1072 
+L 372.996 290.6208 
+Q 372.996 299.8944 382.572 299.8944 
+z
+" clip-path="url(#p1fbd7c544b)" style="fill: #fff0d5; stroke: #b27628; stroke-width: 1.1; stroke-linejoin: miter"/>
+   </g>
+   <g id="text_1">
+    <text style="font-weight: 700; font-size: 19px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #26362d" x="31.68" y="42.826813" transform="rotate(-0 31.68 42.826813)">Una tarea → una salida → una forma de evaluar</text>
+   </g>
+   <g id="text_2">
+    <text style="font-weight: 700; font-size: 15px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #287653" x="189" y="123.860663" transform="rotate(-0 189 123.860663)">Clasificación</text>
+   </g>
+   <g id="text_3">
+    <text style="font-size: 12.5px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #287653" x="189" y="157.483139" transform="rotate(-0 189 157.483139)">¿Derivar a humano?</text>
+   </g>
+   <g id="text_4">
+    <text style="font-weight: 700; font-size: 15px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #306e9b" x="524.16" y="124.102069" transform="rotate(-0 524.16 124.102069)">Regresión</text>
+   </g>
+   <g id="text_5">
+    <text style="font-size: 12.5px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #306e9b" x="524.16" y="157.733139" transform="rotate(-0 524.16 157.733139)">¿Cuántos segundos?</text>
+   </g>
+   <g id="text_6">
+    <text style="font-weight: 700; font-size: 15px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #7160a6" x="189" y="243.034069" transform="rotate(-0 189 243.034069)">Ranking</text>
+   </g>
+   <g id="text_7">
+    <text style="font-size: 12.5px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #7160a6" x="189" y="276.965139" transform="rotate(-0 189 276.965139)">¿Qué pasaje va primero?</text>
+   </g>
+   <g id="text_8">
+    <text style="font-weight: 700; font-size: 15px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #b27628" x="524.16" y="243.092662" transform="rotate(-0 524.16 243.092662)">Generación</text>
+   </g>
+   <g id="text_9">
+    <text style="font-size: 12.5px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #b27628" x="524.16" y="276.965139" transform="rotate(-0 524.16 276.965139)">¿Qué respuesta producir?</text>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p1fbd7c544b">
+   <rect x="18" y="14.4" width="684" height="331.2"/>
+  </clipPath>
+ </defs>
+</svg>

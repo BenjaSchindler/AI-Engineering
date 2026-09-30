@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="720pt" height="360pt" viewBox="0 0 720 360" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <title>Consulta y pasaje relacionado quedan cerca; un pasaje de facturación representa otro tema.</title>
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:title>Consulta y pasaje relacionado quedan cerca; un pasaje de facturación representa otro tema.</dc:title>
+    <dc:date>2026-09-30T19:22:30.134101</dc:date>
+    <dc:description>Consulta y pasaje relacionado quedan cerca; un pasaje de facturación representa otro tema.</dc:description>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.10.3, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 360 
+L 720 360 
+L 720 0 
+L 0 0 
+z
+" style="fill: #fbfaf7"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 209.52 252.864 
+C 233.10186 252.864 255.721042 243.790696 272.395935 227.642379 
+C 289.070828 211.494062 298.44 189.589169 298.44 166.752 
+C 298.44 143.914831 289.070828 122.009938 272.395935 105.861621 
+C 255.721042 89.713304 233.10186 80.64 209.52 80.64 
+C 185.93814 80.64 163.318958 89.713304 146.644065 105.861621 
+C 129.969172 122.009938 120.6 143.914831 120.6 166.752 
+C 120.6 189.589169 129.969172 211.494062 146.644065 227.642379 
+C 163.318958 243.790696 185.93814 252.864 209.52 252.864 
+z
+" clip-path="url(#pe9041aa192)" style="fill: #e2f1e6"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 537.84 259.488 
+C 555.979892 259.488 573.379263 252.508536 586.206104 240.086753 
+C 599.032945 227.664971 606.24 210.815053 606.24 193.248 
+C 606.24 175.680947 599.032945 158.831029 586.206104 146.409247 
+C 573.379263 133.987464 555.979892 127.008 537.84 127.008 
+C 519.700108 127.008 502.300737 133.987464 489.473896 146.409247 
+C 476.647055 158.831029 469.44 175.680947 469.44 193.248 
+C 469.44 210.815053 476.647055 227.664971 489.473896 240.086753 
+C 502.300737 252.508536 519.700108 259.488 537.84 259.488 
+z
+" clip-path="url(#pe9041aa192)" style="fill: #e5eff7"/>
+   </g>
+   <g id="line2d_1">
+    <path d="M 168.48 153.504 
+L 243.72 186.624 
+" clip-path="url(#pe9041aa192)" style="fill: none; stroke-dasharray: 7.4,3.2; stroke-dashoffset: 0; stroke: #287653; stroke-width: 2"/>
+   </g>
+   <g id="text_1">
+    <text style="font-weight: 700; font-size: 19px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #26362d" x="31.68" y="43.206813" transform="rotate(-0 31.68 43.206813)">Cercanía aprendida; no una prueba de verdad</text>
+   </g>
+   <g id="text_2">
+    <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #657066" x="31.68" y="335.66325" transform="rotate(-0 31.68 335.66325)">Ubicaciones ilustrativas; no son embeddings medidos ni distancias calibradas.</text>
+   </g>
+   <g id="PathCollection_1">
+    <defs>
+     <path id="m0b6fb1a9b4" d="M 0 5 
+C 1.326016 5 2.597899 4.473168 3.535534 3.535534 
+C 4.473168 2.597899 5 1.326016 5 0 
+C 5 -1.326016 4.473168 -2.597899 3.535534 -3.535534 
+C 2.597899 -4.473168 1.326016 -5 0 -5 
+C -1.326016 -5 -2.597899 -4.473168 -3.535534 -3.535534 
+C -4.473168 -2.597899 -5 -1.326016 -5 0 
+C -5 1.326016 -4.473168 2.597899 -3.535534 3.535534 
+C -2.597899 4.473168 -1.326016 5 0 5 
+z
+" style="stroke: #287653"/>
+    </defs>
+    <g clip-path="url(#pe9041aa192)">
+     <use xlink:href="#m0b6fb1a9b4" x="168.48" y="153.504" style="fill: #287653; stroke: #287653"/>
+    </g>
+   </g>
+   <g id="text_3">
+    <text style="font-weight: 700; font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #287653" x="182.16" y="104.099187" transform="rotate(-0 182.16 104.099187)">¿Recuperar mi clave?</text>
+   </g>
+   <g id="PathCollection_2">
+    <g clip-path="url(#pe9041aa192)">
+     <use xlink:href="#m0b6fb1a9b4" x="243.72" y="186.624" style="fill: #287653; stroke: #287653"/>
+    </g>
+   </g>
+   <g id="text_4">
+    <text style="font-weight: 700; font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #287653" x="202.68" y="263.075187" transform="rotate(-0 202.68 263.075187)">Restablecer contraseña</text>
+   </g>
+   <g id="PathCollection_3">
+    <defs>
+     <path id="m1792edf43a" d="M 0 5 
+C 1.326016 5 2.597899 4.473168 3.535534 3.535534 
+C 4.473168 2.597899 5 1.326016 5 0 
+C 5 -1.326016 4.473168 -2.597899 3.535534 -3.535534 
+C 2.597899 -4.473168 1.326016 -5 0 -5 
+C -1.326016 -5 -2.597899 -4.473168 -3.535534 -3.535534 
+C -4.473168 -2.597899 -5 -1.326016 -5 0 
+C -5 1.326016 -4.473168 2.597899 -3.535534 3.535534 
+C -2.597899 4.473168 -1.326016 5 0 5 
+z
+" style="stroke: #306e9b"/>
+    </defs>
+    <g clip-path="url(#pe9041aa192)">
+     <use xlink:href="#m1792edf43a" x="537.84" y="186.624" style="fill: #306e9b; stroke: #306e9b"/>
+    </g>
+   </g>
+   <g id="text_5">
+    <text style="font-weight: 700; font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #306e9b" x="531" y="289.520406" transform="rotate(-0 531 289.520406)">Cambiar datos de pago</text>
+   </g>
+   <g id="text_6">
+    <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #287653" x="387.36" y="170.06325" transform="rotate(-0 387.36 170.06325)">Par relacionado</text>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="pe9041aa192">
+   <rect x="18" y="14.4" width="684" height="331.2"/>
+  </clipPath>
+ </defs>
+</svg>
